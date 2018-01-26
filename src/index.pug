@@ -4,7 +4,126 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet")
         link(rel="stylesheet", href="styles.css")
         title HairRoom
     body
-    h1.title HairRoom
+        .site-header.title
+            nav.main-nav: .wrapper
+                .logo.logo--header: img(src="./img/logo.png" alt="main logo")
+                .info
+                    ul.info__list
+                        li.info__item: p.info__address Калининград, Иванникова, 12
+                        li.info__item: a.info__phone(href="tel: 523766") 52-37-66
+                .menu-icon: .menu-icon__middle
+                .main-menu
+                    ul.main-menu__list
+                       - let menuItems = ["Салон", "Услуги", "Прайс", "Галлерея", "Контакты"]
+                       - let menuLinks = ["#", "services", "price", "gallery", "contacts"]
+                       - for(var i = 0; i < 5; i++) 
+                            - let link = "#" + menuLinks[i];
+                            li.main-menu__item: a.main-menu__link(href=link)= menuItems[i]
+                .franchise
+                    a.button__franchise(href="franchise.html") Франшиза
+
+            section.hero
+                h1.hero__title Ваш идеальный салон красоты
+                p.hero__copy Быть свободной значит быть разной, меняте свой стиль под любое настроение. Не важно, что вас ждет сегодня: серьезное событие или романтический вечер - будьте неотразимы!
+                a.button.button--online-record(href="#") online-запись
+                .hero__img: img(src="./img/women.png" alt="women")
+                p.title__description Hair Room kaliningrad
+                .socials
+                    ul.socials__list
+                        - let socialItems = ["instagram", "facebook", "vkontakte"]
+                        - let socialLinks = ["instagram.com", "facebook.com", "vk.com"]
+                        - for(let i = 0; i < 3; i++)
+                            li.socials__item: a.socials__link(href= socialLinks[i])= socialItems[i]
+            nav.scroll-spy
+                ul.scroll-spy__list
+                    - let scrollItems = ["Салон", "Услуги", "Прайс", "Галлерея", "Контакты"]
+                    - let scrollLinks = ["#", "services", "price", "gallery", "contacts"]
+                    - for(let i =0; i < 5; i++)
+                        - let link = "#" + scrollLinks[i]
+                        li.scroll__spy-item: a.scroll__spy-link(href=link data-label!= scrollItems[i] id= (scrollLinks[i] + "-link"))= scrollItems[i]
+        
+        section.about: .wrapper
+            .about__img: img(src="./img/about.png" alt="about")
+            .about__card
+                sup.title__sup О салоне
+                h4.about__title Hair Room - салон с вашим характером
+                .tabs
+                    ul.tabs__list(id="tabs" role="tablist")
+                        li.tabs__item.tabs__current(data-tab="tab-1"): a.tabs__link Миссия
+                        li.tabs__item(data-tab="tab-2"): a.tabs__link Подход
+                        li.tabs__item(data-tab="tab-3"): a.tabs__link Мастера
+
+                    .tabs__content.tabs__current(id="tab-1")
+                        p.about__copy Наш салон предлагает уникальные услуги европейского уровня качества, поэтому мы всегда гарантируем отменное качество вашего неповторимого образа. Уникальное оборудование и профессиональные мастера - это залог упеха студии HAIR ROOM. Позвольте себе удовольствие наслаждаться своей красотой и дарить ее любимым.
+
+                    .tabs__content
+                        p.about__copy Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere quam eius ducimus tenetur nam! Eaque, alias tempore similique numquam, nostrum dignissimos quasi, voluptatum quidem fugiat delectus accusamus minima harum nisi vero? Recusandae natus repellendus et eaque deleniti mollitia voluptatibus vero non fugiat doloribus, veritatis, modi incidunt voluptate error minima ab.
+
+                    .tabs__content
+                        p.about__copy Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea rem omnis inventore, odit cupiditate, nam magni possimus quas deserunt est repudiandae animi quidem eligendi voluptatem exercitationem qui enim quibusdam, facilis aperiam eveniet ut ab odio dolorem. Quisquam eligendi, dolorum cupiditate, voluptatibus sequi nemo corrupti facilis veritatis, exercitationem dolor optio delectus.
+
+                a.button.button--pink(href="#") online Запись
+                a.button.button--ghost(href="#price") прайс-лист
+
+                .logo.logo--about: img(src="./img/logo-white.png" alt="logo white")
+
+        section.services: .wrapper
+            header.services__header
+                h4.title__sup Мы предлагаем
+                h3.title__section Услуги
+
+            article.services__card
+                h5.servces__card-title Наращивание волос
+                .services__card-content
+                .services__card-img: img(src="./img/card1.png" alt="card img 1")
+
+            article.services__card
+                h5.servces__card-title Маникюр
+                .services__card-content
+                     p.title__description.title__description--left Hair Room Услуги
+                     p.services__card-description бесцветный розовый с нейтрализацией желтизны
+                     a.button.button--pink.button--card(href="#") Записаться
+                     a.button.button--ghost.button--card(href="#") Прайс-лист
+                .services__card-img: img(src="./img/card2.png" alt="card img 2")
+                
+            article.services__card
+                h5.servces__card-title Дополнительные услуги
+                .services__card-content
+                .services__card-img: img(src="./img/card3.png" alt="card img 3")
+
+            article.services__card
+                h5.servces__card-title Наращивание ресниц
+                .services__card-content
+                .services__card-img: img(src="./img/card4.png" alt="card img 4")
+
+        section.price: .wrapper
+            header.price__header
+                h4.title__sup.title__sup--white Цены на услуги
+                h3.title__section.title__section--white Прайс-лист
+            .price-wrapper
+                .price-inner__column
+                    table.price-table
+                        caption Основные услуги
+                        tr
+                            td Наращивание волос
+                            td 1200 <span>р.</span>
+                        tr 
+                            td Маникюр
+                            td 1000 <span>р.</span>
+                        tr
+                            td Уход за волосами
+                            td 2000 <span>р.</span>
+                    
+                .price-inner__column.price-inner__column--right
+                    table.price-table
+                        caption Дополнительные услуги
+                            tr
+                                td Наращивание ресниц
+                                td 2500 <span>р.</span>
+
+                .price-inner__column
+

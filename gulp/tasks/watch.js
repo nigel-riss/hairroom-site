@@ -30,4 +30,5 @@ gulp.task("watch", () => {
 
     gulp.task("cssInject", ["styles"], () => {
         gulp.src("./dist/styles.css")
-    })
+        .pipe(browserSync.stream());
+    });
