@@ -1,0 +1,50 @@
+.button {
+    border: 3px solid $secondary;
+    border-radius: 35px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $white;
+    display: inline-block;
+    
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 80px;
+
+        &--centerX {
+            justify-content: flex-end;
+        }
+    }
+    &--online-record {
+        padding: 10px 80px;
+        @include centerer-x;
+        bottom: 25px;
+        z-index: 5;
+        border-color: $secondary; 
+    }
+
+    &--pink {
+        width: 240px;
+        padding: 10px 0;
+        text-align: center;
+        margin-bottom: 30px;
+        font-family: $OpenSans;
+        color: #3b0f22;
+        font-weight: bold;
+        background-color: $accent;
+        border: none;
+        box-shadow: 0px 20px 58px -11px rgba(0,0,0,0.8);
+    }
+
+    &--ghost {
+        width: 240px;
+        padding: 10px 0;
+        text-align: center;
+        color: #3b0f22;
+        font-weight: 600;
+        background-color: rgba(#f4cfe4, 0.3);
+        border-color: $accent;
+    }
+}

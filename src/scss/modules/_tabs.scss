@@ -1,0 +1,33 @@
+.tabs {
+
+    &__list {
+        list-style: none;
+        padding-left: 0;
+        display: flex;
+    }
+
+    &__item {
+        padding-right: 20px;
+    
+        &:last-child {
+            padding-right: 0;
+        }
+    }
+
+    &__link {
+        font-size: 1.125rem;
+        text-transform: uppercase;
+        color: #898989;
+        line-height: 15px;
+        font-weight: 300;
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+            color: $title;
+        }
+    }
+
+    &__content {
+        padding-bottom: 140px;
+    }
+}

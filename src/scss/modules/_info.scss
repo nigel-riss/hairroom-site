@@ -1,0 +1,40 @@
+.info {
+    padding-top: 15px;
+    padding-left: 15px;
+
+    &__list {
+        // box model
+        margin: 0;
+        padding-left: 0;
+        list-style: none;
+    }
+
+    &__item {
+        // typography
+        color: $copy;
+    }
+
+    &__address {
+        // box model
+        margin: 0;
+
+        // typography
+        font-weight: 600;
+        font-size: 1.125rem;
+    }
+
+    &__phone {
+        // typography
+        color: $copy;
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 1.5rem;
+        display: flex;
+        align-items: center;
+        span {
+            //typography
+            color: $accent;
+            margin-bottom: 10px;
+        }
+    }
+}

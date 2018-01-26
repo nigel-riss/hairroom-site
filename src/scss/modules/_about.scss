@@ -1,0 +1,30 @@
+.about {
+    // height: 100vh;
+    position: relative;
+    background-image: url("./img/about-bg-main.png");
+
+    &__card {
+        margin-top: 25px;
+    }
+    &__wrapper {
+        padding-left: 25px;
+    }
+    &__img {
+        background-image: url("./img/about-bg.png");
+        background-size: cover;
+        height: 220px;
+    }
+
+    &__title {
+        font-family: $mainFont;
+        font-weight: bold;
+        font-size: 1.33rem;
+        margin-top: 0;
+        width: 275px;
+    }
+
+    &__copy {
+        color: #010101;
+    }
+
+}

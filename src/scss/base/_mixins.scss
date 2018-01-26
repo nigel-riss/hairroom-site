@@ -1,0 +1,55 @@
+// Breakpoints
+
+@mixin atSmall {
+    @media(max-width: 360px) {
+            @content;
+    }
+}
+
+@mixin atTabletsPortrait {
+    @media(min-width: 700px) {
+        @content;
+    }
+}
+
+@mixin atTabletsLanscape {
+    @media(min-width: 900px) {
+        @content;
+    }
+}
+
+@mixin atDesktop {
+    @media(min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin atDesktopLarge {
+    @media(min-width: 1400px) {
+        @content;
+    }
+}
+
+// Positioning
+
+@mixin centerer {
+    // positioning
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin centerer-x {
+    // positioning
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+@mixin centerer-y {
+    // positioning
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%);
+}
