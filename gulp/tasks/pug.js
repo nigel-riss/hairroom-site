@@ -9,11 +9,11 @@ gulp.task("pugRender", () => {
         return {
             title: "Pug",
             message: error.message
-        }
+        };
     }))
     .on("error", function(error) {
         console.log(error.toString());
         this.emit("end");
     })
     .pipe(gulp.dest("./dist"));
-})
+});

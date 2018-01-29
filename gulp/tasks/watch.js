@@ -17,12 +17,12 @@ gulp.task("watch", () => {
 
     watch("./src/**/*.pug", () => {
         gulp.start("pugChanged");
-    })
+    });
 
     watch("./src/scss/**/*.scss", () => {
         gulp.start("cssInject");
-    })
-})
+    });
+});
 
     gulp.task("pugChanged", ["pugRender"], () => {
         browserSync.reload();
@@ -30,4 +30,4 @@ gulp.task("watch", () => {
 
     gulp.task("cssInject", ["styles"], () => {
         gulp.src("./dist/styles.css")
-    })
+    });

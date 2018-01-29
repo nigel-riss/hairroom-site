@@ -17,4 +17,4 @@ gulp.task("styles", () => {
         browsers: "last 2 versions"
     }))
     .pipe(gulp.dest("./dist"));
-})
+});
