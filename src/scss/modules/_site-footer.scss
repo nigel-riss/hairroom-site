@@ -1,0 +1,19 @@
+.site-footer {
+    transform: translateY(-60%);
+    height: 100vh;
+    background-color: #e6a9d2;
+
+    &__content {
+        padding-top: 50px;
+        margin-left: 25px;
+        border-top-color: #721d50;
+        border-top-style: solid;
+        border-top-width: 1px;
+    }
+
+    &__title {
+        color: #2b2a29;
+        text-transform: uppercase;
+        letter-spacing: 7px;
+    }
+}

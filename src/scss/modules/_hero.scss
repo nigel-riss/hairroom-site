@@ -6,8 +6,8 @@
     height: 105vh;
 
     // visual
-    background-color: $accent;
-    background-image: url("./img/bg-hero.png");
+    background: rgba($accent, 0.9);
+    // background-image: url("./img/bg-hero.png");
 
     &::after {
         content: url("./img/hr.png");

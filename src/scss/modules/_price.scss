@@ -1,4 +1,53 @@
 .price {
-    padding-left: 25px;
-    background-color: #c354a9;
+    margin-left: 25px;
+    background-color: #dabcf2;
+    border-radius: 5px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+
+    // background-image: url("./img/price-bg.png");
+
+    &__header {
+        padding-top: 40px;
+        padding-left: 20px;
+    }
+
+    &__wrapper {
+        padding-left: 25px;
+        padding-bottom: 80px;
+    }
+
+    &__group-title {
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    &__table {
+        width: 100%;
+        padding-right: 15px;
+    }
+
+    &__column-description {
+        color: #000;
+        font-family: $OpenSans;
+        line-height: 24px;
+        text-align: left;
+        margin: 20px 0;
+        font-weight: 500;
+    }
+
+    &__caption {
+        margin: 20px 0;
+        color: #8a185a;
+        text-align: left;
+        text-transform: uppercase;
+        // letter-spacing: 1px;
+        font-weight: bold;
+    }
+
+    td {
+        text-transform: uppercase;
+        font-size: 1rem;
+    }
 }

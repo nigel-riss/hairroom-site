@@ -90,37 +90,140 @@ html(lang="en")
             //-     .services__card-img: img(src="./img/card1.png" alt="card img 1")
 
             article.services__card
-                h5.servces__card-title Маникюр
+                h5.services__card-title Маникюр
                 .services__card-img
-                .services__card-content
-                     p.title__description.title__description--left Hair Room Услуги
-                     p.services__card-description бесцветный розовый с нейтрализацией желтизны
-                     .button__wrapper.button--wrapper-centerX
-                        a.button.button--pink.button--card(href="#") Записаться
-                        a.button.button--ghost.button--card(href="#") Прайс-лист
-                
-            article.services__card
-                h5.servces__card-title Дополнительные услуги
-                .services__card-content
-                .services__card-img: img(src="./img/card3.png" alt="card img 3")
+                    .services__card-content
+                        p.title__description.title__description--left Hair Room Услуги
+                        p.services__card-description бесцветный розовый с нейтрализацией желтизны
+                        .button__wrapper.button__wrapper--centerX
+                            a.button.button--pink.button--card(href="#") Записаться
+                            a.button.button--ghost.button--card(href="#") Прайс-лист
+                    
+            //- article.services__card
+            //-     h5.servces__card-title Дополнительные услуги
+            //-     .services__card-content
+            //-     .services__card-img: img(src="./img/card3.png" alt="card img 3")
 
-            article.services__card
-                h5.servces__card-title Наращивание ресниц
-                .services__card-content
-                .services__card-img: img(src="./img/card4.png" alt="card img 4")
+            //- article.services__card
+            //-     h5.servces__card-title Наращивание ресниц
+            //-     .services__card-content
+            //-     .services__card-img: img(src="./img/card4.png" alt="card img 4")
 
         section.price: .wrapper
             header.price__header
                 h4.title__sup.title__sup--white Цены на услуги
                 h3.title__section.title__section--white Прайс-лист
 
-        section.shares
-            article.shares__card
-                header.shares__header
-                    p.shares__offers Акции
-                    p.shares__text Новинки в разделе ухода за волосами
+            .price__wrapper
+                .price__group
+                    h3.price__group-title Уход<br>за волосами
+                    .price-inner__column
+                        table.price__table
+                            caption.price__caption кератиновое выпрямление / восстановление
+                            caption.price__column-description Система богата белками и аминокислотами кератина. Подходит для сильно поврежденных волос и  имеет накопительный эффект.
+                            tr
+                                td короткие
+                                td <b>2000 - 2500</b> <span>руб.</span>
+                            tr
+                                td до плеч
+                                td <b>2500 - 3000</b> <span>руб.</span>
+                            tr
+                                td до лопаток
+                                td <b>3000 - 3500</b> <span>руб.</span>
+                            tr
+                                td середина спины
+                                td <b>4000 - 4500</b> <span>руб.</span>
+                    .price-inner__column
+                        table.price__table
+                            caption.price__caption Тонировка с уходом
+                            caption.price__column-description Большой выбор красок европейских производителей, профессиональные мастера.
+                            tr
+                                td короткие
+                                td <b>1500</b> <span>руб.</span>
+                            tr
+                                td Средние
+                                td <b>2000</b> <span>руб.</span>
+                            tr
+                                td Длинные
+                                td <b>3000</b> <span>руб.</span>
+                    .price-inner__column
+                        table.price__table
+                            caption.price__caption Укладка
+                            caption.price__column-description Учитываем все ваши пожелания.
+                            tr
+                                td Любой длины
+                                td <b>800 - 2000<b> <span>руб.</span>
 
-            article.shares__card
-                header.shares__header
-                    p.shares__offers.shares__offers--white Акции
-                    p.shares__text.shares__text--white Новинки в разделе ухода за волосами
+
+        section.shares
+            .shares__content
+                article.shares__card.shares__card--offers
+                    header.shares__header
+                        p.shares__offers Акции
+                        p.shares__text Новинки в разделе ухода за волосами
+                        a.button.button--card.button--offers(href="#") Дальше
+                article.shares__card.shares__card--loyality
+                    header.shares__header
+                        p.shares__offers.shares__offers--white Акции
+                        p.shares__text.shares__text--white Новинки в разделе ухода за волосами
+                        a.button.button--card.button--offers Дальше
+        
+        section.gallery
+            header.gallery__header
+                h3.title__sup Социальные сети
+                h4.gallery__title Следите за HAIR ROOM в социальных сетях
+
+            .gallery__subscribe
+                h5.gallery__motto Давайте дружить
+                .gallery__logo: img(src="./img/insta_logo.png" alt="insta logo")
+                p.gallery__text Для подписчиков нашей группы в Instagramv мы проводим регулярные розыгрыши призов и сертификатов на улуги нашего салона.
+                a.button.button--subscribe Подписаться
+            .gallery__gallery
+                img(src="./img/hr_card1.png" alt="card")
+                img(src="./img/hr_card2.png" alt="card")
+                img(src="./img/hr_card3.png" alt="card")
+                img(src="./img/hr_card4.png" alt="card")
+                img(src="./img/hr_card5.png" alt="card")
+                img(src="./img/hr_card6.png" alt="card")
+                img(src="./img/hr_card7.png" alt="card")
+                img(src="./img/hr_card8.png" alt="card")
+
+        section.map#map
+        .map__board
+            p.title__description.title__description--right Hair Room Kaliningrad
+            .map__info-block
+                span.map__info E-mail
+                p.map__contact hairroom@gmail.com
+
+            .map__info-block
+                span.map__info Телефон
+                p.map__contact +7 4012 52-37-76
+                
+            .map__info-block
+                span.map__info Адрес
+                p.map__contact г. Калининград<br> ул. Иванникова, д.12
+        
+        footer.site-footer
+            .site-footer__content
+                h3.site-footer__title Hair Room
+                h4.site-foooter__description-title HAIR ROOM. Калининград
+                p.site-footer__description Ваш идеальный салон красоты. Ждем вас в гости к нам для создания вашего неповторимого образа
+
+                h4.site-footer__description-title Контакты
+                    h5.site-footer__info-title Адрес
+                    p.site-footer__info г. Калининград, ул. Иванникова, д.12
+                    h5.site-footer__info-title Тел.
+                    p.site-footer__info +7 4012 52-37-76
+                    h5.site-footer__info-title e-mail
+                    p.site-footer__info hairroom@gmail.com
+
+                h4.site-footer__description-title Время работы
+                    h5.site-footer__info-title Ежедневно
+                    p.site-footer__info с 10<sup>00</sup> до 20<sup>00</sup>
+
+                    h5.site-footer__info-title Воскресенье
+                    p.site-footer__info - выходной
+
+                
+        script(src="map.js")
+        script(async, defer, src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsXqiEFxIOCZHT3sEJWMMLc6HywtBL4-0&callback=initMap")

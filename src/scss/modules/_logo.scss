@@ -12,6 +12,7 @@
         background-color: $white;
         border-radius: 50%;
         @include centerer-x;
+        z-index: 5;
         bottom: -85px;
         width: 150px;
         height: 150px;

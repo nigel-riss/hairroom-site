@@ -1,0 +1,60 @@
+.gallery {
+    padding-top: 30px;
+    background-color: #f8f4f6;
+    
+
+    &__header {
+        background-image: url("./img/gallery_header_bg.png");
+        background-size: cover;
+        height: 300px;
+        padding-left: 25px;
+        padding-top: 125px;
+    }
+
+    &__title {
+        // font-family: $mainFontExtarBlack;
+        font-size: 1.325rem;
+        margin: 0 ;
+    }
+
+    &__subscribe {
+        background-image: url("./img/gallery_subscribe_bg.png");
+        background-size: cover;
+        padding: 60px 30px;
+        padding-bottom: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    &__motto {
+        margin: 0;
+        padding-bottom: 30px;
+        text-transform: uppercase;
+        color: #fff;
+        letter-spacing: 1px;
+        font-weight: 100;
+    }
+
+    &__text {
+        color: $accent;
+        padding-bottom: 40px;
+        margin: 0;
+    }
+
+    &__gallery {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        background-image: url("./img/gallery_bg.png");
+        background-size: cover;
+        padding-bottom: 100px;
+
+        img {
+            width: 50%;
+            height: 185px;
+        }
+    }
+}

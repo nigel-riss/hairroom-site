@@ -1,0 +1,28 @@
+.map {
+    height: 100vh;
+    position: relative;
+
+    &__board {
+        
+        transform: translateY(-180%);
+        margin: 0 15px;
+        padding: 50px 30px;
+        display: block;
+
+        border-radius: 5px;
+        box-shadow: 18px 12px 28px -4px rgba(53,7,34,0.74);
+        background-color: rgba(#963a70, 0.8);
+    }
+
+    &__info {
+        color: #ffffff;
+        font-size: 0.875rem;
+        text-transform: uppercase;
+    }
+
+    &__contact {
+        color: #ffffff;
+        font-weight: bold;
+        font-family: $OpenSans;
+    }
+}

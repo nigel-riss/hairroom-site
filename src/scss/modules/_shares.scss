@@ -1,8 +1,58 @@
 .shares {
-    padding-left: 25px;
-    background-color: #c354a9;
+    // padding-left: 25px;
+    margin-top: 40px;
+    background-color: #9b6eae;
+    
+    &__content {
+        transform: translateY(30px)
+        
+    }
 
     &__offers {
         margin: 0;
+        color: #981864;
+        text-transform: uppercase;
+        font-weight: 500;
+
+        &--white {
+            color: white;
+        }
+    }
+
+    &__header {
+        padding-left: 25px;
+    }
+
+    &__text {
+        color: #1c1e23;
+        font-family: $mainFontBlack;
+        font-weight: bold;
+        text-align: left;
+        width: 135px;
+
+        &--white {
+            color: white;
+        }
+    }
+
+    &__card {
+        width: 300px;
+        height: 200px;
+        background-color: #fff;
+        padding-top: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+
+        &--offers {
+            background-image: url("./img/offers.png");
+            background-color: #fff;
+        }
+        
+        &--loyality {
+            background-image: url("./img/loyality.png");
+            background-color: #54adc3;
+        }
     }
 }

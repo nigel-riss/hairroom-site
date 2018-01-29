@@ -15,10 +15,38 @@
             padding-top: 100px;
             margin: 0;
         }
+
+        &--white {
+            // padding-top: 40px;
+        }
     }
 
     &__description {
         display: none;
+
+        &--left {
+            position: absolute;
+            left: -60px;
+            top: 110px;
+            display: inline-block;
+            margin: 0;
+            transform: rotate(-90deg);
+            color: #fff;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        &--right {
+            display: inline-block;
+            position: absolute;
+            right: -70px;
+            top: 100px;
+            transform: rotate(-90deg);
+            font-size: 0.875rem;
+            color: #ffffff;
+            text-transform: uppercase;
+
+        }
     }
 
     &__section {
