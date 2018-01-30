@@ -1,3 +1,7 @@
 .socials {
-    display: none;
+
+    &__list {
+        // box model
+        display: none;
+    }
 }

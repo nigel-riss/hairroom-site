@@ -1,8 +1,5 @@
 .main-nav {
+    display: flex;
     padding-bottom: 50px;
-
-    &__wrapper {
-        display: flex;
-        padding-left: 25px;
-    }
+    padding-left: 25px;
 }

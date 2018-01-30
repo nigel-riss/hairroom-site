@@ -4,58 +4,57 @@ html(lang="en")
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        link(href="https://fonts.googleapis.com/css?family=Montserrat:400,800" rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css?family=Montserrat:300,400,800" rel="stylesheet")
         link(rel="stylesheet", href="styles.css")
         title HairRoom
     body
-        .site-header
-            nav.main-nav: .wrapper
-                .main-nav__wrapper
-                    .logo.logo--header: img(src="./img/logo.png" alt="main logo")
-                    .info
-                        ul.info__list
-                            li.info__item: p.info__address Калининград<br>Иванникова, 12
-                            li.info__item: a.info__phone(href="tel: 523766") 52<span>.</span>37<span>.</span>66
-                    
-                    .menu-icon: .menu-icon__middle
+        header.site-header
+            nav.main-nav
+                .logo
+                    .logo__img: img(src="./img/logo.png" alt="HairRoom Logo")
+                ul.info__list
+                    li: p Калининград<br>Иванникова, 12
+                    li: a(href="tel: 523766") 52<span>.</span>37<span>.</span>66
+                
+                .menu-icon: .menu-icon__middle
 
-                .main-menu
+                nav.main-menu
                     ul.main-menu__list
-                    - let menuItems = ["Салон", "Услуги", "Прайс", "Галлерея", "Контакты"]
-                    - let menuLinks = ["#", "services", "price", "gallery", "contacts"]
-                    - for(var i = 0; i < 5; i++) 
-                            - let link = "#" + menuLinks[i];
-                            li.main-menu__item: a.main-menu__link(href=link)= menuItems[i]
-                .franchise
-                    a.button__franchise(href="franchise.html") Франшиза
+                        li: a(href="#Салон") Салон
+                        li: a(href="#Услуги") Услуги
+                        li: a(href="#Прайс") Прайс
+                        li: a(href="#Галлерея") Галлерея
+                        li: a(href="#Контакты") Контакты
 
             section.hero
-                .hero__wrapper
+                header.hero__header
                     h1.hero__title Ваш идеальный салон красоты
+
+                .hero__content
                     p.hero__copy Быть свободной значит быть разной, меняте свой стиль под любое настроение. Не важно, что вас ждет сегодня: серьезное событие или романтический вечер - будьте неотразимы!
                     a.button.button--online-record(href="#") online&nbsp;запись
-                    .hero__img: img(src="./img/women.png" alt="women")
+                    .hero__img: img(src="./img/women.png" alt="Hair Room девушка")
                     p.title__description Hair Room kaliningrad
-                    .socials
-                        ul.socials__list
-                            - let socialItems = ["instagram", "facebook", "vkontakte"]
-                            - let socialLinks = ["instagram.com", "facebook.com", "vk.com"]
-                            - for(let i = 0; i < 3; i++)
-                                li.socials__item: a.socials__link(href= socialLinks[i])= socialItems[i]
+                    ul.socials__list
+                        li: a(href="instagram.com") instagram
+                        li: a(href="facebook.com") facebook
+                        li: a(href="vk.com") vkontakte
             nav.scroll-spy
                 ul.scroll-spy__list
-                    - let scrollItems = ["Салон", "Услуги", "Прайс", "Галлерея", "Контакты"]
-                    - let scrollLinks = ["#", "services", "price", "gallery", "contacts"]
-                    - for(let i =0; i < 5; i++)
-                        - let link = "#" + scrollLinks[i]
-                        li.scroll__spy-item: a.scroll__spy-link(href=link data-label!= scrollItems[i] id= (scrollLinks[i] + "-link"))= scrollItems[i]
+                    li: a(href="#" id="#-link") Салон
+                    li: a(href="#services" id="services-link") Услуги
+                    li: a(href="#price" id="price-link") Прайс
+                    li: a(href="#gallery" id="gallery-link") Галлерея
+                    li: a(href="#contacts" id="contacts-link") Контакты
         
-        section.about: .wrapper
+        section.about
             .about__img
-            .about__wrapper
-                .about__card
+            .about__board
+                header.about__header
                     sup.title__sup О салоне
                     h4.about__title HAIR ROOM - салон с&nbsp;вашим характером
+
+                .about__content
                     .tabs
                         ul.tabs__list(id="tabs" role="tablist")
                             li.tabs__item.tabs__current(data-tab="tab-1"): a.tabs__link Миссия
@@ -66,31 +65,21 @@ html(lang="en")
                             p.about__copy Наш салон предлагает уникальные услуги европейского уровня качества, поэтому мы всегда гарантируем отменное качество вашего неповторимого образа. Уникальное оборудование и профессиональные мастера - это залог упеха студии HAIR ROOM
                             p.about__copy.about__copy--mrtop Позвольте себе удовольствие наслаждаться своей красотой и дарить ее любимым.
 
-                        //- .tabs__content
-                        //-     p.about__copy Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere quam eius ducimus tenetur nam! Eaque, alias tempore similique numquam, nostrum dignissimos quasi, voluptatum quidem fugiat delectus accusamus minima harum nisi vero? Recusandae natus repellendus et eaque deleniti mollitia voluptatibus vero non fugiat doloribus, veritatis, modi incidunt voluptate error minima ab.
-
-                        //- .tabs__content
-                        //-     p.about__copy Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea rem omnis inventore, odit cupiditate, nam magni possimus quas deserunt est repudiandae animi quidem eligendi voluptatem exercitationem qui enim quibusdam, facilis aperiam eveniet ut ab odio dolorem. Quisquam eligendi, dolorum cupiditate, voluptatibus sequi nemo corrupti facilis veritatis, exercitationem dolor optio delectus.
-                    .logo.logo--about
-                        .logo__outline
-                            img(src="./img/logo-white.png" alt="logo white")
-            .button__wrapper
-                a.button.button--pink(href="#") online Запись
-                a.button.button--ghost(href="#price") прайс-лист
+                .logo.logo--about
+                    .logo__outline
+                        img(src="./img/logo-white.png" alt="logo white")
+                .button__wrapper
+                    a.button.button--pink(href="#") online Запись
+                    a.button.button--ghost(href="#price") прайс-лист
 
 
-        section.services: .wrapper
+        section.services
             header.services__header
-                h4.title__sup.title__sup--mrtop Мы предлагаем
-                h3.title__section Услуги
-
-            //- article.services__card
-            //-     h5.servces__card-title Наращивание волос
-            //-     .services__card-content
-            //-     .services__card-img: img(src="./img/card1.png" alt="card img 1")
+                p.title__sup.title__sup--mrtop Мы предлагаем
+                p.title__section Услуги
 
             article.services__card
-                h5.services__card-title Маникюр
+                header.services__card-title Маникюр
                 .services__card-img
                     .services__card-content
                         p.title__description.title__description--left Hair Room Услуги
@@ -98,28 +87,18 @@ html(lang="en")
                         .button__wrapper.button__wrapper--centerX
                             a.button.button--pink.button--card(href="#") Записаться
                             a.button.button--ghost.button--card(href="#") Прайс-лист
-                    
-            //- article.services__card
-            //-     h5.servces__card-title Дополнительные услуги
-            //-     .services__card-content
-            //-     .services__card-img: img(src="./img/card3.png" alt="card img 3")
 
-            //- article.services__card
-            //-     h5.servces__card-title Наращивание ресниц
-            //-     .services__card-content
-            //-     .services__card-img: img(src="./img/card4.png" alt="card img 4")
-
-        section.price: .wrapper
+        section.price
             header.price__header
-                h4.title__sup.title__sup--white Цены на услуги
-                h3.title__section.title__section--white Прайс-лист
+                p.title__sup.title__sup--white Цены на услуги
+                p.title__section.title__section--white Прайс-лист
 
-            .price__wrapper
+            .price__content
                 .price__group
                     h3.price__group-title Уход<br>за волосами
                     .price-inner__column
                         table.price__table
-                            caption.price__caption кератиновое выпрямление / восстановление
+                            caption.price__caption кератиновое выпрямление<br>/ восстановление
                             caption.price__column-description Система богата белками и аминокислотами кератина. Подходит для сильно поврежденных волос и  имеет накопительный эффект.
                             tr
                                 td короткие
@@ -152,7 +131,7 @@ html(lang="en")
                             caption.price__column-description Учитываем все ваши пожелания.
                             tr
                                 td Любой длины
-                                td <b>800 - 2000<b> <span>руб.</span>
+                                td <b>800 - 2000</b> <span>руб.</span>
 
 
         section.shares
@@ -174,56 +153,74 @@ html(lang="en")
                 h4.gallery__title Следите за HAIR ROOM в социальных сетях
 
             .gallery__subscribe
-                h5.gallery__motto Давайте дружить
-                .gallery__logo: img(src="./img/insta_logo.png" alt="insta logo")
-                p.gallery__text Для подписчиков нашей группы в Instagramv мы проводим регулярные розыгрыши призов и сертификатов на улуги нашего салона.
-                a.button.button--subscribe Подписаться
+                h5.gallery__slogan Давайте дружить
+                .gallery__content
+                    .gallery__logo: img(src="./img/insta_logo.png" alt="instagram logo")
+                    p.gallery__text Для подписчиков нашей группы в Instagramv мы проводим регулярные розыгрыши призов и сертификатов на улуги нашего салона.
+                    a.button.button--subscribe Подписаться
             .gallery__gallery
-                img(src="./img/hr_card1.png" alt="card")
-                img(src="./img/hr_card2.png" alt="card")
-                img(src="./img/hr_card3.png" alt="card")
-                img(src="./img/hr_card4.png" alt="card")
-                img(src="./img/hr_card5.png" alt="card")
-                img(src="./img/hr_card6.png" alt="card")
-                img(src="./img/hr_card7.png" alt="card")
-                img(src="./img/hr_card8.png" alt="card")
+                .gallery__img
+                    img(src="./img/hr_card1.png" alt="HairRoom студия красоты")
+                .gallery__img
+                    img(src="./img/hr_card2.png" alt="HairRoom декорации")
+                .gallery__img
+                    img(src="./img/hr_card3.png" alt="HairRoom наращивание ресниц")
+                .gallery__img
+                    img(src="./img/hr_card4.png" alt="HairRoom окрас волос")
+                .gallery__img
+                    img(src="./img/hr_card5.png" alt="HairRoom")
+                .gallery__img
+                    img(src="./img/hr_card6.png" alt="HairRoom увеличение губ")
+                .gallery__img
+                    img(src="./img/hr_card7.png" alt="HairRoom миллирование")
+                .gallery__img
+                    img(src="./img/hr_card8.png" alt="HairRoom педикюр")
 
-        section.map#map
-        .map__board
-            p.title__description.title__description--right Hair Room Kaliningrad
-            .map__info-block
-                span.map__info E-mail
-                p.map__contact hairroom@gmail.com
 
-            .map__info-block
-                span.map__info Телефон
-                p.map__contact +7 4012 52-37-76
+        section.location
+            .map-label
+              .map-label__content
+                p.title__description.title__description--right Hairroom Kaliningrad
+                p.map-label__info-title E-mail
+                p.map-label__info-text hairroom@gmail.com
+
+                p.map-label__info-title Телефон
+                p.map-label__info-text +7 4012 52-37-76
+
+                p.map-label__info-title Адрес
+                p.map-label__info-text г. Калининград,<br> ул. Иванникова, д.12<br><sub>(ориентир напротив гостиницы Radisson)</sub>
                 
-            .map__info-block
-                span.map__info Адрес
-                p.map__contact г. Калининград<br> ул. Иванникова, д.12
-        
+            #map.location__map
+
         footer.site-footer
-            .site-footer__content
-                h3.site-footer__title Hair Room
-                h4.site-foooter__description-title HAIR ROOM. Калининград
+            header.site-footer__header
+                .site-footer__logo: img(src="./img/hair_room_logo_footer.png" alt="Hair Room логотип")
+                p.site-footer__title-location HAIR ROOM. Калининград
                 p.site-footer__description Ваш идеальный салон красоты. Ждем вас в гости к нам для создания вашего неповторимого образа
 
-                h4.site-footer__description-title Контакты
-                    h5.site-footer__info-title Адрес
-                    p.site-footer__info г. Калининград, ул. Иванникова, д.12
-                    h5.site-footer__info-title Тел.
-                    p.site-footer__info +7 4012 52-37-76
-                    h5.site-footer__info-title e-mail
-                    p.site-footer__info hairroom@gmail.com
+            .site-footer__content
+                p.site-footer__contacts-title Контакты
 
-                h4.site-footer__description-title Время работы
-                    h5.site-footer__info-title Ежедневно
-                    p.site-footer__info с 10<sup>00</sup> до 20<sup>00</sup>
+                p.site-footer__info-title Адрес:
+                p.site-footer__info-text г. Калининград, ул. Иванникова, д. 12
 
-                    h5.site-footer__info-title Воскресенье
-                    p.site-footer__info - выходной
+                p.site-footer__info-title Телефон:
+                p.site-footer__info-text + 7 4012 52 37 76
 
+                p.site-footer__info-title E-mail:
+                p.site-footer__info-text hairroom@gmail.com
+                
+                p.site-footer__contacts-title Время работы
+
+                p.site-footer__info-title Ежедневно:
+                p.site-footer__info-text С 10 <sup>00</sup> до 20<sup>00</sup>
+                
+                p.site-footer__info-title Воскресенье:
+                p.site-footer__info-text.site-footer__info-text--bold - выходной
+                
+            p.site-footer__copyright copyright &copy; 2018<br><b>katz cant read</b>
+                
                 
         script(src="map.js")
+        script(src="scripts.js")
         script(async, defer, src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsXqiEFxIOCZHT3sEJWMMLc6HywtBL4-0&callback=initMap")

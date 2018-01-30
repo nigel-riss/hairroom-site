@@ -1,3 +1,34 @@
 .main-menu {
+    position: fixed;
+    background-color: $accent;
+    left: -100%;
     display: none;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+
+    &--shown {
+        display: block;
+        left: 0;
+        opacity: 0.9;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__list {
+        padding: 0;
+    }
+
+    li {
+        padding-bottom: 30px;
+        list-style: none;
+    }
+
+    a {
+        color: #fff;
+        
+        text-decoration: none;
+    }
 }

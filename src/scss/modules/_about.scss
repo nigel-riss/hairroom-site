@@ -1,15 +1,21 @@
 .about {
     // height: 100vh;
-    position: relative;
-    background-image: url("./img/about-bg-main.png");
+    
 
-    &__card {
-        margin-top: 25px;
-    }
-    &__wrapper {
+    &__header {
+        padding-top: 20px;
         padding-left: 25px;
     }
+
+    &__board {
+        position: relative;
+        background-image: url("./img/about-bg-main.png");
+        background-repeat: no-repeat;
+    }
+
     &__img {
+        position: relative;
+        // background-image: url("./img/about-bg-main.png");
         background-image: url("./img/about-bg.png");
         background-size: cover;
         height: 220px;

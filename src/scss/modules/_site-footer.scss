@@ -1,19 +1,79 @@
 .site-footer {
-    transform: translateY(-60%);
-    height: 100vh;
+    // height: 100vh;
     background-color: #e6a9d2;
-
-    &__content {
-        padding-top: 50px;
-        margin-left: 25px;
+    padding-top: 100px;
+    
+    &__header {
+        margin-top: 50px;
         border-top-color: #721d50;
         border-top-style: solid;
-        border-top-width: 1px;
+        border-top-width: 2px;
+        margin-left: 25px;
+        
+    }
+
+    &__content {
+        padding-left: 25px;
+        width: 325px;
     }
 
     &__title {
         color: #2b2a29;
         text-transform: uppercase;
         letter-spacing: 7px;
+    }
+
+    &__title-location {
+        margin: 0;
+        color: #6f164b;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    &__description {
+        color: #964266;
+        line-height: 23px;
+        font-family: $OpenSans;
+    }
+
+    &__contacts-title {
+        margin-top: 40px; 
+        color: #6f1e4e;
+        font-family: $mainFontRegular;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    &__info-title {
+        color: $accent;
+        font-family: $OpenSans;
+        font-weight: bold;
+    }
+
+    &__info-text {
+        color: #414042;
+
+    }
+
+    &__logo {
+        // box model
+        padding: 40px 0;
+    }
+
+    &__copyright {
+        padding-top: 80px;
+        padding-bottom: 40px;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-family: $OpenSans;
+        color: #414042;
+
+        b {
+            color: $accent;
+            font-family: $OpenSans;
+            font-weight: 600;
+        }
     }
 }

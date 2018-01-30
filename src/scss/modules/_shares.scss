@@ -1,11 +1,11 @@
 .shares {
+    position: relative;
     // padding-left: 25px;
     margin-top: 40px;
     background-color: #9b6eae;
     
     &__content {
-        transform: translateY(30px)
-        
+        transform: translateY(30px);
     }
 
     &__offers {

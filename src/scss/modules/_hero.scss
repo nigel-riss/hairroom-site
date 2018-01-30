@@ -17,7 +17,11 @@
         z-index: 4;
     }
 
-    &__wrapper {
+    &__header {
+        padding-left: 25px;
+    }
+
+    &__content {
         // box model
         padding-left: 25px;
     }
