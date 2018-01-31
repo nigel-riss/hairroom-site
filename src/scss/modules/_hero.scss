@@ -5,10 +5,12 @@
     // box model
     height: 105vh;
 
+    @include atSmall {
+        height: 110vh;
+    }
+
     // visual
     background: rgba($accent, 0.9);
-    // background-image: url("./img/bg-hero.png");
-
     &::after {
         content: url("./img/hr.png");
         position: absolute;

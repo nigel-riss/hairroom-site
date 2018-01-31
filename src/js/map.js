@@ -20,14 +20,25 @@ window.initMap = function() {
         title: "HairRoom"
     })
     var content = `
-        <div class="">
-            <img src="./img/hr_logo_map.png" alt="logo map"/>
+        <div class="map-label__infowindow">
+            <img src="./img/hair_room_logo_map.png" alt="logo map"/>
+            <div class="map-label__infowindow-content">
+                <p class="map-label__infowindow-title">Hair Room</p>
+                <p class="map-label__infowindow-description">
+                    Салон красоты
+                </p>
+                <p class="map-label__infowindow-address">
+                    ул. Иванникова, д.12
+                </p>
+            </div>
         </div>
         
     `
     var infowindow = new google.maps.InfoWindow({
         content: content
     })
+
+    infowindow.open(map, marker);
     var icon = "./img/marker.svg";
     marker.setIcon(icon);
 }

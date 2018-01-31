@@ -23,7 +23,7 @@
     &--online-record {
         padding: 10px 80px;
         @include centerer-x;
-        bottom: 25px;
+        bottom: 10px;
         z-index: 3;
         border-color: $secondary; 
     }

@@ -32,4 +32,62 @@
             
         }
     }
+
+    &__infowindow {
+        display: flex;
+        padding: 10px 20px;
+    }
+
+    &__infowindow-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-left: 30px;
+    }
+
+    &__infowindow-title {
+        // box model
+        margin: 0;
+        margin-bottom: 5px;
+        text-align: center;
+        
+        // typography
+        font-family: $mainFontLight;
+        font-size: 0.875rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #64080f;
+
+    }
+
+    &__infowindow-description {
+        // box model
+        margin: 0;
+        margin-bottom: 5px;
+        text-align: center;
+
+        // typography
+        font-family: $OpenSans;
+        color: #414042;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: bold;
+
+        
+    }
+    &__infowindow-address {
+        margin: 0;
+        
+        // typography
+        font-family: $OpenSans;
+        color: #414042;
+        font-weight: bold;
+        font-size: 0.9em;
+    }
+
+
+}
+.gm-style-iw + div {
+    display: none;
 }
