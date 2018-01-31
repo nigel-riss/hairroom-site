@@ -12,14 +12,12 @@
     }
 
     &__title {
-        // font-family: $mainFontExtarBlack;
         font-size: 1.325rem;
         margin: 0 ;
     }
 
     &__subscribe {
         background-image: url("./img/gallery_subscribe_bg.png");
-        background-size: cover;
         padding: 60px 30px;
         padding-bottom: 0;
         display: flex;
