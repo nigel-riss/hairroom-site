@@ -5,8 +5,11 @@
     background-color: #e0c1de;
     background-image: url("./img/pattern.png");
     background-size: cover;
-
-
+    
+    @include atDesktop {
+        padding-left: 115px;
+        padding-bottom: 400px;
+    }
     &::before {
         content: url("./img/hr.png");
         width: 225px;
@@ -15,12 +18,52 @@
         right: 25px;
         z-index: 0;
     }
-    // &__card {
+
+    &__wrapper {
+        position: relative !important;
+        width: 100%;
+        height: 450px;
+        border-radius: 5px;
+
+        &:hover .services__card-img::after {
+            transition: 0.3s ease-in-out all;
+            opacity: 0.7;   
+           
+        }
+
+        // &:hover .button__wrapper {
+        //     transition: 0.3s ease-in-out;
+        //     visibility: visible;
         // }
-        
+
+        &:hover {
+            transition: 0.3s ease-in-out all;
+            box-shadow: -39px 44px 0px -21px rgba(152,67,128,0.56);
+            
+            @include atDesktop {
+                transform: translate(30px);
+                transform: scale(1.1);
+            }
+        }
+    }
+
+
+    &__cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
         &__card {
+            transition: 0.3s ease-in-out;
+            
+            @include atDesktop {
+                margin-bottom: 30px;
+            }
 
             &-description {
+
+                visibility: hidden;
                 text-align: right;
                 color: #720a47;
                 text-transform: uppercase;
@@ -31,31 +74,81 @@
                 font-size: 0.875rem;
                 font-weight: 600;
                 line-height: 20px;
-
             }
 
             &-title {
                 color: #8a185a;
                 text-transform: uppercase;
                 letter-spacing: 1px;
+                margin: 30px 0;
             }
             
             &-img {
                 position: relative;
                 width: 300px;
-                height: 400px;
+                height: 450px;
                 display: inline-block;
-                margin-bottom: 30px;
-                border-radius: 5px;
-                background-image: url("./img/card1.png");
-                background-position: 35% 0;
+                background-image: url("./img/hair_bg.png");
                 background-size: cover;
+                box-shadow: 0px 23px 51px -9px rgba(165,68,122,0.96);
+                border-radius: 5px;
+                z-index: 0;
+
+                @include atDesktop {
+                    width: 325px;
+                }
+                
+
+                &--bg2 {
+                    background-image: url("./img/card1.png");
+                }
+
+                &--bg3 {
+                    background-image: url("./img/hair_bg2.png");
+                }
+
+                &--bg4 {
+                    background-image: url("./img/hair_bg3.png");
+                    background-position: 0 20%;
+                }
+
+                &--bg5 {
+                    background-image: url("./img/hair_bg4.png");
+                    background-position: 0 20%;                    
+                }
+                
+                &::after {
+                    background: linear-gradient(to right, #ae2370, #ffcee9);
+                    opacity: 0;
+                    content: "";
+                    display: block;
+                    height: 100%;
+                    left: 0;
+                    position: absolute;
+                    top: 0;
+                    width: 100%;
+                    border-radius: 5px;
+                }
+                img {
+                    position: absolute;
+                    z-index: 1;
+                    width: 100%;
+                    height: 100%;
+                }
             }
+
 
             &-content {
                 height: 100%;
                 width: 100%;
-                position: relative;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+
+                &--centerY {
+                    position: relative;
+                }
             }
     }
 }

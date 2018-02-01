@@ -5,6 +5,7 @@
     text-transform: uppercase;
     color: $white;
     display: inline-block;
+    cursor: pointer;
     
     &__wrapper {
         position: relative;
@@ -13,11 +14,20 @@
         justify-content: center;
         align-items: center;
         padding-bottom: 80px;
+        visibility: hidden;
 
         &--centerX {
             position: absolute;
-            bottom: -60px;
-            @include centerer-x;
+            right: 10px;
+            bottom: -70px;
+            // @include centerer;
+        }
+
+
+        &--inline {
+            @include atDesktop {
+                flex-direction: row;
+            }
         }
     }
     &--online-record {
@@ -26,9 +36,41 @@
         bottom: 10px;
         z-index: 3;
         border-color: $secondary; 
+        transition: 0.3s ease-in-out;
+
+        @include atDesktop {
+            position: static;
+            transform: translate(0);
+        }
+
+        &:hover {
+            background-color: #fff;
+            color: #7c1651;
+        }
     }
 
-    &--pink {
+    &--franschize {
+        display: none;
+        margin-left: 45px;
+        border-color: #85286d;
+        border-width: 5px;
+        padding: 7px 40px;
+        color: #85286d !important;
+        transition: 0.3s ease-in-out all;
+        letter-spacing: 5px;
+
+        @include atDesktop {
+            display: block;
+            padding: 7px 20px;
+        }
+
+        &:hover {
+            background-color: #85286d;
+            color: #fff !important;
+        }
+    }
+
+&--pink {
         width: 240px;
         padding: 10px 0;
         text-align: center;
@@ -39,6 +81,11 @@
         background-color: $accent;
         border: none;
         box-shadow: 0px 20px 58px -11px rgba(0,0,0,0.8);
+        
+        @include atDesktop {
+            margin-bottom: 0;
+            // margin-right: 40px;
+        }
     }
 
     &--ghost {
@@ -49,6 +96,17 @@
         font-weight: 600;
         background-color: rgba(#f4cfe4, 0.3);
         border-color: $accent;
+    }
+
+    &--card {
+        transition: 0.3s ease-in-out all;
+        margin-bottom: 30px;
+        width: 140px;
+
+        &:hover {
+            background-color: #fff;
+            color: #c8368d;
+        }
     }
 
     &--offers {

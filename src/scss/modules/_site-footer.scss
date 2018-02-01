@@ -59,6 +59,14 @@
     &__logo {
         // box model
         padding: 40px 0;
+        margin-bottom: 40px;
+        width: 248px;
+        height: 31px;
+
+        img {
+            width: 100%;
+
+        }
     }
 
     &__copyright {

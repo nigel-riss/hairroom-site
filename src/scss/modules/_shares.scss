@@ -3,9 +3,21 @@
     // padding-left: 25px;
     margin-top: 40px;
     background-color: #9b6eae;
+
+    @include atDesktop {
+        background-color: #fff;
+        transform: translateY(-450px)
+    }
     
     &__content {
         transform: translateY(30px);
+
+        @include atDesktop {
+            display: flex;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
     }
 
     &__offers {
@@ -45,14 +57,24 @@
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
 
+        @include atDesktop {
+            width: 350px;
+            height: 250px;
+        }
+
         &--offers {
             background-image: url("./img/offers.png");
+            background-size: cover;
             background-color: #fff;
+            margin-right: 50px;
         }
         
         &--loyality {
             background-image: url("./img/loyality.png");
+            background-size: cover;
             background-color: #54adc3;
+            margin-right: 50px;
+            
         }
     }
 }

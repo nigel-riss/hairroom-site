@@ -21,7 +21,7 @@ window.initMap = function() {
     })
     var content = `
         <div class="map-label__infowindow">
-            <img src="./img/hair_room_logo_map.png" alt="logo map"/>
+            <div class="map-label__logo"><img src="./img/hr_logo_black.svg" alt="logo map"/></div>
             <div class="map-label__infowindow-content">
                 <p class="map-label__infowindow-title">Hair Room</p>
                 <p class="map-label__infowindow-description">

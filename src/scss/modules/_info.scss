@@ -3,9 +3,10 @@
     &__list {
         // box model
         padding-top: 15px;
-        padding-left: 15px;
+        padding-left: 2%;
         margin: 0;
         list-style: none;
+
         li {
             // typography
             color: $copy;
@@ -18,6 +19,16 @@
             // typography
             font-weight: 600;
             font-size: 1.125rem;
+            text-align: center;
+
+            @include atDesktop {
+                font-size: 1.75rem;
+                font-weight: 500;
+            }
+
+            @include atDesktopLarge {
+                font-size: 2rem;
+            }
         }
         a {
             // typography
@@ -27,10 +38,19 @@
             font-size: 1.5rem;
             display: flex;
             align-items: center;
+
+
+            @include atDesktop {
+                font-size: 2.75rem;
+            }
+            
+            @include atDesktopLarge {
+                font-size: 3.5rem;
+            }
             span {
                 //typography
                 color: $accent;
-                margin-bottom: 10px;
+                margin-bottom: 20px;
             }
         }
     }

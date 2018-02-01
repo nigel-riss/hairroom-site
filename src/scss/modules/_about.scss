@@ -1,24 +1,51 @@
 .about {
     // height: 100vh;
-    
+    // position: relative;
+
+    @include atDesktop {
+        display: flex;
+        margin-bottom: 100px;
+    }
 
     &__header {
         padding-top: 20px;
         padding-left: 25px;
+
+        @include atDesktop {
+            padding-left: 80px;
+        }
     }
 
     &__board {
         position: relative;
         background-image: url("./img/about-bg-main.png");
         background-repeat: no-repeat;
+    
+
+        @include atTabletsPortrait {
+            background-size: cover;
+            background-position: 0 -300px;
+            box-shadow: 0px 64px 58px -30px rgba(195,161,190,0.75);
+        }
     }
 
     &__img {
-        position: relative;
-        // background-image: url("./img/about-bg-main.png");
-        background-image: url("./img/about-bg.png");
-        background-size: cover;
-        height: 220px;
+        z-index: 1;
+        width: 100%;
+
+        @include atDesktop {
+           z-index: 1;
+           margin-left: 83px;
+           margin-bottom: 30px
+        }
+
+        img {
+            width: 100%;
+
+            @include atDesktop {
+                max-width: 861px;
+            }
+        }
     }
 
     &__title {
@@ -27,10 +54,21 @@
         font-size: 1.33rem;
         margin-top: 0;
         width: 275px;
+
+        @include atDesktop {
+            font-size: 2.75rem;
+            width: auto;
+        }
     }
 
     &__copy {
         color: #010101;
     }
 
+
+    &__content {
+        @include atDesktop {
+            padding-left: 80px;
+        }
+    }
 }

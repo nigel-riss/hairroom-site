@@ -2,4 +2,54 @@
     display: flex;
     padding-bottom: 50px;
     padding-left: 25px;
+
+    @include atDesktop {
+        padding-left: 4.5%;
+        justify-content: space-between;
+        max-width: 88%;
+        align-items: center;
+    }
+
+    &__wrapper {
+
+        @include atDesktop {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 50px;
+        }
+    }
+
+    &__slogan {
+        display: none;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 700;
+
+        span {
+            font-size: 1.125rem;
+            display: block;
+            padding-top: 5px;
+            letter-spacing: 6px;
+            
+        }
+
+        @include atDesktopLarge {
+            display: block;
+            position: absolute;
+            right: 0;
+        }
+    }
+
+    &__link {
+        font-size: 0.75rem;
+        padding-bottom: 5px;
+        border: 2px solid #611336;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        font-family: $OpenSans;
+        color: #611336;
+        text-decoration: none;
+        
+    }
 }

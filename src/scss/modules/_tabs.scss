@@ -1,6 +1,10 @@
 .tabs {
     padding-left: 25px;
 
+    @include atDesktop {
+        padding-left: 0;
+    }
+    
     &__list {
         list-style: none;
         padding-left: 0;
@@ -31,6 +35,10 @@
     &__content {
         padding-bottom: 80px;
         display: none;
+
+        @include atDesktop {
+            width: 460px;
+        }
     }
 
     &__current {

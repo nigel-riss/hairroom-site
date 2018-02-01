@@ -1,12 +1,18 @@
 .price {
     margin-left: 25px;
-    background-color: #dabcf2;
+    // background-color: #dabcf2;
     border-radius: 5px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 
-    // background-image: url("./img/price-bg.png");
-
+    @include atDesktop {
+        margin-left: 246px;
+        background-color: none;
+        transform: translateY(-250px);
+        box-shadow: -43px 53px 63px -44px rgba(0,0,0,0.72);
+        background-image: url("./img/price_bg.jpg");
+        background-repeat: no-repeat;
+    }
     &__header {
         padding-top: 40px;
         padding-left: 20px;
@@ -15,6 +21,42 @@
     &__content {
         padding-left: 25px;
         padding-bottom: 80px;
+
+        @include atDesktop {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__group {
+        width: 33.3%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        &--big {
+            @include atDesktop {
+                width: 66.6%;
+            }
+        }
+    }
+
+    &-inner__column {
+        
+        &--right {
+            width: auto !important;
+        }
+
+        &--pd {
+            padding-left: 120px;
+        }
+        @include atDesktop {
+            width: 40%;
+        }
+    }
+
+    &__conteiner {
+        display: flex;
+        flex-wrap: wrap;
     }
 
     &__group-title {
