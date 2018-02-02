@@ -2,19 +2,32 @@
     // height: 100vh;
     background-color: #e6a9d2;
     padding-top: 100px;
+    padding-left: 25px;
+    padding-right: 25px;
+    
+
+    @include atTabletsPortrait {
+        display: flex;
+        padding-left: 55px;
+    }
     
     &__header {
         margin-top: 50px;
         border-top-color: #721d50;
         border-top-style: solid;
         border-top-width: 2px;
-        margin-left: 25px;
         
+        @include atTabletsPortrait {
+            width: 66%;
+        }
     }
 
     &__content {
-        padding-left: 25px;
         width: 325px;
+
+        @include atTabletsPortrait {
+            padding-top: 150px;
+        }
     }
 
     &__title {
@@ -77,6 +90,10 @@
         letter-spacing: 2px;
         font-family: $OpenSans;
         color: #414042;
+
+        @include atTabletsPortrait {
+            display: none;
+        }
 
         b {
             color: $accent;

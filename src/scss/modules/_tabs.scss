@@ -1,6 +1,10 @@
 .tabs {
     padding-left: 25px;
 
+    @include atTabletsPortrait {
+        padding-left: 0;
+    }
+
     @include atDesktop {
         padding-left: 0;
     }
@@ -21,9 +25,11 @@
 
     &__link {
         font-size: 1.125rem;
+        font-family: $OpenSans;
         text-transform: uppercase;
         color: #898989;
         line-height: 15px;
+        letter-spacing: 3px;
         font-weight: 300;
         transition: 0.3s ease-in-out;
         display: inherit;
@@ -33,7 +39,7 @@
     }
 
     &__content {
-        padding-bottom: 80px;
+        padding-bottom: 45px;
         display: none;
 
         @include atDesktop {

@@ -33,9 +33,9 @@
         }
         
         &--left {
-            // position: absolute;
-            // left: -60px;
-            // top: 110px;
+            position: absolute;
+            left: -50px;
+            top: 100px;
             display: inline-block;
             margin: 0;
             transform: rotate(-90deg);
@@ -43,10 +43,10 @@
             font-size: 0.875rem;
             text-transform: uppercase;
             letter-spacing: 1px;
-            visibility: hidden !important;
+            // visibility: hidden !important;
         }
         &--right {
-            display: inline-block;
+            display: none;
             position: absolute;
             right: -70px;
             top: 100px;
@@ -55,6 +55,12 @@
             color: #ffffff;
             text-transform: uppercase;
             letter-spacing: 2px;
+            z-index: 2;
+
+            @include atTabletsPortrait {
+                top: 150px;
+                display: inline-block;
+            }
 
             @include atDesktop {
                 font-size: 1.875rem;
@@ -71,7 +77,8 @@
         text-transform: uppercase;
         font-size: 3.33rem;
         margin: 0;
-        margin-bottom: 40px;
+        padding-bottom: 30px;
         font-weight: bold;
+
     }
 }

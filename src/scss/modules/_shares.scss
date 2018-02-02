@@ -1,7 +1,7 @@
 .shares {
     position: relative;
     // padding-left: 25px;
-    margin-top: 40px;
+    // margin-top: 40px;
     background-color: #9b6eae;
 
     @include atDesktop {
@@ -10,7 +10,7 @@
     }
     
     &__content {
-        transform: translateY(30px);
+        transform: translateY(36px);
 
         @include atDesktop {
             display: flex;
@@ -25,6 +25,8 @@
         color: #981864;
         text-transform: uppercase;
         font-weight: 500;
+        font-family: $OpenSans;
+        font-size: 0.75rem;
 
         &--white {
             color: white;
@@ -41,6 +43,7 @@
         font-weight: bold;
         text-align: left;
         width: 135px;
+        margin-bottom: 30px;
 
         &--white {
             color: white;
@@ -48,14 +51,15 @@
     }
 
     &__card {
-        width: 300px;
-        height: 200px;
+        width: 328px;
+        height: 206px;
         background-color: #fff;
         padding-top: 10px;
         margin-bottom: 10px;
         border-radius: 5px;
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
+        
 
         @include atDesktop {
             width: 350px;
@@ -63,14 +67,14 @@
         }
 
         &--offers {
-            background-image: url("./img/offers.png");
+            // background-image: url("./img/offers.png");
             background-size: cover;
             background-color: #fff;
             margin-right: 50px;
         }
         
         &--loyality {
-            background-image: url("./img/loyality.png");
+            // background-image: url("./img/loyality.png");
             background-size: cover;
             background-color: #54adc3;
             margin-right: 50px;

@@ -11,6 +11,10 @@
         padding-top: 20px;
         padding-left: 25px;
 
+        @include atTabletsPortrait {
+            padding-left: 75px;
+        }
+        
         @include atDesktop {
             padding-left: 80px;
         }
@@ -20,10 +24,11 @@
         position: relative;
         background-image: url("./img/about-bg-main.png");
         background-repeat: no-repeat;
-    
+        background-size: cover;
+        background-position: 0 40%;
 
         @include atTabletsPortrait {
-            background-size: cover;
+            margin-left: 55px;
             background-position: 0 -300px;
             box-shadow: 0px 64px 58px -30px rgba(195,161,190,0.75);
         }
@@ -32,6 +37,13 @@
     &__img {
         z-index: 1;
         width: 100%;
+        height: 100%;
+
+        @include atTabletsPortrait {
+            width: 88%;
+            height: 390px;
+            box-shadow: 0px 15px 39px 0px rgba(0,0,0,0.2);
+        }
 
         @include atDesktop {
            z-index: 1;
@@ -41,6 +53,7 @@
 
         img {
             width: 100%;
+            height: 100%;
 
             @include atDesktop {
                 max-width: 861px;
@@ -54,6 +67,7 @@
         font-size: 1.33rem;
         margin-top: 0;
         width: 275px;
+        margin-bottom: 25px;
 
         @include atDesktop {
             font-size: 2.75rem;
@@ -63,10 +77,18 @@
 
     &__copy {
         color: #010101;
+        font-family: $OpenSans;
+        line-height: 30px;
+        width: 308px;
     }
 
 
     &__content {
+
+        @include atTabletsPortrait {
+            padding-left: 75px;
+        }
+
         @include atDesktop {
             padding-left: 80px;
         }

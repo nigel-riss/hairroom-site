@@ -12,7 +12,7 @@
     }
 }
 
-@mixin atTabletsLanscape {
+@mixin atTabletsLandscape {
     @media(min-width: 900px) {
         @content;
     }

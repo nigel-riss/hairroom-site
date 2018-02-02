@@ -7,11 +7,11 @@
     width: 86px;
     padding: 15px;
     box-shadow: 0px 25px 58px -11px rgba(0,0,0,0.24);
-    z-index: 5;
+    // z-index: 5;
 
-    @include atDesktop {
-        height: 188px;
-        width: 120px;
+    @include atTabletsPortrait {
+        height: 144px;
+        width: 144px;
     }
 
     @include atDesktopLarge {

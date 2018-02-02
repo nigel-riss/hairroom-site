@@ -1,17 +1,23 @@
 .services {
     position: relative;
     padding-left: 25px;
-    padding-bottom: 25px;
+    padding-bottom: 100px;
     background-color: #e0c1de;
-    background-image: url("./img/pattern.png");
+    // background-image: url("./img/pattern.png");
     background-size: cover;
     
+    @include atTabletsPortrait {
+        padding-bottom: 250px;
+        padding-left: 55px;
+    }
+
     @include atDesktop {
         padding-left: 115px;
         padding-bottom: 400px;
     }
+
     &::before {
-        content: url("./img/hr.png");
+        // content: url("./img/hr.png");
         width: 225px;
         position: absolute;
         bottom: -50px;
@@ -27,14 +33,13 @@
 
         &:hover .services__card-img::after {
             transition: 0.3s ease-in-out all;
-            opacity: 0.7;   
+            opacity: 0.7;
            
         }
 
-        // &:hover .button__wrapper {
-        //     transition: 0.3s ease-in-out;
-        //     visibility: visible;
-        // }
+        &:hover .services__card-content {
+            display: block;
+        }
 
         &:hover {
             transition: 0.3s ease-in-out all;
@@ -50,45 +55,56 @@
 
     &__cards {
         display: flex;
-        flex-wrap: wrap;
+        // flex-wrap: wrap;
         justify-content: space-between;
+        align-items: center;
+
+        @include atTabletsPortrait {
+            flex-wrap: nowrap;
+        }
     }
 
         &__card {
             transition: 0.3s ease-in-out;
+            margin-right: 25px;
             
+            @include atTabletsPortrait {
+            }
+
             @include atDesktop {
                 margin-bottom: 30px;
             }
 
             &-description {
-
-                visibility: hidden;
                 text-align: right;
                 color: #720a47;
                 text-transform: uppercase;
                 width: 155px;
+                font-family: $OpenSans;
                 position: absolute;
-                top: 150px;
+                top: 195px;
                 right: 30px;
                 font-size: 0.875rem;
                 font-weight: 600;
                 line-height: 20px;
-            }
+        }
 
             &-title {
                 color: #8a185a;
                 text-transform: uppercase;
+                padding-left: 15px;
                 letter-spacing: 1px;
                 margin: 30px 0;
+                margin-top: 0;
+                font-weight: bold;
             }
             
-            &-img {
+        &-img {
                 position: relative;
                 width: 300px;
                 height: 450px;
                 display: inline-block;
-                background-image: url("./img/hair_bg.png");
+                // background-image: url("./img/hair_bg.png");
                 background-size: cover;
                 box-shadow: 0px 23px 51px -9px rgba(165,68,122,0.96);
                 border-radius: 5px;
@@ -100,21 +116,21 @@
                 
 
                 &--bg2 {
-                    background-image: url("./img/card1.png");
+                    // background-image: url("./img/card1.png");
                 }
 
                 &--bg3 {
-                    background-image: url("./img/hair_bg2.png");
+                    // background-image: url("./img/hair_bg2.png");
                 }
 
                 &--bg4 {
-                    background-image: url("./img/hair_bg3.png");
-                    background-position: 0 20%;
+                    // background-image: url("./img/hair_bg3.png");
+                    // background-position: 0 20%;
                 }
 
                 &--bg5 {
-                    background-image: url("./img/hair_bg4.png");
-                    background-position: 0 20%;                    
+                    // background-image: url("./img/hair_bg4.png");
+                    // background-position: 0 20%;                    
                 }
                 
                 &::after {
@@ -141,10 +157,15 @@
             &-content {
                 height: 100%;
                 width: 100%;
+                display: none;
+                transition: 0.3s ease-in-out;
+                z-index: 1;
                 position: absolute;
                 top: 0;
+                bottom: 0;
                 left: 0;
-                z-index: 1;
+                right: 0;
+
 
                 &--centerY {
                     position: relative;

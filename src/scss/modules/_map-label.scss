@@ -14,8 +14,13 @@
     padding-bottom: 30px;
 
     // visual
-    background-color: rgba($accent, 0.8);
+    // background-color: rgba($accent, 0.8);
+    background-image: url("./img/place.png");
     border-radius: 10px;
+
+    @include atTabletsPortrait {
+        width: 55%;
+    }
 
     &__logo {
         width: 86px;
@@ -30,6 +35,7 @@
     &__info-title {
         color: #fff;
         font-size: 0.75rem;
+        font-family: $OpenSans;
     }
     &__info-text {
         color: #fff;

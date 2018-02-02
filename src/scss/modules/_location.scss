@@ -3,5 +3,13 @@
 
     &__map {
         height: 100vh;
+
+        @include atTabletsPortrait {
+            width: 95%;
+        }
+
+        @include atDesktop {
+            width: 100%;
+        }
     }
 }

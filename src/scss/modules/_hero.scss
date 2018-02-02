@@ -1,7 +1,6 @@
 .hero {
     // positioning
     position: relative;
-
     // box model
     height: 105vh;
 
@@ -11,10 +10,10 @@
 
     @include atTabletsPortrait {
         height: auto;
-        width: 88%;
     }
-
+    
     @include atDesktop {
+        width: 88%;
         height: 700px;
         padding-left: 4.5%;
         margin-bottom: 200px;
@@ -23,16 +22,28 @@
 
     // visual
     background: rgba($accent, 0.9);
+    background-image: url("./img/hero_bg.png");
 
     &::after {
-        content: url("./img/hr.png");
+        // content: url("./img/hr.png");
         position: absolute;
         bottom: -75px;
         @include centerer-x;
         z-index: 4;
 
+        @include atTabletsPortrait {
+            // content: url("./img/hr_desktop.png");
+            bottom: -300px;
+            z-index: 1;
+            left: 50%;
+        }
+        
+        @include atTabletsLandscape {
+            left: 60%;
+        }
+
         @include atDesktop {
-            content: url("./img/hr_desktop.png");
+            // content: url("./img/hr_desktop.png");
             left: 91%;
             z-index: -1;
             bottom: -150px;
@@ -40,8 +51,15 @@
     }
 
     &__header {
+        position: relative;
+        padding-top: 40px;
         padding-left: 25px;
 
+        @include atTabletsPortrait {
+            z-index: 2;
+            padding-left: 55px;
+        }
+        
         @include atDesktop {
             padding-left: 0;
             display: block;
@@ -54,6 +72,10 @@
         // box model
         padding-left: 25px;
 
+        @include atTabletsPortrait {
+            padding-left: 55px;
+        }
+
         @include atDesktop {
             padding-left: 0;
             position: relative;
@@ -64,7 +86,6 @@
         // box model
         display: inline-block;
         margin-top: 0;
-        padding-top: 40px;
         padding-left: 20px;
         text-transform: uppercase;
         font-size: 1.75rem;
@@ -74,6 +95,12 @@
         color: $white;
         font-family: $mainFont;
 
+        @include atTabletsPortrait {
+            font-size: 2.75rem;
+            margin-bottom: 60px;
+            padding-left: 0;
+        }
+
         @include atDesktop {
             padding-left: 0;
             font-size: 4rem;
@@ -82,13 +109,22 @@
     }
 
     &__copy {
+        position: relative;
         color: #000;
         font-family: $OpenSans;
         font-weight: 600;
         font-size: 0.9rem;
         line-height: 30px;
         padding-left: 20px;
+        margin-bottom: 0;
         width: 300px;
+
+        @include atTabletsPortrait {
+            margin-top: 0;
+            margin-bottom: 60px;
+            z-index: 2;
+            padding-left: 0;
+        }
 
         @include atDesktop {
             padding-left: 0;
@@ -100,13 +136,37 @@
 
     &__img {
         position: absolute;
-        bottom: -10px;
-        left: -50px;
-        width: 300px;
+        bottom: -65px;
+        left: 0px;
+        width: 325px;
+
+        @include atTabletsPortrait {
+            width: 750px;
+            bottom: -5px;
+            z-index: 1;
+        }
+
+        @include atTabletsLandscape {
+            width: 825px;
+            left: 10px;
+
+        }
 
         @include atDesktop {
-            bottom: -90px;
+            width: auto;
+            bottom: -50px;
             left: 20%;
+            z-index: 0;
+        }
+
+        source {
+            width: 100%;
+            height: 100%;
+
+            @include atDesktop {
+                width: auto;
+                height: auto;
+            }
         }
         img {
             width: 100%;
