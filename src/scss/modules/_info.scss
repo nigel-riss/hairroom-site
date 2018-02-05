@@ -7,6 +7,10 @@
         margin: 0;
         list-style: none;
 
+        @include atTabletsPortrait {
+            padding-top: 25px;
+        }
+
         li {
             // typography
             color: $copy;
@@ -17,13 +21,12 @@
             margin: 0;
     
             // typography
-            font-weight: 600;
-            font-size: 0.7rem;
+            font-size: 0.75rem;
             text-align: center;
             text-transform: uppercase;
             
             @include atTabletsPortrait {
-                font-size: 1.5rem;
+                font-size: 1.1rem;
             }
 
             @include atDesktop {
@@ -43,10 +46,11 @@
             font-size: 1.6rem;
             display: flex;
             align-items: center;
+            // font-family: $mainFontRegular;
 
             
             @include atTabletsPortrait {
-                font-size: 3rem;
+                font-size: 2.25rem;
             }
 
             @include atDesktop {
@@ -61,6 +65,10 @@
                 color: $accent;
                 margin: 0 2px;
                 margin-bottom: 12px;
+
+                @include atTabletsPortrait {
+                    margin-bottom: 15px;
+                }
             }
         }
     }

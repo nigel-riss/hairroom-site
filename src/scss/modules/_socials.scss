@@ -10,13 +10,21 @@
         border-right: none;
         border-bottom: none;
         
+        @include atTabletsPortrait {
+            display: block;
+            position: absolute;
+            right: 20px;
+            bottom: 65px;
+            z-index: 1;
+        }
+
         @include atDesktop {
             display: block;
             position: absolute;
             bottom: 65px;
             right: 0;
             padding: 20px;
-            padding-right: 14%;
+            padding-right: 2.5%;
             padding-left: 80px;
         }
         li {

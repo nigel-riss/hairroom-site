@@ -12,6 +12,7 @@
     padding: 0 15px;
     padding-top: 30px;
     padding-bottom: 30px;
+    box-shadow: 25px 0px 21px -11px rgba(53,7,34,0.74);
 
     // visual
     // background-color: rgba($accent, 0.8);
@@ -35,7 +36,9 @@
     &__info-title {
         color: #fff;
         font-size: 0.75rem;
-        font-family: $OpenSans;
+        font-family: $OpenSansBold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
     }
     &__info-text {
         color: #fff;

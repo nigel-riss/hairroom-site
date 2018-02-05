@@ -2,7 +2,12 @@
     position: relative;
     // padding-left: 25px;
     // margin-top: 40px;
-    background-color: #9b6eae;
+    background: linear-gradient(to right, #d16bb3, #8f6aa5);
+    
+    @include atTabletsPortrait {
+        background: none;
+        display: none;
+    }
 
     @include atDesktop {
         background-color: #fff;
@@ -11,6 +16,14 @@
     
     &__content {
         transform: translateY(36px);
+
+        @include atTabletsPortrait {
+            transform: none;
+            display: flex;
+            position: absolute;
+            right: 30px;
+            top: 100%;
+        }
 
         @include atDesktop {
             display: flex;
@@ -27,6 +40,7 @@
         font-weight: 500;
         font-family: $OpenSans;
         font-size: 0.75rem;
+        letter-spacing: 4px;
 
         &--white {
             color: white;
@@ -67,14 +81,14 @@
         }
 
         &--offers {
-            // background-image: url("./img/offers.png");
+            background-image: url("./img/offers.jpg");
             background-size: cover;
             background-color: #fff;
             margin-right: 50px;
         }
         
         &--loyality {
-            // background-image: url("./img/loyality.png");
+            background-image: url("./img/loyality.jpg");
             background-size: cover;
             background-color: #54adc3;
             margin-right: 50px;

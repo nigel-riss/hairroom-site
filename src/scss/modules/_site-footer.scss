@@ -1,33 +1,49 @@
 .site-footer {
-    // height: 100vh;
-    background-color: #e6a9d2;
+    background: linear-gradient(to bottom, #e5a0cf, #f7dfef 50%);
     padding-top: 100px;
     padding-left: 25px;
-    padding-right: 25px;
     
 
     @include atTabletsPortrait {
         display: flex;
-        padding-left: 55px;
+        padding-top: 0;
+        background: linear-gradient(to bottom, #f2d2e7, #faeaf5);    
     }
-    
+
+    @include atDesktop {
+        padding-left: 83px;
+    }
+
     &__header {
         margin-top: 50px;
         border-top-color: #721d50;
         border-top-style: solid;
         border-top-width: 2px;
+        padding-right: 25px;
+        
         
         @include atTabletsPortrait {
             width: 66%;
+            margin-top: 0;
+            border: none;
         }
+    }
+
+    &__container {
+        padding-left: 25px;
+
+        @include atTabletsPortrait {
+            display: flex;
+            padding-top: 60px;
+            border-top: 2px solid #721d50;
+            width: 100%;
+            padding-bottom: 200px;
+        }
+
     }
 
     &__content {
         width: 325px;
-
-        @include atTabletsPortrait {
-            padding-top: 150px;
-        }
     }
 
     &__title {
@@ -44,7 +60,7 @@
     }
 
     &__description {
-        color: #964266;
+        color: $accent;
         line-height: 23px;
         font-family: $OpenSans;
     }
@@ -56,6 +72,10 @@
         font-weight: 500;
         text-transform: uppercase;
         letter-spacing: 1px;
+
+        @include atTabletsPortrait {
+            margin-top: 0;
+        }
     }
 
     &__info-title {
@@ -76,9 +96,12 @@
         width: 248px;
         height: 31px;
 
+        @include atTabletsPortrait {
+            padding: 0;
+        }
+
         img {
             width: 100%;
-
         }
     }
 

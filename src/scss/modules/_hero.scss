@@ -1,15 +1,18 @@
 .hero {
     // positioning
     position: relative;
+
     // box model
-    height: 105vh;
+    min-height: 100vh;
 
     @include atSmall {
         height: 120vh;
     }
 
     @include atTabletsPortrait {
-        height: auto;
+        min-height: 640px;
+        box-shadow: 0px 70px 30px -50px rgba(125,30,86,0.4);
+        z-index: 2;
     }
     
     @include atDesktop {
@@ -21,20 +24,19 @@
     }
 
     // visual
-    background: rgba($accent, 0.9);
-    background-image: url("./img/hero_bg.png");
+    background: linear-gradient(to right, rgba(198, 22, 141, 0.85), rgba(219, 102, 154, 0.9));
 
     &::after {
-        // content: url("./img/hr.png");
+        content: url("./img/hero_hr.png");
         position: absolute;
         bottom: -75px;
         @include centerer-x;
-        z-index: 4;
+        z-index: 0;
 
         @include atTabletsPortrait {
-            // content: url("./img/hr_desktop.png");
-            bottom: -300px;
-            z-index: 1;
+            // content: url("./img/hr_md.png");
+            // width: 0px;
+            bottom: -200px;
             left: 50%;
         }
         
@@ -43,16 +45,19 @@
         }
 
         @include atDesktop {
-            // content: url("./img/hr_desktop.png");
-            left: 91%;
+            content: url("./img/hero_hr-lg.png");
+            right: -10%;
             z-index: -1;
             bottom: -150px;
+            left: 100%;
+            transform: translate(0);
+            display: none;
         }
     }
 
     &__header {
         position: relative;
-        padding-top: 40px;
+        padding-top: 36px;
         padding-left: 25px;
 
         @include atTabletsPortrait {
@@ -71,7 +76,9 @@
     &__content {
         // box model
         padding-left: 25px;
-
+        display: flex;
+        flex-direction: column;
+        
         @include atTabletsPortrait {
             padding-left: 55px;
         }
@@ -89,7 +96,9 @@
         padding-left: 20px;
         text-transform: uppercase;
         font-size: 1.75rem;
-        text-shadow: 1px 1px #6a1444, 1px -1px #6a1444, -1px 1px #6a1444, -1px -1px #6a1444, 3px 3px 6px rgba(0,0,0,.5);
+        // text-shadow: 1px 1px #6a1444, 1px -1px #6a1444, -1px 1px #6a1444, -1px -1px #6a1444, 3px 3px 6px rgba(0,0,0,.5);
+        text-shadow: 0 0, 
+        -8.1px 5px 0 #6a1444;
         width: 200px;
         // typography
         color: $white;
@@ -118,6 +127,8 @@
         padding-left: 20px;
         margin-bottom: 0;
         width: 300px;
+        margin-top: 0;
+        margin-bottom: 20px;
 
         @include atTabletsPortrait {
             margin-top: 0;
@@ -137,26 +148,31 @@
     &__img {
         position: absolute;
         bottom: -65px;
-        left: 0px;
+        z-index: 1;
+        margin-left: -25px;
         width: 325px;
 
         @include atTabletsPortrait {
-            width: 750px;
             bottom: -5px;
             z-index: 1;
+            min-width: 675px;
+            left: 11%;
         }
 
         @include atTabletsLandscape {
-            width: 825px;
-            left: 10px;
-
+            min-width: 700px; 
+            left: 25%;
         }
 
         @include atDesktop {
             width: auto;
-            bottom: -50px;
+            bottom: -59px;
             left: 20%;
             z-index: 0;
+        }
+
+        @include atDesktopLarge {
+            left: 30%;
         }
 
         source {
@@ -171,7 +187,8 @@
         img {
             width: 100%;
             height: 100%;
-
+            object-fit: contain;
+            
             @include atDesktop {
                 width: auto;
                 height: auto;

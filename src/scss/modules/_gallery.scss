@@ -1,7 +1,13 @@
 .gallery {
     padding-top: 30px;
-    background-color: #f8f4f6;
     
+    @include atTabletsPortrait {
+        transform: translateY(-150px);
+    }
+
+    @include atDesktop {
+        transform: translateY(-300px);
+    }
 
     &__header {
         // background-image: url("./img/gallery_header_bg.png");
@@ -10,15 +16,34 @@
         padding-left: 25px;
         padding-top: 100px;
 
+        @include atTabletsPortrait {
+            background-image: url("./img/pattern.jpg");
+            background-size: cover;
+            background-position: 100% 30%;
+            background-repeat: no-repeat;
+        }
+
         @include atDesktop {
-            background-size: contain;
+            background-size: cover;
             padding-left: 115px;
+            padding-top: 150px;
+            background-image: url("./img/pattern.jpg");
+            background-position: 0 0;
+
         }
     }
 
     &__title {
         font-size: 1.325rem;
         margin: 0;
+        margin-bottom: 55px;
+
+        @include atTabletsPortrait {
+            margin-bottom: 0;
+            font-size: 2.66rem;
+            font-family: $mainFontBold;
+            padding-bottom: 30px;
+        }
 
         @include atDesktop {
             font-size: 3rem;
@@ -26,7 +51,8 @@
     }
 
     &__subscribe {
-        background-image: url("./img/gallery_subscribe_bg.png");
+        background-image: url("./img/gallery_subscribe_bg.jpg");
+        background-size: cover;
         padding: 60px 30px;
         padding-bottom: 0;
         display: flex;
@@ -34,6 +60,11 @@
         justify-content: center;
         align-items: center;
         text-align: center;
+        box-shadow: 0px 19px 35px -7px rgba(0,0,0,0.7);
+
+        @include atTabletsPortrait {
+            display: none;
+        }
     }
 
     &__slogan {
@@ -57,22 +88,34 @@
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
-        // background-image: url("./img/gallery_bg.png");
         background-size: cover;
-        padding-bottom: 100px;
+        background: linear-gradient(to right, #d15dac, #b7569e);
+
+        @include atTabletsPortrait {
+            padding-bottom: 0;
+        }
+    
     }
     &__img {
         width: 50%;
+        height: 226px;
         // height: 187px;
 
         @include atTabletsPortrait {
-            width: 25%;
+            width: 33.33%;
         }
 
-        @include atDesktop {
-            // width: 357x;
-            // height: 357px;
+        &--subscribe {
+            display: none;
 
+        @include atTabletsPortrait {
+                display: block;
+            }
+        }
+        
+
+        @include atDesktop {
+            width: 20%;
         }
         img {
             width: 100%;

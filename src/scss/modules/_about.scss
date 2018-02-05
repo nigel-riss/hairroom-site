@@ -1,10 +1,26 @@
 .about {
     // height: 100vh;
     // position: relative;
+    @include atTabletsPortrait {
+        background: linear-gradient(to bottom, #f7e9f4 10%, #fbf9fa);
+    }
 
     @include atDesktop {
         display: flex;
-        margin-bottom: 100px;
+        background-image: url("./img/pattern.jpg");
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(to bottom,rgba(255, 255, 255, 0.8),rgba(238, 195, 225, 0.8));
+        }
     }
 
     &__header {
@@ -13,6 +29,7 @@
 
         @include atTabletsPortrait {
             padding-left: 75px;
+            padding-top: 140px;
         }
         
         @include atDesktop {
@@ -20,44 +37,83 @@
         }
     }
 
+    &__background {
+        position: relative;
+        background-image: url("./img/pattern.jpg");
+
+        &::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to bottom,rgba(247, 233, 244, 0.15), rgba(234, 199, 226, 0.15));
+        }
+
+        @include atDesktop {
+            background-image: none;
+            position: static;
+            margin-left: -100px;
+            width: 100%;
+        }
+        
+    }
+
     &__board {
         position: relative;
-        background-image: url("./img/about-bg-main.png");
+        background-color: #e6dceb;
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: 0 40%;
-
+        background-position: 0 -100%;
+        
         @include atTabletsPortrait {
             margin-left: 55px;
-            background-position: 0 -300px;
+            // padding-top: 150px;
+            background-position: 0 0;
+            background-image: url("./img/about_bg-md.jpg");
+            background-size: cover;
             box-shadow: 0px 64px 58px -30px rgba(195,161,190,0.75);
+            transform: translateY(-100px);
+        }
+
+        @include atDesktop {
+            transform: none;
+            margin-left: 0;
+            padding-left: 100px;
+            margin-bottom: 60px;
         }
     }
 
     &__img {
+        position: relative;
         z-index: 1;
         width: 100%;
-        height: 100%;
+        height: 247px;
+        
+        box-shadow: 0px 14px 21px 0px rgba(0,0,0,0.2);
 
         @include atTabletsPortrait {
             width: 88%;
             height: 390px;
+            // margin-bottom: 100px;
+            // height: 390px;
             box-shadow: 0px 15px 39px 0px rgba(0,0,0,0.2);
         }
 
         @include atDesktop {
-           z-index: 1;
+        //    z-index: 3;
            margin-left: 83px;
-           margin-bottom: 30px
+           height: auto;
+           transform: translateY(-100px);
         }
 
         img {
             width: 100%;
             height: 100%;
-
-            @include atDesktop {
-                max-width: 861px;
-            }
+            object-fit: cover;
         }
     }
 
@@ -69,6 +125,13 @@
         width: 275px;
         margin-bottom: 25px;
 
+        @include atTabletsPortrait {
+            font-size: 2.66rem;
+            font-family: $mainFontExtarBlack;
+            min-width: 436px;
+            font-weight: normal;
+        }
+
         @include atDesktop {
             font-size: 2.75rem;
             width: auto;
@@ -79,7 +142,11 @@
         color: #010101;
         font-family: $OpenSans;
         line-height: 30px;
-        width: 308px;
+        min-width: 308px;
+
+        @include atTabletsPortrait {
+            max-width: 410px;
+        }
     }
 
 

@@ -17,7 +17,11 @@
 
     &__item {
         padding-right: 20px;
-    
+
+        @include atTabletsPortrait {
+            padding-right: 55px;
+        }
+
         &:last-child {
             padding-right: 0;
         }
@@ -33,6 +37,12 @@
         font-weight: 300;
         transition: 0.3s ease-in-out;
         display: inherit;
+
+
+        @include atTabletsPortrait {
+            letter-spacing: 7px;
+        }
+        
         &:hover {
             color: $title;
         }
@@ -51,7 +61,37 @@
         display: inherit;
 
         a {
+            position: relative;
             color: $accent;
+
+            &::before {
+                // positioning
+                position: absolute;
+                height: 2px;
+                bottom: -10px;
+                left: 0;
+    
+                // box model
+                content: '';
+                width: 100%;
+    
+                // visual
+                visibility: hidden;
+                background-color: $accent;
+                transform: scaleX(0);
+                transition: 0.3s ease-in-out all 0s;
+            }
+    
+            &:hover,&:active {
+                // typography
+                color: $accent;
+    
+                &::before {
+                    // visual
+                    visibility: visible;
+                    transform: scaleX(1);
+                }
+            }
         }
     }
 }

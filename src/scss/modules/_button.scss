@@ -30,6 +30,12 @@
 
 
         &--inline {
+
+            @include atTabletsPortrait {
+                padding-left: 75px;
+                justify-content: flex-start;
+            }
+
             @include atDesktop {
                 flex-direction: row;
             }
@@ -46,26 +52,30 @@
         z-index: 3;
         bottom: 10px;
         transition: 0.3s ease-in-out;
-        @include centerer-x;
-        display: inline-block;
-        vertical-align: middle;
         line-height: 2;
         font-family: $OpenSans;
         background-color: rgba(237, 99, 182, 0.24);
         bottom: 25px;
         font-weight: 600;
         text-align: center;
+        @include centerer-x;
 
         @include atTabletsPortrait {
+            width: 250px;
+            height: 39px;
+            line-height: 35px;
             font-size: 1rem;
             padding: 5px 50px;
+            padding-bottom: 0;
+            padding-top: 0;
             position: static;
+            vertical-align: middle;
             transform: translate(0);
             margin-bottom: 50px;
         }
 
         @include atDesktop {
-            padding: 10px 80px;
+            // padding: 10px 80px;
         }
         &:hover {
             background-color: #fff;
@@ -109,6 +119,8 @@
         @include atTabletsPortrait {
             margin-right: 0px;
             margin-bottom: 0px;
+            width: 310px;
+            margin-right: 40px;
         }
 
         @include atDesktop {

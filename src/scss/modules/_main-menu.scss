@@ -24,12 +24,13 @@
     &--shown {
         left: 0;
         visibility: visible;
+        // background-image: url("./img/hero_bg.png");
     }
 
     &__list {
         // box model
         padding: 0;
-
+        text-align: center;
 
         @include atDesktop {
             display: flex;

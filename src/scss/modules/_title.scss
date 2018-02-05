@@ -1,7 +1,7 @@
 .title {
 
     &__sup {
-        color: $title;
+        color: #8a185a;
         font-family: $OpenSans;
         margin-top: 0;
         margin-bottom: 15px;
@@ -11,10 +11,20 @@
         font-size: 1.125rem;
         line-height: 30px;
 
+        @include atTabletsPortrait {
+            font-family: $OpenSansBold;
+            font-weight: normal;
+            letter-spacing: 5px;
+        }
+
         &--mrtop {
             padding-top: 100px;
             margin: 0;
 
+            @include atTabletsPortrait {
+                padding-top: 25px;
+            }
+            
             @include atDesktop {
                 padding-top: 0;
             }
@@ -48,14 +58,15 @@
         &--right {
             display: none;
             position: absolute;
-            right: -70px;
+            right: -120px;
             top: 100px;
             transform: rotate(-90deg);
-            font-size: 0.875rem;
+            font-size: 1.33rem;
             color: #ffffff;
             text-transform: uppercase;
             letter-spacing: 2px;
             z-index: 2;
+            font-family: $OpenSansBold;
 
             @include atTabletsPortrait {
                 top: 150px;

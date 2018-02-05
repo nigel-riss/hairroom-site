@@ -1,24 +1,45 @@
 .price {
     padding-left: 25px;
-    border-radius: 5px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
-    background-color: #b170a8;
+    background: linear-gradient(to bottom, #e2d8e9, #cc6ab0 20%);
+    
+    @include atTabletsPortrait {
+        background: linear-gradient(to bottom, #ffffff, #e2dbe5 30%);
+    
+    }
     margin-bottom: -30px;
-    // background-image: url("./img/price_bg.jpg");
 
     @include atTabletsPortrait {
+        position: relative;
+        z-index: 1;
         transform: translateY(-150px);
-        margin-left: 55px;
+        padding-left: 55px;
+
+        &::before {
+            content: url("./img/hero_hr_gallery.png");
+            position: absolute;
+            left: -100px;
+            bottom: -240px;
+            z-index: 3;
+        }
     }
-    
+
     @include atDesktop {
         margin-left: 246px;
-        background-color: none;
+        background: none;
         transform: translateY(-250px);
-        box-shadow: -43px 53px 63px -44px rgba(0,0,0,0.72);
-        // background-image: url("./img/price_bg.jpg");
+        // box-shadow: -43px 53px 63px -44px rgba(0,0,0,0.72);
         background-repeat: no-repeat;
+    }
+
+    &__board {
+        background-image: url("./img/price_bg-md.jpg");
+        background-size: cover;
+
+        @include atTabletsPortrait {
+            border-radius: 5px;
+        }
     }
 
     &__header {
