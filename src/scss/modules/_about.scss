@@ -9,6 +9,8 @@
         display: flex;
         background-image: url("./img/pattern.jpg");
         position: relative;
+        background-size: cover;
+        padding-bottom: 100px;
 
         &::before {
             content: "";
@@ -19,7 +21,7 @@
             bottom: 0;
             height: 100%;
             width: 100%;
-            background: linear-gradient(to bottom,rgba(255, 255, 255, 0.8),rgba(238, 195, 225, 0.8));
+            background: linear-gradient(to bottom,rgba(233, 220, 230, 0.2),rgba(232, 197, 224, 0.2));
         }
     }
 
@@ -33,6 +35,7 @@
         }
         
         @include atDesktop {
+            padding-top: 100px;
             padding-left: 80px;
         }
     }
@@ -50,7 +53,7 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background: linear-gradient(to bottom,rgba(247, 233, 244, 0.15), rgba(234, 199, 226, 0.15));
+            background: linear-gradient(to bottom,rgba(247, 233, 244, 0.7), rgba(234, 199, 226, 0.7));
         }
 
         @include atDesktop {
@@ -80,9 +83,9 @@
         }
 
         @include atDesktop {
-            transform: none;
             margin-left: 0;
             padding-left: 100px;
+            padding-bottom: 50px;
             margin-bottom: 60px;
         }
     }
@@ -106,11 +109,11 @@
         @include atDesktop {
         //    z-index: 3;
            margin-left: 83px;
-           height: auto;
+           min-height: 700px;
            transform: translateY(-100px);
         }
 
-        img {
+        img, source {
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -129,7 +132,7 @@
             font-size: 2.66rem;
             font-family: $mainFontExtarBlack;
             min-width: 436px;
-            font-weight: normal;
+            letter-spacing: 3px;
         }
 
         @include atDesktop {
@@ -146,6 +149,10 @@
 
         @include atTabletsPortrait {
             max-width: 410px;
+        }
+
+        @include atDesktop {
+            max-width: 470px;
         }
     }
 

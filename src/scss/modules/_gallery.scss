@@ -2,17 +2,15 @@
     padding-top: 30px;
     
     @include atTabletsPortrait {
-        transform: translateY(-150px);
+        transform: translateY(-200px);
     }
 
     @include atDesktop {
-        transform: translateY(-300px);
+        transform: translateY(-350px);
     }
 
     &__header {
-        // background-image: url("./img/gallery_header_bg.png");
         background-size: cover;
-        // height: 300px;
         padding-left: 25px;
         padding-top: 100px;
 
@@ -21,13 +19,15 @@
             background-size: cover;
             background-position: 100% 30%;
             background-repeat: no-repeat;
+            padding-top: 180px;
+            
         }
 
         @include atDesktop {
             background-size: cover;
             padding-left: 115px;
             padding-top: 150px;
-            background-image: url("./img/pattern.jpg");
+            background-image: url("./img/pattern_gallery.png");
             background-position: 0 0;
 
         }
@@ -47,6 +47,7 @@
 
         @include atDesktop {
             font-size: 3rem;
+            padding-bottom: 70px;
         }
     }
 
@@ -98,7 +99,7 @@
     }
     &__img {
         width: 50%;
-        height: 226px;
+        max-height: 400px;
         // height: 187px;
 
         @include atTabletsPortrait {
@@ -106,7 +107,7 @@
         }
 
         &--subscribe {
-            display: none;
+            display: none;   
 
         @include atTabletsPortrait {
                 display: block;

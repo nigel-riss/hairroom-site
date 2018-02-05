@@ -20,6 +20,7 @@
         &--mrtop {
             padding-top: 100px;
             margin: 0;
+            color: #dc6fb0;
 
             @include atTabletsPortrait {
                 padding-top: 25px;
@@ -80,6 +81,12 @@
                 right: -155px;
             }
 
+        }
+
+        &--map {
+            font-size: 0.875rem;
+            top: 120px;
+            right: -75px;
         }
     }
 

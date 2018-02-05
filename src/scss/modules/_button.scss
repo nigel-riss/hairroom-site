@@ -26,10 +26,15 @@
             @include centerer-x;
             top: 70%;
             flex-direction: column;
+
+            @include atDesktop {
+                left: 75%;
+            }
         }
 
 
         &--inline {
+            z-index: 3;
 
             @include atTabletsPortrait {
                 padding-left: 75px;
@@ -38,13 +43,14 @@
 
             @include atDesktop {
                 flex-direction: row;
+                z-index: 3;
+
             }
         }
     }
 
     &--online-record {
 
-        // padding: 12px 80px;
         border-width: 2px;
         width: 315px;
         height: 40px;
@@ -76,6 +82,7 @@
 
         @include atDesktop {
             // padding: 10px 80px;
+            width: 310px;
         }
         &:hover {
             background-color: #fff;
@@ -125,7 +132,6 @@
 
         @include atDesktop {
             margin-bottom: 0;
-            // margin-right: 40px;
         }
 
         &:hover {
@@ -157,6 +163,12 @@
         width: 240px;
         font-family: $OpenSans;
         letter-spacing: 1px;
+
+
+        @include atDesktop {
+            width: 140px;
+            margin-right: 0;
+        }
 
         &:hover {
             background-color: #fff;

@@ -13,7 +13,9 @@
         @include atTabletsPortrait {
             display: block;
             position: absolute;
-            right: 20px;
+            padding-right: 40px;
+            padding-top: 20px;
+            right: 0;
             bottom: 65px;
             z-index: 1;
         }
@@ -21,7 +23,7 @@
         @include atDesktop {
             display: block;
             position: absolute;
-            bottom: 65px;
+            bottom: 40px;
             right: 0;
             padding: 20px;
             padding-right: 2.5%;
@@ -37,7 +39,7 @@
             text-transform: uppercase;
             letter-spacing: 1px;
             transition: 0.3s ease-in-out all;
-
+            font-family: $OpenSansBold;
             &:hover {
                 color: #6c1a3e;
             }

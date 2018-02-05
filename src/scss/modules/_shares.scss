@@ -1,17 +1,16 @@
 .shares {
     position: relative;
-    // padding-left: 25px;
-    // margin-top: 40px;
+    z-index: 1;
     background: linear-gradient(to right, #d16bb3, #8f6aa5);
     
     @include atTabletsPortrait {
         background: none;
-        display: none;
+        // display: none;
     }
 
     @include atDesktop {
         background-color: #fff;
-        transform: translateY(-450px)
+        transform: translateY(-300px)
     }
     
     &__content {
@@ -22,14 +21,13 @@
             display: flex;
             position: absolute;
             right: 30px;
-            top: 100%;
+            top: -200px;
         }
 
         @include atDesktop {
             display: flex;
             position: absolute;
             top: 0;
-            right: 0;
         }
     }
 

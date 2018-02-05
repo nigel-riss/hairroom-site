@@ -51,10 +51,11 @@
         }
 
         @include atDesktop {
-            top: 150px;
+            top: 60px;
         }
+
         @include atDesktopLarge {
-            top: 75px;
+            top: 85px;
         }
     }
 

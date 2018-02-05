@@ -12,6 +12,7 @@
 
     @include atDesktop {
         padding-left: 83px;
+        padding-right: 100px;
     }
 
     &__header {
@@ -23,9 +24,13 @@
         
         
         @include atTabletsPortrait {
-            width: 66%;
+            max-width: 388px;
             margin-top: 0;
             border: none;
+        }
+
+        @include atDesktop {
+            max-width: 486px;
         }
     }
 
@@ -34,10 +39,17 @@
 
         @include atTabletsPortrait {
             display: flex;
+            justify-content: space-between;
             padding-top: 60px;
             border-top: 2px solid #721d50;
             width: 100%;
             padding-bottom: 200px;
+            padding-right: 25px;
+            flex-wrap: wrap;
+        }
+
+        @include atDesktop {
+            padding-bottom: 100px;
         }
 
     }
@@ -63,6 +75,7 @@
         color: $accent;
         line-height: 23px;
         font-family: $OpenSans;
+        margin-bottom: 40px;
     }
 
     &__contacts-title {
@@ -71,7 +84,7 @@
         font-family: $mainFontRegular;
         font-weight: 500;
         text-transform: uppercase;
-        letter-spacing: 1px;
+        letter-spacing: 4px;
 
         @include atTabletsPortrait {
             margin-top: 0;
@@ -105,6 +118,39 @@
         }
     }
 
+    &__navigation {
+        list-style: none;
+        padding-left: 0;
+        margin-bottom: 40px;
+        display: none;
+
+        @include atDesktop {
+            display: block;
+        }
+
+        li {
+            padding-bottom: 20px;
+
+            &:first-child, &:last-child {
+                padding-bottom: 0px;
+            }
+        }
+
+        &-title {
+            color: #6f164b !important;
+            margin-bottom: 23px;
+            display: block;
+            letter-spacing: 4px;
+        }
+
+        a {
+            text-transform: uppercase;
+            font-family: $OpenSansBold;
+            text-decoration: none;
+            color: #414042;
+        }
+    }
+
     &__copyright {
         padding-top: 80px;
         padding-bottom: 40px;
@@ -115,7 +161,14 @@
         color: #414042;
 
         @include atTabletsPortrait {
-            display: none;
+            // display: none;
+            margin: 0 auto;
+        }
+
+        @include atDesktop {
+            display: block;
+            margin: 0;
+            padding: 0;
         }
 
         b {

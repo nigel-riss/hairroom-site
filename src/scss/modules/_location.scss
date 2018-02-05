@@ -20,9 +20,7 @@
     @include atDesktop {
         background-image: url("./img/pattern-lg.jpg");
         background-size: contain;
-    }
-    &__background {
-       
+        height: 60vh;
     }
 
     &__map {
@@ -30,13 +28,12 @@
 
         @include atTabletsPortrait {
             width: 95%;
-            transform: translateY(-150px);
+            transform: translateY(-200px);
         }
 
         @include atDesktop {
-            // width: %;
-            height: 60vh;
-            transform: translateY(-300px);
+            height: 80vh;
+            transform: translateY(-350px);
         }
     }
 }

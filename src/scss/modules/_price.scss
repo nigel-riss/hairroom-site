@@ -5,7 +5,8 @@
     background: linear-gradient(to bottom, #e2d8e9, #cc6ab0 20%);
     
     @include atTabletsPortrait {
-        background: linear-gradient(to bottom, #ffffff, #e2dbe5 30%);
+        // background: linear-gradient(to bottom, #ffffff, #e2dbe5 30%);
+        background: none;
     
     }
     margin-bottom: -30px;
@@ -29,29 +30,31 @@
         margin-left: 246px;
         background: none;
         transform: translateY(-250px);
-        // box-shadow: -43px 53px 63px -44px rgba(0,0,0,0.72);
         background-repeat: no-repeat;
     }
 
     &__board {
-        background-image: url("./img/price_bg-md.jpg");
-        background-size: cover;
-
+        background-color: #d8a8df;
+        
+        
         @include atTabletsPortrait {
+            background-image: url("./img/price_bg-lg.jpg");
+            background-size: contain;
             border-radius: 5px;
+            box-shadow: -14px 0px 20px -5px rgba(0,0,0,0.3);
         }
     }
 
     &__header {
         padding-top: 40px;
         padding-left: 20px;
-        background-color: #d8a8df;
+        // background-color: #d8a8df;
     }
 
     &__content {
         padding: 0 25px;
         padding-bottom: 80px;
-        background-color: #d8a8df;
+        // background-color: #d8a8df;
 
         @include atDesktop {
             display: flex;

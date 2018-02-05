@@ -33,10 +33,6 @@
                 font-size: 1.75rem;
                 font-weight: 500;
             }
-
-            @include atDesktopLarge {
-                font-size: 2rem;
-            }
         }
         a {
             // typography
@@ -58,7 +54,7 @@
             }
             
             @include atDesktopLarge {
-                font-size: 3.5rem;
+                font-size: 3.75rem;
             }
             span {
                 //typography
@@ -68,6 +64,10 @@
 
                 @include atTabletsPortrait {
                     margin-bottom: 15px;
+                }
+
+                @include atDesktopLarge {
+                    margin-bottom: 25px;
                 }
             }
         }
