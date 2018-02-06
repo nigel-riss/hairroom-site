@@ -98,7 +98,7 @@
 
         // typography
         text-transform: uppercase;
-        font-family: $OpenSans;
+        font-family: $textFont;
         color: #fff;
         letter-spacing: 1px;
         font-weight: 100;
@@ -107,7 +107,7 @@
     &__text {
         // typography
         color: $accent;
-        font-family: $OpenSans;
+        font-family: $textFont;
 
         // box model
         margin: 0;

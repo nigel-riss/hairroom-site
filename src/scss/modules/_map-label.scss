@@ -45,7 +45,7 @@
         // typography
         color: #fff;
         font-size: 0.75rem;
-        font-family: $OpenSansBold;
+        font-family: $textFontBold;
         text-transform: uppercase;
         letter-spacing: 1px;
     }
@@ -53,7 +53,7 @@
         // typography
         color: #fff;
         font-size: 1.25rem;
-        font-family: $OpenSansBold;
+        font-family: $textFontBold;
 
         sub {
             // typography
@@ -99,7 +99,7 @@
         text-align: center;
 
         // typography
-        font-family: $OpenSans;
+        font-family: $textFont;
         color: #414042;
         text-transform: uppercase;
         letter-spacing: 1px;
@@ -112,7 +112,7 @@
         margin: 0;
         
         // typography
-        font-family: $OpenSans;
+        font-family: $textFont;
         color: #414042;
         font-weight: bold;
         font-size: 0.9em;

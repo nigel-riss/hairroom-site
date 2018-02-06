@@ -79,7 +79,7 @@
         transition: 0.3s ease-in-out;
 
         // typography
-        font-family: $OpenSans;
+        font-family: $textFont;
         font-weight: 600;
         line-height: 2;
         text-align: center;
@@ -127,7 +127,7 @@
         transition: 0.3s ease-in-out all;
         
         // typography
-        font-family: $OpenSansExtraBold !important;
+        font-family: $textFontExtraBold !important;
         font-weight: bold;
         color: #85286d !important;
         letter-spacing: 5px;
@@ -156,7 +156,7 @@
 
         // typography
         text-align: center;
-        font-family: $OpenSansBold;
+        font-family: $textFontBold;
         font-weight: bold;
         color: #3b0f22;
 
@@ -193,7 +193,7 @@
 
         // typography
         text-align: center;
-        font-family: $OpenSansBold !important;
+        font-family: $textFontBold !important;
         font-weight: 600;
         color: #3b0f22;
         
@@ -225,7 +225,7 @@
         transition: 0.3s ease-in-out all;
 
         // typography
-        font-family: $OpenSansBold;
+        font-family: $textFontBold;
         letter-spacing: 1px;
 
 

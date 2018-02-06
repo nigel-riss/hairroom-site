@@ -1,81 +1,112 @@
 .main-menu {
+    // positioning
     position: fixed;
+    left: -110%;
+    z-index: 4;
+
+    // box model
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: $accent;
-    left: -100%;
-    visibility: hidden;
-    width: 100%;
     height: 100%;
-    z-index: 4;
+    width: 100%;
+    padding-bottom: 70px;
+
+    // visual
+    background-color: $accent;
+    visibility: hidden;
     transition: 0.3s ease-out all;
     
-    @include atDesktop {
-        position: static;
-        width: auto;
-        height: auto;
-        flex-direction: row;
-        visibility: visible;
-        background: none;
-        // padding-left: 65px;
+    // @include atDesktop {
+    //     position: static;
+    //     width: auto;
+    //     height: auto;
+    //     flex-direction: row;
+    //     visibility: visible;
+    //     background: none;
+    //     // padding-left: 65px;
+    // }
+    
+    ul {
+        // box model
+        margin: 0;
+        padding: 0;
+        
+        // visual
+        list-style: none;
+        
+        // @include atDesktop {
+        //     // box model
+        //     display: flex;
+        //     border-radius: 50px;
+        //     margin-left: 3.85%;
+
+        //     // visual
+        //     background-color: #c11e8b;
+        //     box-shadow: 0px 5px 20px -2px rgba(0, 0, 0, 0.37);
+        // }
+    }
+    
+    li {
+        // box model
+        margin: 0;
+        padding: 15px 0;
+
+        // typography
+        text-align: center;
+        
+        // @include atDesktop {
+        //     padding: 12px 20px;
+        //     transition: 0.3s ease-in-out all;
+            
+        //     &:hover {
+        //         background-color: $accent;
+        //         border-radius: 30px;
+        //         box-shadow: 0px 5px 20px -2px rgba(0,0,0,0.4);
+                
+        //     }
+            
+            
+        //     &:hover a {
+        //         color: #000;
+        //     }
+        // }
+        
+        // @include atDesktopLarge {
+        //     padding: 12px 40px;
+        // }
+    }
+    
+    a {
+        // typography
+        color: #fff;
+        font-family: $textFont;
+        font-weight: 400;
+        letter-spacing: 1px;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    &__franchise {
+        // box model
+        margin-top: 5px;
+
+        a {
+            // box model
+            display: inline-block;
+            vertical-align: top;
+            padding: 10px 20px;
+            border: 2px solid $white;
+    
+            // visual
+            border-radius: 30px;
+        }
     }
     
     &--shown {
         left: 0;
         visibility: visible;
         // background-image: url("./img/hero_bg.png");
-    }
-
-    &__list {
-        // box model
-        padding: 0;
-        text-align: center;
-
-        @include atDesktop {
-            display: flex;
-            border-radius: 50px;
-            background-color: #c11e8b;
-            box-shadow: 0px 5px 20px -2px rgba(0,0,0,0.37);
-            margin-left: 3.85%;
-        }
-    }
-
-    li {
-        // box model
-        padding-bottom: 30px;
-
-        // visual
-        list-style: none;
-
-        @include atDesktop {
-            padding: 12px 20px;
-            transition: 0.3s ease-in-out all;
-
-            &:hover {
-                background-color: $accent;
-                border-radius: 30px;
-                box-shadow: 0px 5px 20px -2px rgba(0,0,0,0.4);
-                
-            }
-
-
-            &:hover a {
-                color: #000;
-            }
-        }
-
-        @include atDesktopLarge {
-            padding: 12px 40px;
-        }
-    }
-
-    a {
-        // typography
-        color: #fff;
-        text-decoration: none;
-        text-transform: uppercase;
-        font-family: $OpenSans;
     }
 }

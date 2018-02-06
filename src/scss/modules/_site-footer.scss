@@ -104,7 +104,7 @@
         // typography
         color: $accent;
         line-height: 23px;
-        font-family: $OpenSans;
+        font-family: $textFont;
     }
 
     &__contacts-title {
@@ -127,7 +127,7 @@
     &__info-title {
         // typography
         color: $accent;
-        font-family: $OpenSans;
+        font-family: $textFont;
         font-weight: bold;
     }
 
@@ -192,7 +192,7 @@
         a {
             // typography
             text-transform: uppercase;
-            font-family: $OpenSansBold;
+            font-family: $textFontBold;
             text-decoration: none;
             color: #414042;
         }
@@ -207,7 +207,7 @@
         text-align: center;
         text-transform: uppercase;
         letter-spacing: 2px;
-        font-family: $OpenSans;
+        font-family: $textFont;
         color: #414042;
 
         @include atTabletsPortrait {
@@ -225,7 +225,7 @@
         b {
             // typography
             color: $accent;
-            font-family: $OpenSans;
+            font-family: $textFont;
             font-weight: 600;
         }
     }

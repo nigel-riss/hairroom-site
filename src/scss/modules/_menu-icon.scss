@@ -1,23 +1,27 @@
 .menu-icon {
     // positioning
     position: fixed;
-    right: 15px;
-    top: 15px;
+    right: 25px;
+    top: 18px;
     z-index: 5;
 
     // box model
     width: 50px;
     height: 50px;
+    border: 2px solid $accent;
 
     // visual
     background-color: $accent;
-    box-shadow: 0px 25px 58px -11px rgba(0,0,0,0.5);
+    box-shadow: 0px 10px 24px 0 rgba(0, 0, 0, 0.125);
     border-radius: 50%;
 
     @include atTabletsPortrait {
+        // positioning
         right: 50px;
     }
+
     @include atDesktop {
+        // box model
         display: none;
     }
 
@@ -28,7 +32,7 @@
         position: absolute;
         left: 12px;
         top: 31px;
-        transform: origin 0% 50%;
+        transform-origin: 0% 50%;
 
         //box model
         display: block;
@@ -37,7 +41,7 @@
 
         // visual
         background-color: $white;
-        transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-out;
     }
 
     &__middle {
@@ -53,7 +57,7 @@
 
         // visual
         background-color: $white;
-        transform: all 0.3s ease-in-out;
+        transform: all 0.3s ease-out;
     }
 
     &::after {
@@ -73,11 +77,15 @@
 
         // visual
         background-color: $white;
-        transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-out;
     }
 
     &--close-x {
-        border: 1px solid rgba(#fff, 0.2);
+        // box model
+        border: 2px solid $white;
+
+        // visual
+        box-shadow: none;
 
         &::before {
             // positioning

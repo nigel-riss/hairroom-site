@@ -6,7 +6,7 @@ html(lang="ru")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         //- fix font import to @font-face
         link(href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet")
-        link(href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800" rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet")
         link(rel="stylesheet", href="styles.css")
         title HairRoom
 
@@ -18,27 +18,28 @@ html(lang="ru")
                 .logo
                     img(src="./img/hr_logo_white.svg" alt="HairRoom Logo")
 
-                ul.info
-                    li
-                        p Калининград<br>Иванникова,&nbsp;12
-                    li
-                        a(href="tel: 523766") 52<span>.</span>37<span>.</span>76
+                .info
+                    p.info__address Калининград<br>Иванникова,&nbsp;12
+                    a(href="tel:523766").info__phone 52<span>.</span>37<span>.</span>76
                 
-                .menu-icon: .menu-icon__middle
+                .menu-icon.menu-icon--close-x: .menu-icon__middle
 
-                nav.main-menu
-                    ul.main-menu__list
+                nav.main-menu.main-menu--shown
+                    ul
                         li: a(href="#about") Салон
                         li: a(href="#services") Услуги
                         li: a(href="#price") Прайс
                         li: a(href="#gallery") Галлерея
                         li: a(href="#contacts") Контакты
 
-                    a.button.button--franschize(href="#franshize") Франшиза
+                        .main-menu__franchise
+                           a(href="#") Франшиза
                     
                     //- change class (put into main-menu block)
-                    .main-nav__slogan
-                        a.main-nav__link(href="http://instagram.com") Давайте дружить<br><span>instagram</span>
+                    .be-friends
+                        a(href="http://instagram.com") 
+                            p.be-friends__text Давайте дружить 
+                            p.be-friends__social instagram
 
             section.hero
                 header.hero__header

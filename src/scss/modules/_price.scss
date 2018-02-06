@@ -153,7 +153,7 @@
 
         // typography
         color: #000;
-        font-family: $OpenSans;
+        font-family: $textFont;
         line-height: 24px;
         text-align: left;
         font-weight: 500;
@@ -174,7 +174,7 @@
     td {
         // typography
         text-transform: uppercase;
-        font-family: $OpenSans;
+        font-family: $textFont;
         line-height: 30px;
         font-size: 0.875rem;
         color: #000;

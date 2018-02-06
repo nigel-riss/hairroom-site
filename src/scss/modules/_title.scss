@@ -6,7 +6,7 @@
     &__sup {
         // typography
         color: #d74299;
-        font-family: $OpenSans;
+        font-family: $textFont;
         font-size: 1.125rem;
         text-transform: uppercase;
         letter-spacing: 4px;
@@ -14,7 +14,7 @@
 
         @include atTabletsPortrait {
             // typography
-            font-family: $OpenSansBold;
+            font-family: $textFontBold;
             font-weight: normal;
             letter-spacing: 5px;
         }
@@ -25,7 +25,7 @@
             margin: 0;
 
             // typography
-            font-family: $OpenSansBold;
+            font-family: $textFontBold;
             color: #d74299;
 
             @include atTabletsPortrait {
@@ -96,7 +96,7 @@
             letter-spacing: 2px;
 
             // typography
-            font-family: $OpenSansBold;
+            font-family: $textFontBold;
 
             @include atTabletsPortrait {
                 // box model
@@ -110,7 +110,7 @@
                 right: -155px;
 
                 // typography
-                font-family: $OpenSans;
+                font-family: $textFont;
                 font-size: 1.875rem;
             }
 
