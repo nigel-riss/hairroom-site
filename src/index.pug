@@ -22,9 +22,11 @@ html(lang="ru")
                     p.info__address Калининград<br>Иванникова,&nbsp;12
                     a(href="tel:523766").info__phone 52<span>.</span>37<span>.</span>76
                 
-                .menu-icon.menu-icon--close-x: .menu-icon__middle
+                .menu-icon: .menu-icon__middle
+                //- .menu-icon.menu-icon--close-x: .menu-icon__middle
 
-                nav.main-menu.main-menu--shown
+                //- nav.main-menu.main-menu--shown
+                nav.main-menu
                     ul
                         li: a(href="#about") Салон
                         li: a(href="#services") Услуги
@@ -43,23 +45,22 @@ html(lang="ru")
 
             section.hero
                 header.hero__header
-                    h1.hero__title Ваш идеальный салон красоты
+                    h1.hero__title Ваш<br> идеальный<br> салон<br> красоты
 
-                .hero__content
-                    p.hero__copy Быть свободной значит быть разной, меняйте свой стиль под любое настроение. Не важно, что вас ждет сегодня: серьезное событие или романтический вечер - будьте неотразимы!
+                p.hero__copy Быть свободной значит быть разной, меняйте свой стиль под любое настроение. Не важно, что вас ждет сегодня: серьезное событие или романтический вечер - будьте неотразимы!
 
-                    picture.hero__img
-                        source( media="(max-width: 700px)" srcset="./img/women.png")
-                        source( media="(max-width: 1920px)" srcset="./img/women-lg.png")
-                        img(src="./img/women.png" alt="Hair Room девушка")
-                    
-                    .hero__button
-                        a.button.button--online-record(href="#") online&nbsp;запись
+                .hero__img
+                    img(src="./img/women.png" alt="Hair Room девушка")
+                    //- source( media="(max-width: 700px)" srcset="./img/women.png")
+                    //- source( media="(max-width: 1920px)" srcset="./img/women-lg.png")
+                
+                .hero__button
+                    a.button.button--online-record(href="#") online&nbsp;запись
 
-                    //- change class
-                    p.title__description.title__description--right Hair Room kaliningrad
+                //- change class
+                p.title__description.title__description--right Hair Room kaliningrad
 
-                ul.socials__list
+                ul.socials
                     li: a(href="https://instagram.com/") instagram
                     li: a(href="https://facebook.com/") facebook
                     li: a(href="https://vk.com/") vkontakte

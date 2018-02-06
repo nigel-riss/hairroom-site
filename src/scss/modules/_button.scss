@@ -1,15 +1,15 @@
 .button {
     // box model
     display: inline-block;
-
-    // visual
     border: 3px solid $secondary;
-    border-radius: 35px;
+
+    // typography
+    color: $white;
     text-decoration: none;
     text-transform: uppercase;
     
-    // typography
-    color: $white;
+    // visual
+    border-radius: 35px;
     cursor: pointer;
     
     &__wrapper {
@@ -63,14 +63,10 @@
     }
 
     &--online-record {
-        // positioning
-        z-index: 3;
-        @include centerer-x;
-
         // box model
-        height: 40px;
+        display: inline-block;
+        vertical-align: top;
         width: 315px;
-        bottom: 10px;
 
         // visual
         background-color: rgba(237, 99, 182, 0.24);
@@ -115,40 +111,7 @@
         }
     }
 
-    &--franschize {
-        // box model
-        display: none;
-        margin-left: 45px;
-        padding: 7px 40px;
-
-        // visual
-        border-color: #85286d;
-        border-width: 5px;
-        transition: 0.3s ease-in-out all;
-        
-        // typography
-        font-family: $textFontExtraBold !important;
-        font-weight: bold;
-        color: #85286d !important;
-        letter-spacing: 5px;
-        
-
-        @include atDesktop {
-            // box model
-            display: block;
-            padding: 7px 20px;
-        }
-
-        &:hover {
-            // visual
-            background-color: #85286d;
-
-            // typography
-            color: #fff !important;
-        }
-    }
-
-&--pink {
+    &--pink {
         // box model
         width: 240px;
         padding: 10px 0;
