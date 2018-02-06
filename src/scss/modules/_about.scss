@@ -121,16 +121,14 @@
     }
 
     &__title {
-        font-family: $mainFont;
-        font-weight: bold;
-        font-size: 1.33rem;
+        font-size: 1.45rem;
         margin-top: 0;
         width: 275px;
         margin-bottom: 25px;
 
         @include atTabletsPortrait {
             font-size: 2.66rem;
-            font-family: $mainFontExtarBlack;
+            // font-family: $mainFontExtarBlack;
             min-width: 436px;
             letter-spacing: 3px;
         }
@@ -146,6 +144,7 @@
         font-family: $OpenSans;
         line-height: 30px;
         min-width: 308px;
+        margin-top: 48px;
 
         @include atTabletsPortrait {
             max-width: 410px;

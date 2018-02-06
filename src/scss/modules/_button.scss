@@ -1,14 +1,22 @@
 .button {
+    // box model
+    display: inline-block;
+
+    // visual
     border: 3px solid $secondary;
     border-radius: 35px;
     text-decoration: none;
     text-transform: uppercase;
+    
+    // typography
     color: $white;
-    display: inline-block;
     cursor: pointer;
     
     &__wrapper {
+        // positioning
         position: relative;
+
+        // box model
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -16,186 +24,257 @@
         padding-bottom: 80px;
 
         @include atTabletsPortrait {
+            // box model
             flex-direction: row;
         }
 
-
         &--centerX {
+            // positioning
             position: absolute;
-            // right: 10px;
-            @include centerer-x;
             top: 70%;
+            left: 45%;
+
+            // box model
             flex-direction: column;
 
             @include atDesktop {
-                left: 75%;
+                // box model
+                left: 50%;
             }
         }
 
 
         &--inline {
-            z-index: 3;
 
             @include atTabletsPortrait {
+                // box model
                 padding-left: 75px;
                 justify-content: flex-start;
             }
 
             @include atDesktop {
-                flex-direction: row;
+                // positioning
                 z-index: 3;
 
+                // box model
+                flex-direction: row;
             }
         }
     }
 
     &--online-record {
-
-        border-width: 2px;
-        width: 315px;
-        height: 40px;
-        border-color: $secondary;
+        // positioning
         z-index: 3;
-        bottom: 10px;
-        transition: 0.3s ease-in-out;
-        line-height: 2;
-        font-family: $OpenSans;
-        background-color: rgba(237, 99, 182, 0.24);
-        bottom: 25px;
-        font-weight: 600;
-        text-align: center;
         @include centerer-x;
 
+        // box model
+        height: 40px;
+        width: 315px;
+        bottom: 10px;
+
+        // visual
+        background-color: rgba(237, 99, 182, 0.24);
+        border-width: 2px;
+        border-color: $secondary;
+        transition: 0.3s ease-in-out;
+
+        // typography
+        font-family: $OpenSans;
+        font-weight: 600;
+        line-height: 2;
+        text-align: center;
+        
         @include atTabletsPortrait {
-            width: 250px;
+            // positioning
+            position: static;
+
+            // box model
             height: 39px;
+            width: 250px;
+            margin-bottom: 50px;
+            padding: 0 50px;
+            vertical-align: middle;
+
+            // typography
             line-height: 35px;
             font-size: 1rem;
-            padding: 5px 50px;
-            padding-bottom: 0;
-            padding-top: 0;
-            position: static;
-            vertical-align: middle;
+
+            // visual
             transform: translate(0);
-            margin-bottom: 50px;
         }
 
         @include atDesktop {
-            // padding: 10px 80px;
+            // box model
             width: 310px;
         }
+
         &:hover {
+            // visual
             background-color: #fff;
             color: #7c1651;
         }
     }
 
     &--franschize {
+        // box model
         display: none;
         margin-left: 45px;
+        padding: 7px 40px;
+
+        // visual
         border-color: #85286d;
         border-width: 5px;
-        padding: 7px 40px;
-        color: #85286d !important;
         transition: 0.3s ease-in-out all;
+        
+        // typography
+        font-family: $OpenSansExtraBold !important;
+        font-weight: bold;
+        color: #85286d !important;
         letter-spacing: 5px;
+        
 
         @include atDesktop {
+            // box model
             display: block;
             padding: 7px 20px;
         }
 
         &:hover {
+            // visual
             background-color: #85286d;
+
+            // typography
             color: #fff !important;
         }
     }
 
 &--pink {
+        // box model
         width: 240px;
         padding: 10px 0;
-        text-align: center;
         margin-bottom: 30px;
-        font-family: $OpenSans;
-        color: #3b0f22;
+
+        // typography
+        text-align: center;
+        font-family: $OpenSansBold;
         font-weight: bold;
+        color: #3b0f22;
+
+        // visual
         background-color: $accent;
-        border: none;
         box-shadow: 0px 20px 58px -11px rgba(0,0,0,0.8);
+        border: none;
 
         @include atTabletsPortrait {
-            margin-right: 0px;
-            margin-bottom: 0px;
+            // box model
             width: 310px;
+            margin-bottom: 0px;
             margin-right: 40px;
         }
 
-        @include atDesktop {
-            margin-bottom: 0;
-        }
-
         &:hover {
+            // visual
             transition: 0.3s ease-in-out;
             background-color: #fff;
+
+            // typography
             color: $accent;
         }
     }
 
     &--ghost {
+        // box model
         width: 240px;
         padding: 10px 0;
-        text-align: center;
-        color: #3b0f22;
-        font-weight: 600;
+
+        // visual
         background-color: rgba(#f4cfe4, 0.12);
-        border-color: $accent;
+        border-color: #7c1752;
+
+        // typography
+        text-align: center;
+        font-family: $OpenSansBold !important;
+        font-weight: 600;
+        color: #3b0f22;
+        
+        @include atTabletsPortrait {
+            // box model
+            padding: 8px 0;
+
+            // typography
+            color: #fff;
+        }
+
 
         &:hover {
-            transition: 0.3s ease-in-out;
+            // visual
             background-color: $accent;
+            transition: 0.3s ease-in-out;
+
+            // typography
             color: #fff;
         }
     }
 
     &--card {
-        transition: 0.3s ease-in-out all;
-        margin-bottom: 15px;
+        // box model
         width: 240px;
-        font-family: $OpenSans;
+        margin-bottom: 15px;
+
+        // visual
+        transition: 0.3s ease-in-out all;
+
+        // typography
+        font-family: $OpenSansBold;
         letter-spacing: 1px;
 
 
-        @include atDesktop {
+        @include atTabletsPortrait {
+            // box model
             width: 140px;
             margin-right: 0;
+
+            // typography
+            font-size: 0.77rem;
         }
 
         &:hover {
+            // visual
             background-color: #fff;
+
+            // typography
             color: #c8368d;
         }
     }
 
     &--offers {
+        // box model
         padding: 5px 30px;
+        width: auto;
+
+        // visual
         background-color: #c8368d;
+        border: none;
+
+        // typography
         font-size: 1rem;
         text-transform: none;
-        border: none;
-        width: auto;
     }
 
     &--subscribe {
-        border: 5px solid $accent;
-        color: $accent;
-        font-weight: bold;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-left: 30px;
-        padding-right: 30px;
+        // box model
+        padding: 10px 30px;
         margin-bottom: 50px;
 
+        // visual
+        border: 5px solid $accent;
+
+        // typography
+        font-weight: bold;
+        color: $accent;
+
         &:hover {
+            // visual
             background-color: #fff;
             transition: 0.3s ease-in-out;
         }

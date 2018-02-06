@@ -44,7 +44,7 @@
         }
         
         &:hover {
-            color: $title;
+            color: #d74299;
         }
     }
 
@@ -62,13 +62,13 @@
 
         a {
             position: relative;
-            color: $accent;
+            color: #d74299;
 
             &::before {
                 // positioning
                 position: absolute;
                 height: 2px;
-                bottom: -10px;
+                bottom: -17px;
                 left: 0;
     
                 // box model

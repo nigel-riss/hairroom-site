@@ -5,193 +5,255 @@
     // box model
     min-height: 100vh;
 
-    @include atSmall {
-        height: 120vh;
-    }
-
     @include atTabletsPortrait {
-        min-height: 640px;
-        box-shadow: 0px 70px 30px -50px rgba(125,30,86,0.4);
+        // positioning
         z-index: 2;
+
+        // box model
+        min-height: 640px;
+
+        // visual
+        box-shadow: 0px 70px 30px -50px rgba(125,30,86,0.4);
     }
     
     @include atDesktop {
-        width: 88%;
+        // box model
         height: 700px;
-        padding-left: 4.5%;
+        width: 88%;
         margin-bottom: 200px;
+        padding-left: 4.5%;
+
+        // visual
         box-shadow: 0px 34px 39px -1px rgba(203,165,187,0.59);
     }
 
-    // visual
-    background: linear-gradient(to right, rgba(198, 22, 141, 0.85), rgba(219, 102, 154, 0.9));
+        // visual
+        background: linear-gradient(to right, rgba(198, 22, 141, 0.85), rgba(219, 102, 154, 0.9));
 
     &::after {
         content: url("./img/hero_hr.png");
+        // positioning
         position: absolute;
         bottom: -75px;
-        @include centerer-x;
         z-index: 0;
+        @include centerer-x;
 
         @include atTabletsPortrait {
-            // content: url("./img/hr_md.png");
-            // width: 0px;
+            // positioning
             bottom: -200px;
             left: 50%;
         }
         
         @include atTabletsLandscape {
+            // positioning
             left: 60%;
         }
 
         @include atDesktop {
             content: url("./img/hero_hr-lg.png");
+            // positioning
             right: -10%;
-            z-index: -1;
-            bottom: -150px;
             left: 100%;
+            bottom: -150px;
+            z-index: -1;
             transform: translate(0);
+
+            // box model
             display: none;
         }
     }
 
     &__header {
+        // positioning
         position: relative;
+
+        // box model
         padding-top: 36px;
         padding-left: 25px;
 
         @include atTabletsPortrait {
+            // positioning
             z-index: 2;
+
+            // box model
             padding-left: 55px;
         }
         
         @include atDesktop {
-            padding-left: 0;
-            display: block;
+            // positioning
             position: relative;
             z-index: 1;
+
+            // box model
+            display: block;
             padding-top: 55px;
+            padding-left: 0;
         }
     }
 
     &__content {
         // box model
-        padding-left: 25px;
         display: flex;
         flex-direction: column;
+        padding-left: 25px;
         
         @include atTabletsPortrait {
+            // box model
             padding-left: 55px;
         }
 
         @include atDesktop {
-            padding-left: 0;
+            // positioning
             position: relative;
+
+            // box model
+            padding-left: 0;
         }
     }
 
     &__title {
         // box model
         display: inline-block;
+        width: 200px;
         margin-top: 0;
         padding-left: 20px;
+
+        // typography
         text-transform: uppercase;
         font-size: 1.75rem;
-        // text-shadow: 1px 1px #6a1444, 1px -1px #6a1444, -1px 1px #6a1444, -1px -1px #6a1444, 3px 3px 6px rgba(0,0,0,.5);
+
+        // visual
         text-shadow: 0 0,
-        -8.1px 5px 0 #6a1444;
-        width: 200px;
+        -6px 5px 0 #6a1444;
+
         // typography
         color: $white;
         font-family: $mainFont;
 
         @include atTabletsPortrait {
-            font-size: 2.75rem;
+            // box model
             margin-bottom: 60px;
             padding-left: 0;
+
+            // typography
+            font-size: 2.75rem;
         }
 
         @include atDesktop {
-            padding-left: 0;
-            font-size: 4rem;
-            letter-spacing: 14px;
+            // box model
             margin-bottom: 40px;
+            padding-left: 0;
+
+            // typography
+            letter-spacing: 14px;
+            font-size: 4rem;
+
+            // visual
+            text-shadow: 0 0, -12px 7px 0 #6a1444;
         }
     }
 
     &__copy {
+        // positioning
         position: relative;
-        color: #000;
-        font-family: $OpenSans;
-        font-weight: 600;
-        font-size: 0.9rem;
-        line-height: 30px;
-        padding-left: 20px;
-        margin-bottom: 0;
+
+        // box model
         width: 300px;
         margin-top: 0;
         margin-bottom: 20px;
+        padding-left: 20px;
+
+        // typography
+        font-family: $OpenSans;
+        color: #000;
+        font-weight: 600;
+        font-size: 0.9rem;
+        line-height: 30px;
+       
 
         @include atTabletsPortrait {
+            // positioning
+            z-index: 2;
+
+            // box model
             margin-top: 0;
             margin-bottom: 60px;
-            z-index: 2;
             padding-left: 0;
         }
 
         @include atDesktop {
-            padding-left: 0;
-            font-size: 1rem;
-            width: 425px;
+            // box model
             margin-bottom: 70px;
+            padding-left: 0;
+            width: 425px;
+
+            // typography
+            font-size: 1rem;
         }
     }
 
     &__img {
+        // positioning
         position: absolute;
         bottom: -65px;
         z-index: 1;
+
+        // box model
+        width: 305px;
         margin-left: -25px;
-        width: 325px;
 
         @include atTabletsPortrait {
-            bottom: -5px;
-            z-index: 1;
+            // box model
             min-width: 675px;
+
+            // positioning
+            bottom: -5px;
             left: 11%;
+            z-index: 1;
         }
 
         @include atTabletsLandscape {
-            min-width: 700px; 
+            // positioning
             left: 25%;
+
+            // box model
+            min-width: 700px; 
         }
 
         @include atDesktop {
+            // positioning
+            z-index: 0;
+
+            // box model
             width: auto;
             bottom: -19px;
             left: 20%;
-            z-index: 0;
         }
 
         @include atDesktopLarge {
+            // positioning
             left: 30%;
         }
 
         source {
+            // box model
             width: 100%;
             height: 100%;
 
             @include atDesktop {
+                // box model
                 width: auto;
                 height: auto;
             }
         }
         img {
+            // box model
             width: 100%;
             height: 100%;
             object-fit: contain;
             
             @include atDesktop {
+                // box model
                 width: auto;
                 height: auto;
             }

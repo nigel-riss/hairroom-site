@@ -11,7 +11,7 @@
 
     // visual
     background-color: $accent;
-    box-shadow: 0px 25px 58px -11px rgba(0,0,0,0.24);
+    box-shadow: 0px 25px 58px -11px rgba(0,0,0,0.5);
     border-radius: 50%;
 
     @include atTabletsPortrait {

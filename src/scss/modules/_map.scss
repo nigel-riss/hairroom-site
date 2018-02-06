@@ -1,14 +1,20 @@
 .map {
-    height: 100vh;
+    // positioning
     position: relative;
 
+    // box model
+    height: 100vh;
+
     &__board {
-        
+        // positioning
         transform: translateY(-180%);
+
+        // box model
         margin: 0 15px;
         padding: 50px 30px;
         display: block;
 
+        // visual
         border-radius: 5px;
         box-shadow: 18px 12px 28px -4px rgba(53,7,34,0.74);
         background-color: rgba(#963a70, 0.8);
@@ -16,12 +22,14 @@
     }
 
     &__info {
+        // typography
         color: #ffffff;
         font-size: 0.875rem;
         text-transform: uppercase;
     }
 
     &__contact {
+        // typography
         color: #ffffff;
         font-weight: bold;
         font-family: $OpenSans;

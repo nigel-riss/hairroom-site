@@ -7,7 +7,6 @@
 
     // box model
     display: block;
-    // margin: 0 auto;
     width: 90%;
     padding: 0 15px;
     padding-top: 30px;
@@ -17,26 +16,33 @@
     border-radius: 10px;
 
     @include atTabletsPortrait {
+        // box model
         width: 55%;
     }
 
     @include atDesktop {
+        // positioning
+        top: 0;
+
+        // box model
         width: 20%;
         left: 25%;
-        top: 0;
     }
 
     &__logo {
+        // box model
         width: 86px;
         height: 86px;
 
         img {
-            // width: 100%;
+            // box model
+            width: 100%;
             height: 100%;
         }
     }
 
     &__info-title {
+        // typography
         color: #fff;
         font-size: 0.75rem;
         font-family: $OpenSansBold;
@@ -44,23 +50,26 @@
         letter-spacing: 1px;
     }
     &__info-text {
+        // typography
         color: #fff;
         font-size: 1.25rem;
         font-family: $OpenSansBold;
 
         sub {
+            // typography
             color: #c3c3c3;
             font-size: 0.75rem;
-            
         }
     }
 
     &__infowindow {
+        // box model
         display: flex;
         padding: 10px 20px;
     }
 
     &__infowindow-content {
+        // box model
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -99,6 +108,7 @@
         
     }
     &__infowindow-address {
+        // box model
         margin: 0;
         
         // typography
@@ -111,5 +121,6 @@
 
 }
 .gm-style-iw + div {
+    // box model
     display: none;
 }
