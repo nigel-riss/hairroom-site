@@ -4,6 +4,14 @@ html(lang="ru")
         meta(charset="utf-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        meta(name="theme-color" content="#ee7aad")
+        link(rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png")
+        link(rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png")
+        link(rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png")
+        link(rel="manifest" href="/site.webmanifest")
+        link(rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5")
+        meta(name="msapplication-TileColor" content="#da532c")
+        meta(name="theme-color" content="#ee7aad")
         //- fix font import to @font-face
         link(href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet")
         link(href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet")
@@ -50,9 +58,10 @@ html(lang="ru")
                 p.hero__copy Быть свободной значит быть разной, меняйте свой стиль под любое настроение. Не важно, что вас ждет сегодня: серьезное событие или романтический вечер - будьте неотразимы!
 
                 .hero__img
-                    img(src="./img/women.png" alt="Hair Room девушка")
-                    //- source( media="(max-width: 700px)" srcset="./img/women.png")
-                    //- source( media="(max-width: 1920px)" srcset="./img/women-lg.png")
+                    picture
+                        img(src="./img/women.png" alt="Hair Room девушка")
+                        source( media="(max-width: 700px)" srcset="./img/women.png")
+                        source( media="(max-width: 1920px)" srcset="./img/women-lg.png")
                 
                 .hero__button
                     a.button.button--online-record(href="#") online&nbsp;запись
@@ -100,7 +109,7 @@ html(lang="ru")
                     .logo.logo--about
                         .logo__outline
                             img(src="./img/hr_logo_black.svg" alt="logo white")
-                    .button__wrapper.button__wrapper--inline
+                    .about__button
                         a.button.button--pink(href="#") online Запись
                         a.button.button--ghost(href="#price") прайс-лист
 

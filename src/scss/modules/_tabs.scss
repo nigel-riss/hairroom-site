@@ -1,5 +1,4 @@
 .tabs {
-    padding-left: 25px;
 
     @include atTabletsPortrait {
         padding-left: 0;
@@ -10,15 +9,22 @@
     }
     
     &__list {
-        list-style: none;
-        padding-left: 0;
+        // box model
         display: flex;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 48px;
+        
+        // visual
+        list-style: none;
     }
 
     &__item {
+        // box model
         padding-right: 20px;
 
         @include atTabletsPortrait {
+            // box model
             padding-right: 55px;
         }
 
