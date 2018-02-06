@@ -1,0 +1,282 @@
+.button {
+    // box model
+    display: inline-block;
+
+    // visual
+    border: 3px solid $secondary;
+    border-radius: 35px;
+    text-decoration: none;
+    text-transform: uppercase;
+    
+    // typography
+    color: $white;
+    cursor: pointer;
+    
+    &__wrapper {
+        // positioning
+        position: relative;
+
+        // box model
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 80px;
+
+        @include atTabletsPortrait {
+            // box model
+            flex-direction: row;
+        }
+
+        &--centerX {
+            // positioning
+            position: absolute;
+            top: 70%;
+            left: 45%;
+
+            // box model
+            flex-direction: column;
+
+            @include atDesktop {
+                // box model
+                left: 50%;
+            }
+        }
+
+
+        &--inline {
+
+            @include atTabletsPortrait {
+                // box model
+                padding-left: 75px;
+                justify-content: flex-start;
+            }
+
+            @include atDesktop {
+                // positioning
+                z-index: 3;
+
+                // box model
+                flex-direction: row;
+            }
+        }
+    }
+
+    &--online-record {
+        // positioning
+        z-index: 3;
+        @include centerer-x;
+
+        // box model
+        height: 40px;
+        width: 315px;
+        bottom: 10px;
+
+        // visual
+        background-color: rgba(237, 99, 182, 0.24);
+        border-width: 2px;
+        border-color: $secondary;
+        transition: 0.3s ease-in-out;
+
+        // typography
+        font-family: $OpenSans;
+        font-weight: 600;
+        line-height: 2;
+        text-align: center;
+        
+        @include atTabletsPortrait {
+            // positioning
+            position: static;
+
+            // box model
+            height: 39px;
+            width: 250px;
+            margin-bottom: 50px;
+            padding: 0 50px;
+            vertical-align: middle;
+
+            // typography
+            line-height: 35px;
+            font-size: 1rem;
+
+            // visual
+            transform: translate(0);
+        }
+
+        @include atDesktop {
+            // box model
+            width: 310px;
+        }
+
+        &:hover {
+            // visual
+            background-color: #fff;
+            color: #7c1651;
+        }
+    }
+
+    &--franschize {
+        // box model
+        display: none;
+        margin-left: 45px;
+        padding: 7px 40px;
+
+        // visual
+        border-color: #85286d;
+        border-width: 5px;
+        transition: 0.3s ease-in-out all;
+        
+        // typography
+        font-family: $OpenSansExtraBold !important;
+        font-weight: bold;
+        color: #85286d !important;
+        letter-spacing: 5px;
+        
+
+        @include atDesktop {
+            // box model
+            display: block;
+            padding: 7px 20px;
+        }
+
+        &:hover {
+            // visual
+            background-color: #85286d;
+
+            // typography
+            color: #fff !important;
+        }
+    }
+
+&--pink {
+        // box model
+        width: 240px;
+        padding: 10px 0;
+        margin-bottom: 30px;
+
+        // typography
+        text-align: center;
+        font-family: $OpenSansBold;
+        font-weight: bold;
+        color: #3b0f22;
+
+        // visual
+        background-color: $accent;
+        box-shadow: 0px 20px 58px -11px rgba(0,0,0,0.8);
+        border: none;
+
+        @include atTabletsPortrait {
+            // box model
+            width: 310px;
+            margin-bottom: 0px;
+            margin-right: 40px;
+        }
+
+        &:hover {
+            // visual
+            transition: 0.3s ease-in-out;
+            background-color: #fff;
+
+            // typography
+            color: $accent;
+        }
+    }
+
+    &--ghost {
+        // box model
+        width: 240px;
+        padding: 10px 0;
+
+        // visual
+        background-color: rgba(#f4cfe4, 0.12);
+        border-color: #7c1752;
+
+        // typography
+        text-align: center;
+        font-family: $OpenSansBold !important;
+        font-weight: 600;
+        color: #3b0f22;
+        
+        @include atTabletsPortrait {
+            // box model
+            padding: 8px 0;
+
+            // typography
+            color: #fff;
+        }
+
+
+        &:hover {
+            // visual
+            background-color: $accent;
+            transition: 0.3s ease-in-out;
+
+            // typography
+            color: #fff;
+        }
+    }
+
+    &--card {
+        // box model
+        width: 240px;
+        margin-bottom: 15px;
+
+        // visual
+        transition: 0.3s ease-in-out all;
+
+        // typography
+        font-family: $OpenSansBold;
+        letter-spacing: 1px;
+
+
+        @include atTabletsPortrait {
+            // box model
+            width: 140px;
+            margin-right: 0;
+
+            // typography
+            font-size: 0.77rem;
+        }
+
+        &:hover {
+            // visual
+            background-color: #fff;
+
+            // typography
+            color: #c8368d;
+        }
+    }
+
+    &--offers {
+        // box model
+        padding: 5px 30px;
+        width: auto;
+
+        // visual
+        background-color: #c8368d;
+        border: none;
+
+        // typography
+        font-size: 1rem;
+        text-transform: none;
+    }
+
+    &--subscribe {
+        // box model
+        padding: 10px 30px;
+        margin-bottom: 50px;
+
+        // visual
+        border: 5px solid $accent;
+
+        // typography
+        font-weight: bold;
+        color: $accent;
+
+        &:hover {
+            // visual
+            background-color: #fff;
+            transition: 0.3s ease-in-out;
+        }
+    }
+}

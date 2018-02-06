@@ -1,0 +1,232 @@
+.site-footer {
+    // box model
+    padding-top: 100px;
+    padding-left: 25px;
+    
+    // visual
+    background: linear-gradient(to bottom, #e5a0cf, #f7dfef 50%);
+
+    @include atTabletsPortrait {
+        // box model
+        display: flex;
+        padding-top: 0;
+
+        // visual
+        background: linear-gradient(to bottom, #f2d2e7, #faeaf5);
+    }
+
+    @include atDesktop {
+        // box model
+        padding-left: 83px;
+        padding-right: 100px;
+    }
+
+    &__header {
+        // box model
+        margin-top: 50px;
+        padding-right: 25px;
+
+        // visual
+        border-top-color: #721d50;
+        border-top-style: solid;
+        border-top-width: 2px;
+        
+        
+        @include atTabletsPortrait {
+            // box model
+            max-width: 388px;
+            margin-top: 0;
+
+            // visual
+            border: none;
+        }
+
+        // typography
+        color: #333333;
+
+        @include atDesktop {
+            // box model
+            max-width: 486px;
+        }
+    }
+
+    &__container {
+        // box model
+        padding-left: 25px;
+
+        @include atTabletsPortrait {
+            // box model
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding-top: 60px;
+            flex-wrap: wrap;
+            padding-right: 25px;
+            padding-bottom: 200px;
+
+            // visual
+            border-top: 2px solid #721d50;
+        }
+
+        @include atDesktop {
+            // box model
+            padding-bottom: 100px;
+        }
+
+    }
+
+    &__content {
+        // box model
+        width: 325px;
+    }
+
+    &__title {
+        // typography
+        color: #2b2a29;
+        text-transform: uppercase;
+        letter-spacing: 7px;
+    }
+
+    &__title-location {
+        // box model
+        margin: 0;
+
+        // typography
+        color: #6f164b;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    &__description {
+        // box model
+        margin-bottom: 40px;
+
+        // typography
+        color: $accent;
+        line-height: 23px;
+        font-family: $OpenSans;
+    }
+
+    &__contacts-title {
+        // box model
+        margin-top: 40px;
+
+        // typography
+        color: #6f1e4e;
+        font-family: $mainFontRegular;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+
+        @include atTabletsPortrait {
+            // box model
+            margin-top: 0;
+        }
+    }
+
+    &__info-title {
+        // typography
+        color: $accent;
+        font-family: $OpenSans;
+        font-weight: bold;
+    }
+
+    &__info-text {
+        // typography
+        color: #414042;
+        text-decoration: none;
+    }
+
+    &__logo {
+        // box model
+        width: 248px;
+        height: 31px;
+        padding: 40px 0;
+        margin-bottom: 40px;
+
+        @include atTabletsPortrait {
+            // box model
+            padding: 0;
+        }
+
+        img {
+            // box model
+            width: 100%;
+        }
+    }
+
+    &__navigation {
+        // box model
+        display: none;
+        margin-bottom: 40px;
+        padding-left: 0;
+
+        // visual
+        list-style: none;
+
+        @include atDesktop {
+            // box model
+            display: block;
+        }
+
+        li {
+            // box model
+            padding-bottom: 20px;
+
+            &:first-child, &:last-child {
+                // box model
+                padding-bottom: 0px;
+            }
+        }
+
+        &-title {
+            // box model
+            display: block;
+            margin-bottom: 23px;
+
+            // typography
+            color: #6f164b !important;
+            letter-spacing: 4px;
+        }
+
+        a {
+            // typography
+            text-transform: uppercase;
+            font-family: $OpenSansBold;
+            text-decoration: none;
+            color: #414042;
+        }
+    }
+
+    &__copyright {
+        // box model
+        padding-top: 80px;
+        padding-bottom: 40px;
+
+        // typography
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-family: $OpenSans;
+        color: #414042;
+
+        @include atTabletsPortrait {
+            // box model
+            margin: 0 auto;
+        }
+
+        @include atDesktop {
+            // box model
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
+
+        b {
+            // typography
+            color: $accent;
+            font-family: $OpenSans;
+            font-weight: 600;
+        }
+    }
+}

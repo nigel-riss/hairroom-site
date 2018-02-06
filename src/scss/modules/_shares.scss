@@ -1,0 +1,127 @@
+.shares {
+    // positioning
+    position: relative;
+    z-index: 1;
+
+    // visual
+    background: linear-gradient(to right, #d16bb3, #8f6aa5);
+    
+    @include atTabletsPortrait {
+        // visual
+        background: none;
+    }
+
+    @include atDesktop {
+        // positioning
+        transform: translateY(-300px);
+
+        // visual
+        background-color: #fff;
+    }
+    
+    &__content {
+        // positioning
+        transform: translateY(36px);
+
+        @include atTabletsPortrait {
+            // positioning
+            position: absolute;
+            top: -200px;
+            right: 30px;
+            transform: none;
+
+            // box model
+            display: flex;
+        }
+
+        @include atDesktop {
+            // positioning
+            position: absolute;
+            top: 0;
+
+            // box model
+            display: flex;
+        }
+    }
+
+    &__offers {
+        // box model
+        margin: 0;
+        
+        // typography
+        color: #981864;
+        text-transform: uppercase;
+        font-family: $OpenSans;
+        font-weight: 500;
+        font-size: 0.75rem;
+        letter-spacing: 4px;
+
+        &--white {
+            // typography
+            color: white;
+        }
+    }
+
+    &__header {
+        // box model
+        padding-left: 25px;
+    }
+
+    &__text {
+        // box model
+        width: 135px;
+        margin-bottom: 30px;
+
+        // typography
+        color: #1c1e23;
+        font-family: $mainFontBlack;
+        font-weight: bold;
+        text-align: left;
+
+        &--white {
+            // typography
+            color: white;
+        }
+    }
+
+    &__card {
+        // box model
+        width: 328px;
+        height: 206px;
+        margin-bottom: 10px;
+        padding-top: 10px;
+
+        // visual
+        background-color: #fff;
+        border-radius: 5px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        
+
+        @include atDesktop {
+            // box model
+            width: 350px;
+            height: 250px;
+        }
+
+        &--offers {
+            // box model
+            margin-right: 50px;
+            
+            // visual
+            background-image: url("./img/offers.jpg");
+            background-size: cover;
+            background-color: #fff;
+        }
+        
+        &--loyality {
+            // box model
+            margin-right: 50px;
+            
+            // visual
+            background-image: url("./img/loyality.jpg");
+            background-size: cover;
+            background-color: #54adc3;
+        }
+    }
+}

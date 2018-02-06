@@ -1,0 +1,146 @@
+.title {
+    // box model
+    margin-top: 0;
+    margin-bottom: 15px;
+
+    &__sup {
+        // typography
+        color: #d74299;
+        font-family: $OpenSans;
+        font-size: 1.125rem;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        line-height: 30px;
+
+        @include atTabletsPortrait {
+            // typography
+            font-family: $OpenSansBold;
+            font-weight: normal;
+            letter-spacing: 5px;
+        }
+
+        &--mrtop {
+            // box model
+            padding-top: 100px;
+            margin: 0;
+
+            // typography
+            font-family: $OpenSansBold;
+            color: #d74299;
+
+            @include atTabletsPortrait {
+                // box model
+                padding-top: 25px;
+            }
+            
+            @include atDesktop {
+                // box model
+                padding-top: 0;
+            }
+        }
+
+        &--gallery {
+            // typography
+            font-size: 1.2rem;
+        }
+
+        &--price {
+            // typography
+            color: #8a185a;
+        }
+    }
+
+    &__description {
+        // box model
+        display: none;
+
+        @include atDesktop {
+            // box model
+            display: block;
+        }
+        
+        &--left {
+            
+            // positioning
+            position: absolute;
+            top: 100px;
+            left: -50px;
+            
+            // box model
+            display: inline-block;
+            margin: 0;
+            transform: rotate(-90deg);
+
+            // typography
+            color: #fff;
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        &--right {
+            // positioning
+            position: absolute;
+            right: -120px;
+            top: 100px;
+            z-index: 2;
+
+            // box model
+            display: none;
+           
+            transform: rotate(-90deg);
+
+            // typography
+            font-size: 1.33rem;
+            color: #ffffff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+
+            // typography
+            font-family: $OpenSansBold;
+
+            @include atTabletsPortrait {
+                // box model
+                top: 150px;
+                display: inline-block;
+            }
+
+            @include atDesktop {
+                // positioning
+                top: -180px;
+                right: -155px;
+
+                // typography
+                font-family: $OpenSans;
+                font-size: 1.875rem;
+            }
+
+        }
+
+        &--map {
+            // positioning
+            top: 120px;
+            right: -75px;
+
+            // typography
+            font-size: 0.875rem;
+        }
+    }
+
+    &__section {
+        // box model
+        margin: 0;
+        padding-bottom: 30px;
+        
+        // typography
+        color: $section;
+        text-transform: uppercase;
+        font-size: 3.33rem;
+        font-weight: bold;
+
+
+        @include atTabletsPortrait {
+            // typography
+            font-size: 4rem;
+        }
+    }
+}

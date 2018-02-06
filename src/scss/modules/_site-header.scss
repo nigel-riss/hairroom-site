@@ -1,0 +1,13 @@
+.site-header {
+
+    @include atTabletsPortrait {
+        background-image: url("./img/pattern.jpg");
+    }
+
+    @include atDesktop {
+        background-image: url("./img/pattern-lg.jpg");
+        position: relative;
+    }
+    // background-position: 100%;
+    // background-repeat: no-repeat; 
+}

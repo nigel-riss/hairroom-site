@@ -1,0 +1,260 @@
+.services {
+    // positioning
+    position: relative;
+
+    // box model
+    padding-bottom: 100px;
+    padding-left: 25px;
+
+    // visual
+    background: linear-gradient(25deg, #e3d6e5 70%, #e4d4dc);
+    background-size: cover;
+    
+    @include atTabletsPortrait {
+        // box model
+        padding-bottom: 250px;
+        padding-left: 55px;
+    }
+
+    @include atDesktop {
+        // box model
+        padding-left: 115px;
+        padding-bottom: 400px;
+
+        // visual
+        background: linear-gradient(20deg,rgba(221, 129, 192, 1), rgba(211, 195, 221, 0.8)) 90%;
+        box-shadow: 0px 48px 116px -29px rgba(125,30,86,0.77);
+    }
+
+    &::before {
+        content: url("./img/hero_hr.png");
+        // positioning
+        position: absolute;
+        bottom: -7px;
+        right: 25px;
+        z-index: 0;
+    }
+
+    &__wrapper {
+        // positioning
+        position: relative !important;
+
+        // box model
+        width: 100%;
+        height: 450px;
+        border-radius: 5px;
+
+        &:hover .services__card-img::after {
+            // visual
+            transition: 0.3s ease-in-out all;
+            opacity: 0.7;
+        }
+
+        &:hover .services__card-content {
+            // box model
+            display: block;
+        }
+
+        &:hover {
+            // visual
+            transition: 0.3s ease-in-out all;
+            box-shadow: -39px 44px 0px -21px rgba(152,67,128,0.56);
+            
+            @include atDesktop {
+                // positioning
+                transform: translate(30px);
+                transform: scale(1.1);
+            }
+        }
+    }
+
+
+    &__cards {
+        // positioning
+        position: relative;
+
+        // box model
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        // visual
+        overflow-x: scroll;
+        overflow-y: hidden;
+
+        @include atTabletsPortrait {
+            // box model
+            flex-wrap: nowrap;
+        }
+
+        @include atDesktop {
+            // box model
+            flex-wrap: wrap;
+
+            // visual
+            overflow: hidden;
+        }
+
+        &::before {
+            content: url("./img/pattern-lg-cards.png");
+
+            // box model
+            display: none;
+
+            @include atTabletsPortrait {
+                // positioining
+                position: absolute;
+
+                // box model
+                display: block;
+                margin-top: 110px;
+                margin-left: 14%;
+
+                // visual
+                background-repeat: no-repeat;
+            }
+
+            @include atDesktop {
+                content: url("./img/pattern-lg-cards.png");
+                // box model
+                margin-top: 150px;
+            }
+        }
+
+        &::after {
+            @include atDesktop {
+                content: url("./img/hr_cards-lg.png");
+
+                // positioning
+                position: absolute;
+                bottom: -100px;
+                z-index: -1;
+            }
+        }
+    }
+
+        &__card {
+            // box model
+            margin-right: 25px;
+            transition: 0.3s ease-in-out;
+
+            @include atDesktop {
+                // box model
+                margin-bottom: 30px;
+            }
+
+            &-description {
+                // box model
+                width: 155px;
+                
+                // positioning
+                position: absolute;
+                top: 195px;
+                right: 30px;
+                
+                // typography
+                font-size: 0.875rem;
+                line-height: 20px;
+                text-align: right;
+                color: #720a47;
+                text-transform: uppercase;
+        }
+
+            &-title {
+                // box model
+                margin: 30px 0;
+                margin-top: 0;
+                padding-left: 15px;
+
+                // typography
+                color: #8a185a;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                font-family: $OpenSansBold;
+            }
+            
+            &-img {
+                // positioning
+                position: relative;
+                display: inline-block;
+
+                // box model
+                width: 300px;
+                height: 450px;
+
+                // visual
+                background-size: cover;
+                box-shadow: 0px 23px 51px -9px rgba(165,68,122,0.96);
+                border-radius: 5px;
+                z-index: 0;
+
+                @include atDesktop {
+                    // box model
+                    width: 325px;
+                }
+                
+
+                &--bg2 {
+                    background-image: url("./img/card1.png");
+                    background-position: 40% 0;
+                    background-repeat: no-repeat;
+                }
+
+                &--bg3 {
+                    background-image: url("./img/hair_bg2.png");
+                }
+
+                &--bg4 {
+                    background-image: url("./img/hair_bg3.png");
+                    background-position: 0 20%;
+                }
+
+                &--bg5 {
+                    background-image: url("./img/hair_bg4.png");
+                    background-position: 0 20%;
+                }
+                
+                &::after {
+                    background: linear-gradient(180deg, #c6168d, #db669a);
+                    opacity: 0;
+                    content: "";
+                    display: block;
+                    height: 100%;
+                    left: 0;
+                    position: absolute;
+                    top: 0;
+                    width: 100%;
+                    border-radius: 5px;
+                }
+                
+                img {
+                    // positioning
+                    position: absolute;
+                    z-index: 1;
+
+                    // box model
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+
+            &-content {
+                height: 100%;
+                width: 100%;
+                display: none;
+                transition: 0.3s ease-in-out;
+                z-index: 1;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+
+                &--centerY {
+                    // positioning
+                    position: relative;
+                }
+            }
+    }
+}
