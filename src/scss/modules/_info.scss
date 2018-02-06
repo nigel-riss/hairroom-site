@@ -1,80 +1,77 @@
 .info {
-    
-    &__list {
+    // box model
+    padding-top: 20px;
+    padding-left: 20px;
+    margin: 0;
+    list-style: none;
+
+    @include atTabletsPortrait {
         // box model
-        padding-top: 20px;
-        padding-left: 20px;
+        padding-top: 25px;
+    }
+
+    li {
+        // typography
+        color: $copy;
+    }
+
+    p {
+        // box model
         margin: 0;
-        list-style: none;
+
+        // typography
+        font-size: 0.8rem;
+        text-align: center;
+        text-transform: uppercase;
 
         @include atTabletsPortrait {
-            // box model
-            padding-top: 25px;
+            // typography
+            font-size: 1.1rem;
         }
 
-        li {
+        @include atDesktop {
             // typography
-            color: $copy;
+            font-size: 1.75rem;
+            font-weight: 500;
         }
-    
-        p {
-            // box model
-            margin: 0;
-    
+    }
+    a {
+        // typography
+        color: $copy;
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 1.6rem;
+        display: flex;
+        align-items: center;
+        
+        @include atTabletsPortrait {
             // typography
-            font-size: 0.8rem;
-            text-align: center;
-            text-transform: uppercase;
+            font-size: 2.25rem;
+        }
+
+        @include atDesktop {
+            // typography
+            font-size: 2.75rem;
+        }
+        
+        @include atDesktopLarge {
+            // typography
+            font-size: 3.75rem;
+        }
+        span {
+            //typography
+            color: $accent;
+            margin: 0 2px;
+            margin-bottom: 12px;
 
             @include atTabletsPortrait {
-                // typography
-                font-size: 1.1rem;
+                // box model
+                margin-bottom: 15px;
             }
 
-            @include atDesktop {
-                // typography
-                font-size: 1.75rem;
-                font-weight: 500;
-            }
-        }
-        a {
-            // typography
-            color: $copy;
-            font-weight: bold;
-            text-decoration: none;
-            font-size: 1.6rem;
-            display: flex;
-            align-items: center;
-            
-            @include atTabletsPortrait {
-                // typography
-                font-size: 2.25rem;
-            }
-
-            @include atDesktop {
-                // typography
-                font-size: 2.75rem;
-            }
-            
             @include atDesktopLarge {
-                // typography
-                font-size: 3.75rem;
-            }
-            span {
-                //typography
-                color: $accent;
-                margin: 0 2px;
-                margin-bottom: 12px;
-
-                @include atTabletsPortrait {
-                    // box model
-                    margin-bottom: 15px;
-                }
-
-                @include atDesktopLarge {
-                    // box model
-                    margin-bottom: 25px;
-                }
+                // box model
+                margin-bottom: 25px;
             }
         }
     }
