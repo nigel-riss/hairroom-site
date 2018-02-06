@@ -34,14 +34,14 @@
     // }
 
 
-    // &::after {
-    //     content: url("./img/hero_hr.png");
-    //     // positioning
-    //     position: absolute;
-    //     bottom: -75px;
-    //     z-index: 0;
-    //     @include centerer-x;
-
+    &::after {
+        content: url("./img/hero_hr.png");
+        // positioning
+        position: absolute;
+        bottom: -100px;
+        z-index: 2;
+        @include centerer-x;
+    }
     //     @include atTabletsPortrait {
     //         // positioning
     //         bottom: -200px;
@@ -185,6 +185,8 @@
 
     &__img {
         // positioning
+        position: relative;
+        z-index: 3;
         // position: absolute;
         // bottom: -65px;
         // z-index: 1;
@@ -250,6 +252,7 @@
         position: absolute;
         bottom: 25px;
         left: 0;
+        z-index: 4;
 
         // typography
         text-align: center;
