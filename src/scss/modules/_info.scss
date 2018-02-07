@@ -11,6 +11,7 @@
     @include atTabletsPortrait {
         // box model
         padding-top: 25px;
+        padding-left: 40px;
     }
 
     &__address {
@@ -25,10 +26,10 @@
         text-align: center;
         text-transform: uppercase;
 
-        // @include atTabletsPortrait {
-        //     // typography
-        //     font-size: 1.1rem;
-        // }
+        @include atTabletsPortrait {
+            // typography
+            font-size: 1.1rem;
+        }
 
         // @include atDesktop {
         //     // typography
@@ -46,7 +47,7 @@
         
         @include atTabletsPortrait {
             // typography
-            font-size: 2.25rem;
+            font-size: 2.5rem;
         }
 
         @include atDesktop {
@@ -71,10 +72,10 @@
             color: $accent;
             margin: 0 2px;
 
-            // @include atTabletsPortrait {
-            //     // box model
-            //     margin-bottom: 15px;
-            // }
+            @include atTabletsPortrait {
+                // box model
+                vertical-align: top;
+            }
 
             // @include atDesktopLarge {
             //     // box model
