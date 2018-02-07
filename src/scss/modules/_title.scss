@@ -8,7 +8,6 @@
 
         @include atTabletsPortrait {
             // typography
-            font-family: $textFontBold;
             font-weight: normal;
             letter-spacing: 5px;
         }
@@ -19,7 +18,6 @@
             margin: 0;
 
             // typography
-            font-family: $textFontBold;
             color: #d74299;
 
             @include atTabletsPortrait {
@@ -90,7 +88,6 @@
             letter-spacing: 2px;
 
             // typography
-            font-family: $textFontBold;
 
             @include atTabletsPortrait {
                 // box model
