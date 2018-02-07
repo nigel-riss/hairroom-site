@@ -1,75 +1,86 @@
 .info {
-    
-    &__list {
+    // box model
+    margin: 0;
+    padding-top: 15px;
+    padding-left: 20px;
+    // border: 1px solid red;
+
+    // typography
+    text-align: center;
+
+    @include atTabletsPortrait {
         // box model
-        padding-top: 20px;
-        padding-left: 20px;
+        padding-top: 25px;
+        padding-left: 40px;
+    }
+
+    &__address {
+        // box model
         margin: 0;
-        list-style: none;
+
+        // typography
+        font-family: $textFont;
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-align: center;
+        text-transform: uppercase;
 
         @include atTabletsPortrait {
-            padding-top: 25px;
+            // typography
+            font-size: 1.1rem;
         }
 
-        li {
+        // @include atDesktop {
+        //     // typography
+        //     font-size: 1.75rem;
+        //     font-weight: 500;
+        // }
+    }
+
+    &__phone {
+        // typography
+        color: $copyColor;
+        font-size: 1.55rem;
+        font-weight: 700;
+        text-decoration: none;
+        
+        @include atTabletsPortrait {
             // typography
-            color: $copy;
+            font-size: 2.5rem;
         }
-    
-        p {
+
+        @include atDesktop {
+            // typography
+            font-size: 2.75rem;
+        }
+        
+        @include atDesktopLarge {
+            // typography
+            font-size: 3.75rem;
+        }
+
+        span {
+            // positioning
+            transform: translateY(-0.5rem);
+
             // box model
-            margin: 0;
-    
-            // typography
-            font-size: 0.75rem;
-            text-align: center;
-            text-transform: uppercase;
-            
+            display: inline-block;
+            vertical-align: middle;
+
+            //typography
+            color: $accent;
+            margin: 0 2px;
+
             @include atTabletsPortrait {
-                font-size: 1.1rem;
+                // box model
+                vertical-align: top;
             }
 
-            @include atDesktop {
-                font-size: 1.75rem;
-                font-weight: 500;
-            }
-
-            @include atDesktopLarge {
-                font-size: 2rem;
-            }
-        }
-        a {
-            // typography
-            color: $copy;
-            font-weight: bold;
-            text-decoration: none;
-            font-size: 1.6rem;
-            display: flex;
-            align-items: center;
-            // font-family: $mainFontRegular;
-
-            
-            @include atTabletsPortrait {
-                font-size: 2.25rem;
-            }
-
-            @include atDesktop {
-                font-size: 2.75rem;
-            }
-            
-            @include atDesktopLarge {
-                font-size: 3.5rem;
-            }
-            span {
-                //typography
-                color: $accent;
-                margin: 0 2px;
-                margin-bottom: 12px;
-
-                @include atTabletsPortrait {
-                    margin-bottom: 15px;
-                }
-            }
+            // @include atDesktopLarge {
+            //     // box model
+            //     margin-bottom: 25px;
+            // }
         }
     }
 }

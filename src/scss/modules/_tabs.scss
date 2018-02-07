@@ -1,97 +1,134 @@
 .tabs {
-    padding-left: 25px;
+    // box model
+    margin-bottom: 40px;
+    // @include atTabletsPortrait {
+    //     padding-left: 0;
+    // }
 
-    @include atTabletsPortrait {
-        padding-left: 0;
-    }
-
-    @include atDesktop {
-        padding-left: 0;
-    }
+    // @include atDesktop {
+    //     padding-left: 0;
+    // }
     
     &__list {
-        list-style: none;
-        padding-left: 0;
+        // positioning
+        position: relative;
+
+        // box model
         display: flex;
+        padding: 0;
+        margin: 0;
+        margin-bottom: 20px;
+        margin-left: -10px;
+        
+        // visual
+        list-style: none;
+
+        &::after {
+            content: "";
+
+            // positioning
+            position: absolute;
+            bottom: 0;
+            left: 10px;
+
+            // box model
+            height: 1px;
+            width: 150%;
+
+            // visual
+            background-color: rgba($notationColor, 0.25);
+        }
     }
 
-    &__item {
-        padding-right: 20px;
+    &__list-item {
+        // @include atTabletsPortrait {
+        //     // box model
+        //     padding-right: 55px;
+        // }
 
-        @include atTabletsPortrait {
-            padding-right: 55px;
-        }
+        &--current {
+            .tabs__link {
+                // positioning
+                position: relative;
 
-        &:last-child {
-            padding-right: 0;
+                // typography
+                color: $titleColor;
+
+                &::after {
+                    content: "";
+
+                    // positioning
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    transform: translateX(10px);
+
+                    // box model
+                    height: 1px;
+                    width: 100%;
+                    width: calc(100% - 20px);
+        
+                    // visual
+                    background-color: $accent;
+                }
+            }
         }
     }
 
     &__link {
-        font-size: 1.125rem;
-        font-family: $OpenSans;
+        // box model
+        display: inline-block;
+        vertical-align: top;
+        padding: 10px;
+
+        // typography
+        color: #999999;
+        font-size: 1rem;
+        font-family: $textFont;
         text-transform: uppercase;
-        color: #898989;
-        line-height: 15px;
-        letter-spacing: 3px;
         font-weight: 300;
-        transition: 0.3s ease-in-out;
-        display: inherit;
+        letter-spacing: 2px;
 
+        // visual
+        transition: 0.3s ease-out;
 
-        @include atTabletsPortrait {
-            letter-spacing: 7px;
-        }
+        // @include atTabletsPortrait {
+        //     letter-spacing: 7px;
+        // }
         
         &:hover {
-            color: $title;
+            // visual
+            color: $titleColor;
         }
     }
 
     &__content {
-        padding-bottom: 45px;
+        // box model
         display: none;
 
-        @include atDesktop {
-            width: 460px;
+        // @include atDesktop {
+        //     width: 460px;
+        // }
+
+        &--current {
+            // box model
+            display: block;
         }
     }
 
-    &__current {
-        display: inherit;
+    &__copy {
+        // typography
+        color: $copyColor;
+        font-family: $textFont;
+        font-weight: 400;
+        line-height: 1.75;
 
-        a {
-            position: relative;
-            color: $accent;
+        // @include atTabletsPortrait {
+        //     max-width: 410px;
+        // }
 
-            &::before {
-                // positioning
-                position: absolute;
-                height: 2px;
-                bottom: -10px;
-                left: 0;
-    
-                // box model
-                content: '';
-                width: 100%;
-    
-                // visual
-                visibility: hidden;
-                background-color: $accent;
-                transform: scaleX(0);
-                transition: 0.3s ease-in-out all 0s;
-            }
-    
-            &:hover,&:active {
-                // typography
-                color: $accent;
-    
-                &::before {
-                    // visual
-                    visibility: visible;
-                    transform: scaleX(1);
-                }
-            }
-        }
+        // @include atDesktop {
+        //     max-width: 470px;
+        // }
     }
 }

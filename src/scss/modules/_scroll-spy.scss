@@ -1,4 +1,128 @@
 .scroll-spy {
+    // positioning
+    position: fixed;
+    right: 30px;
+    top: 60%;
+    transform: translateY(-50%);
+    z-index: 9;
+
     // box model
     display: none;
+    
+    @include atDesktopLarge {
+        // box model
+        display: block;
+    }
+
+    ul {
+        // box model
+        margin: 0;
+        padding: 0;
+
+        // list
+        list-style: none;
+    }
+
+    li {
+        // box model
+        margin: 0;
+        margin-bottom: 25px;
+        padding: 0;
+    }
+
+    a {
+        display: none;
+    }
+
+    &__link {
+        // positioning
+        position: relative;
+
+        // box model
+        display: block !important;
+        height: 2px;
+        width: 25px;
+
+        // typography
+        font-size: 0;
+
+        // visual
+        border: 2px solid rgba($copyColor, 1);
+
+            // &::before {
+            //     content: attr(data-label);
+
+            //     // positioning
+            //     position: absolute;
+            //     // right: 35px;
+            //     top: -15px;
+            //     // transform: scale(0);
+            //     transform-origin: 100% 50%;
+
+            //     // box model
+            //     display: none;
+            //     height: 30px;
+            //     width: 100px;
+            //     padding-right: 40px;
+
+            //     // typography
+            //     color: $accent;
+            //     font-family: $mainFont;
+            //     font-size: 1.25rem;
+            //     font-weight: 700;
+            //     text-transform: uppercase;
+            //     transition: all 0.3s ease-out;
+            // }
+
+        &:hover {
+            // visual
+            background-color: $accent;
+            border: 2px solid transparent;
+
+            &::before {
+                // positioning
+                right: 25px;
+                // transform: scale(1);
+
+                // visual
+                opacity: 1;
+            }
+
+            &::after {
+                // positioning
+                right: 15px;
+                // transform: scale(1);
+
+                // visual
+                opacity: 1;
+            }
+        }
+
+        &--current {
+            // visual
+            background-color: $accent;
+            border: 2px solid transparent;
+            width: 50px;
+            
+
+             &::before {
+                // positioning
+                right: 25px;
+                transform: scale(1);
+                display: block;
+
+                // visual
+                opacity: 1;
+            }
+
+            &::after {
+                // positioning
+                right: 15px;
+                transform: scale(1);
+
+                // visual
+                opacity: 1;
+            }
+        }
+    }
 }

@@ -17,26 +17,26 @@ gulp.task("watch", () => {
 
     watch("./src/**/*.pug", () => {
         gulp.start("pugChanged");
-    })
+    });
 
     watch("./src/scss/**/*.scss", () => {
         gulp.start("cssInject");
-    })
+    });
 
     watch("./src/js/**/*.js", () => {
         gulp.start("jsChanged");
-    })
-})
-
-    gulp.task("pugChanged", ["pugRender"], () => {
-        browserSync.reload();
     });
+});
 
-    gulp.task("cssInject", ["styles"], () => {
-        gulp.src("./dist/styles.css")
+gulp.task("pugChanged", ["pugRender"], () => {
+    browserSync.reload();
+});
+
+gulp.task("cssInject", ["styles"], () => {
+    gulp.src("./dist/styles.css")
         .pipe(browserSync.stream());
-    });
-    
-    gulp.task("jsChanged", ["scripts"], () => {
-        browserSync.reload();
-    });
+});
+
+gulp.task("jsChanged", ["scripts"], () => {
+    browserSync.reload();
+});

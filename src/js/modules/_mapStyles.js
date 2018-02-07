@@ -124,6 +124,17 @@ module.exports = [{
     ]
 },
 {
+    "featureType": "road.arterial",
+    "elementType": "labels.text.fill",
+    "stylers": [{
+            "color": "#ffffff"
+        },
+        {
+            "lightness": 18
+        }
+    ]
+},
+{
     "featureType": "road.local",
     "elementType": "geometry",
     "stylers": [{
@@ -161,6 +172,17 @@ module.exports = [{
     "elementType": "geometry",
     "stylers": [{
             "color": "#121212"
+        },
+        {
+            "lightness": 1
+        }
+    ]
+},
+{
+    "featureType": "water",
+    "elementType": "labels.text.fill",
+    "stylers": [{
+            "color": "#ffffff"
         },
         {
             "lightness": 1

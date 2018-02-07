@@ -1,95 +1,138 @@
 .title {
+    // box model
+    margin-top: 0;
+    margin-bottom: 15px;
 
     &__sup {
-        color: #8a185a;
-        font-family: $OpenSans;
-        margin-top: 0;
-        margin-bottom: 15px;
-        letter-spacing: 4px;
-        text-transform: uppercase;
-        font-weight: 700;
-        font-size: 1.125rem;
-        line-height: 30px;
+
 
         @include atTabletsPortrait {
-            font-family: $OpenSansBold;
+            // typography
             font-weight: normal;
             letter-spacing: 5px;
         }
 
         &--mrtop {
+            // box model
             padding-top: 100px;
             margin: 0;
 
+            // typography
+            color: $titleColor;
+
             @include atTabletsPortrait {
+                // box model
                 padding-top: 25px;
             }
             
             @include atDesktop {
+                // box model
                 padding-top: 0;
             }
         }
 
-        &--white {
-            // padding-top: 40px;
+        &--gallery {
+            // typography
+            font-size: 1.2rem;
+        }
+
+        &--price {
+            // typography
+            color: $text;
         }
     }
 
     &__description {
+        // box model
         display: none;
 
         @include atDesktop {
+            // box model
             display: block;
         }
         
         &--left {
+            
+            // positioning
             position: absolute;
-            left: -50px;
             top: 100px;
+            left: -50px;
+            
+            // box model
             display: inline-block;
             margin: 0;
             transform: rotate(-90deg);
-            color: #fff;
+
+            // typography
+            color: $white;
             font-size: 0.875rem;
             text-transform: uppercase;
             letter-spacing: 1px;
-            // visibility: hidden !important;
         }
         &--right {
-            display: none;
+            // positioning
             position: absolute;
             right: -120px;
             top: 100px;
+            z-index: 2;
+
+            // box model
+            display: none;
+           
             transform: rotate(-90deg);
+
+            // typography
             font-size: 1.33rem;
-            color: #ffffff;
+            color: $white;
             text-transform: uppercase;
             letter-spacing: 2px;
-            z-index: 2;
-            font-family: $OpenSansBold;
+
+            // typography
 
             @include atTabletsPortrait {
+                // box model
                 top: 150px;
                 display: inline-block;
             }
 
             @include atDesktop {
-                font-size: 1.875rem;
-                font-family: $OpenSans;
+                // positioning
                 top: -180px;
                 right: -155px;
+
+                // typography
+                font-family: $textFont;
+                font-size: 1.875rem;
             }
 
+        }
+
+        &--map {
+            // positioning
+            top: 120px;
+            right: -75px;
+
+            // typography
+            font-size: 0.875rem;
         }
     }
 
     &__section {
-        color: $section;
-        text-transform: uppercase;
-        font-size: 3.33rem;
+        // box model
         margin: 0;
         padding-bottom: 30px;
-        font-weight: bold;
+        
+        // typography
+        color: $section;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 3.33rem;
+        font-weight: 700;
 
+
+        @include atTabletsPortrait {
+            // typography
+            font-size: 4rem;
+        }
     }
 }

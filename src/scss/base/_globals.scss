@@ -9,7 +9,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    // transform: translateY(150px);
+    
     //typography
     font-family: $mainFont;
     font-size: 18px;
@@ -17,11 +17,10 @@ body {
     // visual
     overflow-x: hidden;
 
-    // background-image: url("./img/bg.png");
-
 }
 
 ul {
+    // box model
     margin: 0;
 }
 *{

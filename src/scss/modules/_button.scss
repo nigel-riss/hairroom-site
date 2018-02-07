@@ -1,190 +1,262 @@
 .button {
-    border: 3px solid $secondary;
-    border-radius: 35px;
+    // box model
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 30px;
+    padding: 8px 40px;
+    width: 260px;
+
+    // typography
+    color: $white;
+    font-family: $textFont;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-align: center;
     text-decoration: none;
     text-transform: uppercase;
-    color: $white;
-    display: inline-block;
+    
+    // visual
+    border-radius: 35px;
     cursor: pointer;
     
-    &__wrapper {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding-bottom: 80px;
+    // &__wrapper {
+    //     // positioning
+    //     position: relative;
 
-        @include atTabletsPortrait {
-            flex-direction: row;
-        }
+    //     // box model
+    //     display: flex;
+    //     flex-direction: column;
+    //     justify-content: center;
+    //     align-items: center;
+    //     padding-bottom: 80px;
+
+    //     @include atTabletsPortrait {
+    //         // box model
+    //         flex-direction: row;
+    //     }
+
+    //     &--centerX {
+    //         // positioning
+    //         position: absolute;
+    //         top: 70%;
+    //         left: 45%;
+
+    //         // box model
+    //         flex-direction: column;
+
+    //         @include atDesktop {
+    //             // box model
+    //             left: 50%;
+    //         }
+    //     }
+    //     &__wrapper {
+    //     // positioning
+    //     position: relative;
+
+    //     // box model
+    //     display: flex;
+    //     flex-direction: column;
+    //     justify-content: center;
+    //     align-items: center;
+    //     padding-bottom: 80px;
+
+    //     @include atTabletsPortrait {
+    //         // box model
+    //         flex-direction: row;
+    //     }
+
+    //     &--centerX {
+    //         // positioning
+    //         position: absolute;
+    //         top: 70%;
+    //         left: 45%;
+
+    //         // box model
+    //         flex-direction: column;
+
+    //         @include atDesktop {
+    //             // box model
+    //             left: 50%;
+    //         }
+    //     }
 
 
-        &--centerX {
-            position: absolute;
-            // right: 10px;
-            @include centerer-x;
-            top: 70%;
-            flex-direction: column;
-        }
+    //     &--inline {
 
+    //         @include atTabletsPortrait {
+    //             // box model
+    //             padding-left: 75px;
+    //             justify-content: flex-start;
+    //         }
 
-        &--inline {
+    //         @include atDesktop {
+    //             // positioning
+    //             z-index: 3;
 
-            @include atTabletsPortrait {
-                padding-left: 75px;
-                justify-content: flex-start;
-            }
-
-            @include atDesktop {
-                flex-direction: row;
-            }
-        }
-    }
+    //             // box model
+    //             flex-direction: row;
+    //         }
+    //     }
+    // }
 
     &--online-record {
+        // box model
+        border: 2px solid $secondaryColor;
+        margin-bottom: 0;
 
-        // padding: 12px 80px;
-        border-width: 2px;
-        width: 315px;
-        height: 40px;
-        border-color: $secondary;
-        z-index: 3;
-        bottom: 10px;
-        transition: 0.3s ease-in-out;
-        line-height: 2;
-        font-family: $OpenSans;
+        // visual
         background-color: rgba(237, 99, 182, 0.24);
-        bottom: 25px;
-        font-weight: 600;
-        text-align: center;
-        @include centerer-x;
+        background-color: rgba($accent, 0.5);
+        border-width: 2px;
+        border-color: $secondaryColor;
+        transition: 0.3s ease-in-out;
 
-        @include atTabletsPortrait {
-            width: 250px;
-            height: 39px;
-            line-height: 35px;
-            font-size: 1rem;
-            padding: 5px 50px;
-            padding-bottom: 0;
-            padding-top: 0;
-            position: static;
-            vertical-align: middle;
-            transform: translate(0);
-            margin-bottom: 50px;
-        }
+        // @include atTabletsPortrait {
+        //     // positioning
+        //     position: static;
 
-        @include atDesktop {
-            // padding: 10px 80px;
-        }
+        //     // box model
+        //     height: 39px;
+        //     width: 250px;
+        //     margin-bottom: 50px;
+        //     padding: 0 50px;
+        //     vertical-align: middle;
+
+        //     // typography
+        //     line-height: 35px;
+        //     font-size: 1rem;
+
+        //     // visual
+        //     transform: translate(0);
+        // }
+
+        // @include atDesktop {
+        //     // box model
+        //     width: 310px;
+        // }
+
         &:hover {
-            background-color: #fff;
-            color: #7c1651;
+            // visual
+            background-color: $white;
+            color: $secondaryColor;
         }
     }
 
-    &--franschize {
-        display: none;
-        margin-left: 45px;
-        border-color: #85286d;
-        border-width: 5px;
-        padding: 7px 40px;
-        color: #85286d !important;
-        transition: 0.3s ease-in-out all;
-        letter-spacing: 5px;
+    &--pink {
+        // typography
+        color: $copyColor;
+        border: 2px solid $accent;
 
-        @include atDesktop {
-            display: block;
-            padding: 7px 20px;
-        }
-
-        &:hover {
-            background-color: #85286d;
-            color: #fff !important;
-        }
-    }
-
-&--pink {
-        width: 240px;
-        padding: 10px 0;
-        text-align: center;
-        margin-bottom: 30px;
-        font-family: $OpenSans;
-        color: #3b0f22;
-        font-weight: bold;
+        // visual
         background-color: $accent;
-        border: none;
-        box-shadow: 0px 20px 58px -11px rgba(0,0,0,0.8);
+        box-shadow: 0px 20px 58px -11px rgba(#4d2738, 0.8);
 
-        @include atTabletsPortrait {
-            margin-right: 0px;
-            margin-bottom: 0px;
-            width: 310px;
-            margin-right: 40px;
-        }
-
-        @include atDesktop {
-            margin-bottom: 0;
-            // margin-right: 40px;
-        }
+        // @include atTabletsPortrait {
+        //     // box model
+        //     width: 310px;
+        //     margin-bottom: 0px;
+        //     margin-right: 40px;
+        // }
 
         &:hover {
+            // visual
             transition: 0.3s ease-in-out;
             background-color: #fff;
+
+            // typography
             color: $accent;
         }
     }
 
     &--ghost {
-        width: 240px;
-        padding: 10px 0;
-        text-align: center;
-        color: #3b0f22;
-        font-weight: 600;
+        // box model
+        border: 2px solid $secondaryColor;
+        
+        // typography
+        color: $secondaryColor;
+
+        // visual
         background-color: rgba(#f4cfe4, 0.12);
-        border-color: $accent;
+        
+        // @include atTabletsPortrait {
+        //     // box model
+        //     padding: 8px 0;
+
+        //     // typography
+        //     color: #fff;
+        // }
+
 
         &:hover {
-            transition: 0.3s ease-in-out;
+            // visual
             background-color: $accent;
+            transition: 0.3s ease-in-out;
+
+            // typography
             color: #fff;
         }
     }
 
     &--card {
-        transition: 0.3s ease-in-out all;
-        margin-bottom: 15px;
+        // box model
         width: 240px;
-        font-family: $OpenSans;
+        margin-bottom: 15px;
+
+        // visual
+        transition: 0.3s ease-in-out all;
+
+        // typography
         letter-spacing: 1px;
 
+
+        @include atTabletsPortrait {
+            // box model
+            width: 140px;
+            margin-right: 0;
+
+            // typography
+            font-size: 0.77rem;
+        }
+
         &:hover {
+            // visual
             background-color: #fff;
+
+            // typography
             color: #c8368d;
         }
     }
 
     &--offers {
+        // box model
         padding: 5px 30px;
-        background-color: #c8368d;
+        width: auto;
+
+        // visual
+        background-color: $text;
+        border: none;
+
+        // typography
         font-size: 1rem;
         text-transform: none;
-        border: none;
-        width: auto;
     }
 
     &--subscribe {
-        border: 5px solid $accent;
-        color: $accent;
-        font-weight: bold;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        padding-left: 30px;
-        padding-right: 30px;
+        // box model
+        padding: 10px 30px;
         margin-bottom: 50px;
 
+        // visual
+        border: 5px solid $accent;
+
+        // typography
+        font-weight: bold;
+        color: $accent;
+
         &:hover {
-            background-color: #fff;
+            // visual
+            background-color: $white;
             transition: 0.3s ease-in-out;
         }
     }

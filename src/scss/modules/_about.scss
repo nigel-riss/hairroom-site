@@ -1,6 +1,7 @@
 .about {
-    // height: 100vh;
-    // position: relative;
+    // positioning
+    position: relative;
+
     @include atTabletsPortrait {
         background: linear-gradient(to bottom, #f7e9f4 10%, #fbf9fa);
     }
@@ -9,6 +10,8 @@
         display: flex;
         background-image: url("./img/pattern.jpg");
         position: relative;
+        background-size: cover;
+        padding-bottom: 100px;
 
         &::before {
             content: "";
@@ -19,96 +22,38 @@
             bottom: 0;
             height: 100%;
             width: 100%;
-            background: linear-gradient(to bottom,rgba(255, 255, 255, 0.8),rgba(238, 195, 225, 0.8));
-        }
-    }
-
-    &__header {
-        padding-top: 20px;
-        padding-left: 25px;
-
-        @include atTabletsPortrait {
-            padding-left: 75px;
-            padding-top: 140px;
-        }
-        
-        @include atDesktop {
-            padding-left: 80px;
-        }
-    }
-
-    &__background {
-        position: relative;
-        background-image: url("./img/pattern.jpg");
-
-        &::before {
-            content: '';
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(to bottom,rgba(247, 233, 244, 0.15), rgba(234, 199, 226, 0.15));
-        }
-
-        @include atDesktop {
-            background-image: none;
-            position: static;
-            margin-left: -100px;
-            width: 100%;
-        }
-        
-    }
-
-    &__board {
-        position: relative;
-        background-color: #e6dceb;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: 0 -100%;
-        
-        @include atTabletsPortrait {
-            margin-left: 55px;
-            // padding-top: 150px;
-            background-position: 0 0;
-            background-image: url("./img/about_bg-md.jpg");
-            background-size: cover;
-            box-shadow: 0px 64px 58px -30px rgba(195,161,190,0.75);
-            transform: translateY(-100px);
-        }
-
-        @include atDesktop {
-            transform: none;
-            margin-left: 0;
-            padding-left: 100px;
-            margin-bottom: 60px;
+            background: linear-gradient(to bottom,rgba(233, 220, 230, 0.2),rgba(232, 197, 224, 0.2));
         }
     }
 
     &__img {
-        position: relative;
-        z-index: 1;
-        width: 100%;
-        height: 247px;
+        // typography
+        font-size: 0;
+
+        // visual
+        // box-shadow: 0px 14px 21px 0px rgba(0, 0, 0, 0.2);
         
-        box-shadow: 0px 14px 21px 0px rgba(0,0,0,0.2);
+        // positioning
+        // position: relative;
+        // z-index: 1;
+        // width: 100%;
+        // height: 247px;
+        
 
-        @include atTabletsPortrait {
-            width: 88%;
-            height: 390px;
-            // margin-bottom: 100px;
-            // height: 390px;
-            box-shadow: 0px 15px 39px 0px rgba(0,0,0,0.2);
-        }
+        // @include atTabletsPortrait {
+        //     width: 88%;
+        //     height: 390px;
+        //     // margin-bottom: 100px;
+        //     // height: 390px;
+        //     box-shadow: 0px 15px 39px 0px rgba(0,0,0,0.2);
+        // }
 
-        @include atDesktop {
-        //    z-index: 3;
-           margin-left: 83px;
-           height: auto;
-           transform: translateY(-100px);
-        }
+        // @include atDesktop {
+        // //    z-index: 3;
+        //    margin-left: 83px;
+        //    min-height: 700px;
+        //    transform: translateY(-100px);
+        // }
 
         img {
             width: 100%;
@@ -116,39 +61,89 @@
             object-fit: cover;
         }
     }
-
-    &__title {
-        font-family: $mainFont;
-        font-weight: bold;
-        font-size: 1.33rem;
-        margin-top: 0;
-        width: 275px;
-        margin-bottom: 25px;
-
+    
+    &__board {
+        // box model
+        padding: 35px 30px;
+        padding-bottom: 70px;
+        
+        // visual
+        background-color: $white;
+        overflow: hidden;
+        
         @include atTabletsPortrait {
-            font-size: 2.66rem;
-            font-family: $mainFontExtarBlack;
-            min-width: 436px;
-            font-weight: normal;
+            // positioning
+            // position: relative;
+            // box model
+            margin-left: 55px;
+            background-position: 0 0;
+            background-image: url("./img/about_bg-md.jpg");
+            background-size: cover;
+            box-shadow: 0px 64px 58px -30px rgba(195,161,190,0.75);
+            transform: translateY(-100px);
+            // background-size: cover;
+            // background-repeat: no-repeat;
+            // background-position: 0 -100%;
+            // background-color: #e6dceb;
         }
 
         @include atDesktop {
-            font-size: 2.75rem;
-            width: auto;
+            margin-left: 0;
+            padding-left: 100px;
+            padding-bottom: 50px;
+            margin-bottom: 60px;
         }
     }
 
-    &__copy {
-        color: #010101;
-        font-family: $OpenSans;
-        line-height: 30px;
-        min-width: 308px;
+    &__header {
+        // box model
+        margin-bottom: 25px;
 
         @include atTabletsPortrait {
-            max-width: 410px;
+            padding-left: 75px;
+            padding-top: 140px;
+        }
+        
+        @include atDesktop {
+            padding-top: 100px;
+            padding-left: 80px;
         }
     }
 
+    &__suptitle {
+        // box model
+        margin: 0;
+        padding: 0;
+
+        // typography
+        color: $titleColor;
+        font-family: $textFont;
+        font-size: 1.125rem;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+    }
+
+    &__title {
+        // box model
+        margin: 0;
+        padding: 0;
+
+        // typography
+        font-size: 1.45rem;
+        line-height: 1.25;
+
+        // @include atTabletsPortrait {
+        //     font-size: 2.66rem;
+        //     // font-family: $mainFontExtarBlack;
+        //     min-width: 436px;
+        //     letter-spacing: 3px;
+        // }
+
+        // @include atDesktop {
+        //     font-size: 2.75rem;
+        //     width: auto;
+        // }
+    }
 
     &__content {
 
@@ -158,6 +153,78 @@
 
         @include atDesktop {
             padding-left: 80px;
+        }
+    }
+
+    // &__background {
+    //     position: relative;
+    //     background-image: url("./img/pattern.jpg");
+
+    //     &::before {
+    //         content: '';
+    //         width: 100%;
+    //         height: 100%;
+    //         position: absolute;
+    //         top: 0;
+    //         bottom: 0;
+    //         left: 0;
+    //         right: 0;
+    //         background: linear-gradient(to bottom,rgba(247, 233, 244, 0.7), rgba(234, 199, 226, 0.7));
+    //     }
+
+    //     @include atDesktop {
+    //         background-image: none;
+    //         position: static;
+    //         margin-left: -100px;
+    //         width: 100%;
+    //     }
+        
+    // }
+
+    &__buttons {
+        // typography
+        text-align: center;
+    }
+
+    &__logo {
+        // positioning
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        z-index: 2;
+
+        // box model
+        height: 155px;
+        width: 155px;
+        padding: 32px;
+
+        // visual
+        background-color: $white;
+        border-radius: 50%;
+        box-shadow: 0 7px 28px 6px rgba($copyColor, 0.125);
+
+        &::after {
+            content: "";
+
+            // positioning
+            position: absolute;
+            left: 6px;
+            top: 6px;
+
+            // box model
+            height: 142px;
+            width: 142px;
+            border: 1px solid #cccccc;
+            
+            // visual
+            border-radius: 50%;
+        }
+
+        img {
+            // box model
+            max-height: 100%;
+            max-width: 100%;
         }
     }
 }

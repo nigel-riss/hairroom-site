@@ -1,0 +1,64 @@
+.be-friends {
+    // positioning
+    position: absolute;
+    bottom: 25px;
+
+    // box model
+    padding: 5px;
+
+    // typography
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+
+    &__text {
+        // box model
+        margin: 0;
+        padding: 0;
+        padding-bottom: 7px;
+
+        // visual
+        border-bottom: 1px solid white;
+
+        // typography
+        font-size: 0.7rem;
+    }
+
+    &__social {
+        // box model
+        margin: 0;
+        padding: 0;
+        padding-top: 4px;
+
+        // typography
+        letter-spacing: 3px;
+    }
+
+    span {
+        font-size: 1.125rem;
+        display: block;
+        padding-top: 5px;
+        letter-spacing: 6px;
+
+        @include atTabletsPortrait {
+            letter-spacing: 1px;
+        }
+        
+    }
+
+    @include atTabletsPortrait {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 80px;
+        font-size: 0.6875rem;
+    }
+
+    @include atDesktop {
+        top: 60px;
+    }
+
+    @include atDesktopLarge {
+        top: 70px;
+    }
+}
