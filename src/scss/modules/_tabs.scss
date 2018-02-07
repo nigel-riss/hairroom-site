@@ -1,48 +1,64 @@
 .tabs {
+    // @include atTabletsPortrait {
+    //     padding-left: 0;
+    // }
 
-    @include atTabletsPortrait {
-        padding-left: 0;
-    }
-
-    @include atDesktop {
-        padding-left: 0;
-    }
+    // @include atDesktop {
+    //     padding-left: 0;
+    // }
     
     &__list {
+        // positioning
+        position: relative;
+
         // box model
         display: flex;
         padding: 0;
         margin: 0;
-        margin-bottom: 48px;
+        margin-bottom: 20px;
+        margin-left: -10px;
         
         // visual
         list-style: none;
+
+        &::after {
+            content: "";
+
+            // positioning
+            position: absolute;
+            bottom: 0;
+            left: 10px;
+
+            // box model
+            height: 1px;
+            width: 150%;
+
+            // visual
+            background-color: rgba(#999999, 0.25);
+        }
     }
 
     &__item {
-        // box model
-        padding-right: 20px;
-
-        @include atTabletsPortrait {
-            // box model
-            padding-right: 55px;
-        }
-
-        &:last-child {
-            padding-right: 0;
-        }
+        // @include atTabletsPortrait {
+        //     // box model
+        //     padding-right: 55px;
+        // }
     }
 
     &__link {
-        font-size: 1.125rem;
+        // box model
+        display: inline-block;
+        vertical-align: top;
+        padding: 10px;
+
+        // typography
+        color: #999999;
+        font-size: 1rem;
         font-family: $textFont;
         text-transform: uppercase;
-        color: #898989;
-        line-height: 15px;
-        letter-spacing: 3px;
         font-weight: 300;
+        letter-spacing: 2px;
         transition: 0.3s ease-in-out;
-        display: inherit;
 
 
         @include atTabletsPortrait {

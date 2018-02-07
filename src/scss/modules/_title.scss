@@ -4,13 +4,7 @@
     margin-bottom: 15px;
 
     &__sup {
-        // typography
-        color: #d74299;
-        font-family: $textFont;
-        font-size: 1.125rem;
-        text-transform: uppercase;
-        letter-spacing: 4px;
-        line-height: 30px;
+
 
         @include atTabletsPortrait {
             // typography

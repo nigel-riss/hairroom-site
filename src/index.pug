@@ -4,14 +4,18 @@ html(lang="ru")
         meta(charset="utf-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        meta(name="theme-color" content="#ee7aad")
+
+        //- favicon
         link(rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png")
         link(rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png")
         link(rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png")
         link(rel="manifest" href="/site.webmanifest")
         link(rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5")
         meta(name="msapplication-TileColor" content="#da532c")
+
+        //- address bar
         meta(name="theme-color" content="#ee7aad")
+
         //- fix font import to @font-face
         link(href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet")
         link(href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet")
@@ -76,45 +80,47 @@ html(lang="ru")
         
         section.about
             a#about.nav-link
+
             .about__img
                 picture
                     source(srcset="./img/about_img-sm.jpg" media="(max-width: 700px)")
                     source(srcset="./img/about__img-md.jpg" media="(max-width: 1200)")
                     source(srcset="./img/about_img-lg.jpg" media="(min-width: 1200px)")
                     img(src="./img/about_img-sm.jpg" alt="HairRoom изображение")
-            .about__background
-                .about__board
-                    header.about__header
-                        sup.title__sup О салоне
-                        h4.about__title HAIR ROOM - салон<br> с&nbsp;вашим характером
 
-                    .about__content
-                        .tabs
-                            ul.tabs__list(id="tabs" role="tablist")
-                                li.tabs__item.tabs__current(data-tab="tab-1" id="tab"): a.tabs__link Миссия
-                                li.tabs__item(data-tab="tab-2"): a.tabs__link Подход
-                                li.tabs__item(data-tab="tab-3"): a.tabs__link Мастера
+            .about__board
+                header.about__header
+                    //- sup.title__sup О салоне
+                    sup.about__suptitle О салоне
+                    h2.about__title HAIR ROOM — салон<br> с&nbsp;вашим характером
 
-                            .tabs__content.tabs__current(id="tab-1")
-                                p.about__copy Наш салон предлагает уникальные услуги европейского уровня качества, поэтому мы всегда гарантируем отменное качество вашего неповторимого образа. Уникальное оборудование и профессиональные мастера - это залог упеха студии HAIR ROOM
-                                p.about__copy.about__copy--mrtop Позвольте себе удовольствие наслаждаться своей красотой и дарить ее любимым.
+                .about__content
+                    .tabs
+                        ul.tabs__list(id="tabs" role="tablist")
+                            li.tabs__item.tabs__current(data-tab="tab-1" id="tab"): a.tabs__link Миссия
+                            li.tabs__item(data-tab="tab-2"): a.tabs__link Подход
+                            li.tabs__item(data-tab="tab-3"): a.tabs__link Мастера
 
-                            
-                            .tabs__content(id="tab-2")
-                                p.about__copy Подход
+                        .tabs__content.tabs__current(id="tab-1")
+                            p.about__copy Наш салон предлагает уникальные услуги европейского уровня качества, поэтому мы всегда гарантируем отменное качество вашего неповторимого образа. Уникальное оборудование и профессиональные мастера — это залог упеха студии HAIR ROOM.
+                            p.about__copy.about__copy--mrtop Позвольте себе удовольствие наслаждаться своей красотой и дарить ее любимым.
 
-                            .tabs__content(id="tab-3")
-                                p.about__copy Мастера
+                        
+                        .tabs__content(id="tab-2")
+                            p.about__copy Текст вкладки "подход"
 
-                    .logo.logo--about
-                        .logo__outline
-                            img(src="./img/hr_logo_black.svg" alt="logo white")
-                    .about__button
-                        a.button.button--pink(href="#") online Запись
-                        a.button.button--ghost(href="#price") прайс-лист
+                        .tabs__content(id="tab-3")
+                            p.about__copy Текст вкладки "мастера"
+
+                .logo.logo--about
+                    .logo__outline
+                        img(src="./img/hr_logo_black.svg" alt="logo white")
+                .about__button
+                    a.button.button--pink(href="#") online Запись
+                    a.button.button--ghost(href="#price") прайс-лист
 
 
-        section.services
+        //- section.services
             a#services.nav-link
             header.services__header
                 p.title__sup.title__sup--mrtop Мы предлагаем
@@ -174,7 +180,6 @@ html(lang="ru")
                                 a.button.button--pink.button--card(href="#") Записаться
                                 a.button.button--ghost.button--card(href="#") Прайс-лист
 
-            
         section.price
             a#price.nav-link
             .price__board
@@ -448,7 +453,6 @@ html(lang="ru")
                 .gallery__img
                     img(src="./img/card8-sm.jpg" alt="HairRoom педикюр")
 
-
         section.location
             a#contacts.nav-link
             .map-label
@@ -502,7 +506,7 @@ html(lang="ru")
                     p.site-footer__info-text.site-footer__info-text--bold - выходной
                     
                 p.site-footer__copyright copyright &copy; 2018<br><b>hairroom</b>
-                
+
         nav.scroll-spy
             ul.scroll-spy__list
                 li: a.scroll-spy__link(id="about-link" data-label="Салон" href="#about") Салон

@@ -26,9 +26,77 @@
         }
     }
 
+    &__img {
+        // typography
+        font-size: 0;
+
+        // visual
+        // box-shadow: 0px 14px 21px 0px rgba(0, 0, 0, 0.2);
+        
+        // positioning
+        // position: relative;
+        // z-index: 1;
+        // width: 100%;
+        // height: 247px;
+        
+
+        // @include atTabletsPortrait {
+        //     width: 88%;
+        //     height: 390px;
+        //     // margin-bottom: 100px;
+        //     // height: 390px;
+        //     box-shadow: 0px 15px 39px 0px rgba(0,0,0,0.2);
+        // }
+
+        // @include atDesktop {
+        // //    z-index: 3;
+        //    margin-left: 83px;
+        //    min-height: 700px;
+        //    transform: translateY(-100px);
+        // }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    
+    &__board {
+        // box model
+        padding: 35px 30px;
+        
+        // visual
+        background-color: $white;
+        overflow: hidden;
+        
+        @include atTabletsPortrait {
+            // positioning
+            // position: relative;
+            // box model
+            margin-left: 55px;
+            background-position: 0 0;
+            background-image: url("./img/about_bg-md.jpg");
+            background-size: cover;
+            box-shadow: 0px 64px 58px -30px rgba(195,161,190,0.75);
+            transform: translateY(-100px);
+            // background-size: cover;
+            // background-repeat: no-repeat;
+            // background-position: 0 -100%;
+            // background-color: #e6dceb;
+        }
+
+        @include atDesktop {
+            margin-left: 0;
+            padding-left: 100px;
+            padding-bottom: 50px;
+            margin-bottom: 60px;
+        }
+    }
+
     &__header {
         // box model
-
+        margin-bottom: 25px;
 
         @include atTabletsPortrait {
             padding-left: 75px;
@@ -41,112 +109,77 @@
         }
     }
 
-    &__background {
-        position: relative;
-        background-image: url("./img/pattern.jpg");
-
-        &::before {
-            content: '';
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(to bottom,rgba(247, 233, 244, 0.7), rgba(234, 199, 226, 0.7));
-        }
-
-        @include atDesktop {
-            background-image: none;
-            position: static;
-            margin-left: -100px;
-            width: 100%;
-        }
-        
-    }
-
-    &__board {
-        // positioning
-        position: relative;
-
+    &__suptitle {
         // box model
-        padding: 20px 25px;
+        margin: 0;
+        padding: 0;
 
-        // visual
-        background-color: #e6dceb;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: 0 -100%;
-        
-        @include atTabletsPortrait {
-            // box model
-            margin-left: 55px;
-            background-position: 0 0;
-            background-image: url("./img/about_bg-md.jpg");
-            background-size: cover;
-            box-shadow: 0px 64px 58px -30px rgba(195,161,190,0.75);
-            transform: translateY(-100px);
-        }
-
-        @include atDesktop {
-            margin-left: 0;
-            padding-left: 100px;
-            padding-bottom: 50px;
-            margin-bottom: 60px;
-        }
-    }
-
-    &__img {
-        position: relative;
-        z-index: 1;
-        width: 100%;
-        height: 247px;
-        
-        box-shadow: 0px 14px 21px 0px rgba(0,0,0,0.2);
-
-        @include atTabletsPortrait {
-            width: 88%;
-            height: 390px;
-            // margin-bottom: 100px;
-            // height: 390px;
-            box-shadow: 0px 15px 39px 0px rgba(0,0,0,0.2);
-        }
-
-        @include atDesktop {
-        //    z-index: 3;
-           margin-left: 83px;
-           min-height: 700px;
-           transform: translateY(-100px);
-        }
-
-        img, source {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+        // typography
+        color: $titleColor;
+        font-family: $textFont;
+        font-size: 1.125rem;
+        letter-spacing: 4px;
+        text-transform: uppercase;
     }
 
     &__title {
         // box model
         margin: 0;
-        margin-bottom: 25px;
+        padding: 0;
 
         // typography
         font-size: 1.45rem;
+        line-height: 1.25;
+
+        // @include atTabletsPortrait {
+        //     font-size: 2.66rem;
+        //     // font-family: $mainFontExtarBlack;
+        //     min-width: 436px;
+        //     letter-spacing: 3px;
+        // }
+
+        // @include atDesktop {
+        //     font-size: 2.75rem;
+        //     width: auto;
+        // }
+    }
+
+    &__content {
 
         @include atTabletsPortrait {
-            font-size: 2.66rem;
-            // font-family: $mainFontExtarBlack;
-            min-width: 436px;
-            letter-spacing: 3px;
+            padding-left: 75px;
         }
 
         @include atDesktop {
-            font-size: 2.75rem;
-            width: auto;
+            padding-left: 80px;
         }
     }
+
+    // &__background {
+    //     position: relative;
+    //     background-image: url("./img/pattern.jpg");
+
+    //     &::before {
+    //         content: '';
+    //         width: 100%;
+    //         height: 100%;
+    //         position: absolute;
+    //         top: 0;
+    //         bottom: 0;
+    //         left: 0;
+    //         right: 0;
+    //         background: linear-gradient(to bottom,rgba(247, 233, 244, 0.7), rgba(234, 199, 226, 0.7));
+    //     }
+
+    //     @include atDesktop {
+    //         background-image: none;
+    //         position: static;
+    //         margin-left: -100px;
+    //         width: 100%;
+    //     }
+        
+    // }
+
 
     &__copy {
         // box model
@@ -178,19 +211,5 @@
 
         // typography
         text-align: center;
-    }
-
-
-    &__content {
-        // box model
-        margin-bottom: 140px;
-        
-        @include atTabletsPortrait {
-            padding-left: 75px;
-        }
-
-        @include atDesktop {
-            padding-left: 80px;
-        }
     }
 }
