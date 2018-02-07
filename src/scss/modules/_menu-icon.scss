@@ -30,8 +30,8 @@
 
         // positioning
         position: absolute;
-        left: 12px;
-        top: 31px;
+        left: 10px;
+        top: 30px;
         transform-origin: 0% 50%;
 
         //box model
@@ -47,8 +47,8 @@
     &__middle {
         // positioning
         position: absolute;
-        left: 12px;
-        top: 23px;
+        left: 10px;
+        top: 21px;
 
         // box model
         display: block;
@@ -65,10 +65,10 @@
 
         // positioning
         position: absolute;
-        left: 12px;
-        top: 15px;
+        left: 10px;
+        top: 12px;
 
-        transform: origin 0 50%;
+        transform-origin: 0 50%;
 
         // box model
         display: block;
@@ -89,8 +89,8 @@
 
         &::before {
             // positioning
-            left: 12px;
-            top: 22px;
+            left: 14px;
+            top: 30px;
             transform: rotate(-45deg);
 
             // visual
@@ -103,8 +103,8 @@
 
         &::after {
             // positioning
-            left: 12px;
-            top: 22px;
+            left: 14px;
+            top: 13px;
             transform: rotate(45deg);
 
             // visual

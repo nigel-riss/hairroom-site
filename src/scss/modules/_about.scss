@@ -1,6 +1,7 @@
 .about {
-    // height: 100vh;
-    // position: relative;
+    // positioning
+    position: relative;
+
     @include atTabletsPortrait {
         background: linear-gradient(to bottom, #f7e9f4 10%, #fbf9fa);
     }
@@ -26,8 +27,8 @@
     }
 
     &__header {
-        padding-top: 20px;
-        padding-left: 25px;
+        // box model
+
 
         @include atTabletsPortrait {
             padding-left: 75px;
@@ -66,15 +67,21 @@
     }
 
     &__board {
+        // positioning
         position: relative;
+
+        // box model
+        padding: 20px 25px;
+
+        // visual
         background-color: #e6dceb;
-        background-repeat: no-repeat;
         background-size: cover;
+        background-repeat: no-repeat;
         background-position: 0 -100%;
         
         @include atTabletsPortrait {
+            // box model
             margin-left: 55px;
-            // padding-top: 150px;
             background-position: 0 0;
             background-image: url("./img/about_bg-md.jpg");
             background-size: cover;
@@ -121,10 +128,12 @@
     }
 
     &__title {
-        font-size: 1.45rem;
-        margin-top: 0;
-        width: 275px;
+        // box model
+        margin: 0;
         margin-bottom: 25px;
+
+        // typography
+        font-size: 1.45rem;
 
         @include atTabletsPortrait {
             font-size: 2.66rem;
@@ -140,11 +149,14 @@
     }
 
     &__copy {
+        // box model
+        margin: 0;
+        margin-bottom: 55px;
+
+        // typography
         color: #010101;
         font-family: $textFont;
-        line-height: 30px;
-        min-width: 308px;
-        margin-top: 48px;
+        line-height: 2rem;
 
         @include atTabletsPortrait {
             max-width: 410px;
@@ -153,11 +165,26 @@
         @include atDesktop {
             max-width: 470px;
         }
+
+        &--mrtop {
+            margin: 0;
+        }
+    }
+
+    &__button {
+        // box model
+        width: 100%;
+        margin-bottom: 80px;
+
+        // typography
+        text-align: center;
     }
 
 
     &__content {
-
+        // box model
+        margin-bottom: 140px;
+        
         @include atTabletsPortrait {
             padding-left: 75px;
         }

@@ -12,55 +12,85 @@
     border-radius: 35px;
     cursor: pointer;
     
-    &__wrapper {
-        // positioning
-        position: relative;
+    // &__wrapper {
+    //     // positioning
+    //     position: relative;
 
-        // box model
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding-bottom: 80px;
+    //     // box model
+    //     display: flex;
+    //     flex-direction: column;
+    //     justify-content: center;
+    //     align-items: center;
+    //     padding-bottom: 80px;
 
-        @include atTabletsPortrait {
-            // box model
-            flex-direction: row;
-        }
+    //     @include atTabletsPortrait {
+    //         // box model
+    //         flex-direction: row;
+    //     }
 
-        &--centerX {
-            // positioning
-            position: absolute;
-            top: 70%;
-            left: 45%;
+    //     &--centerX {
+    //         // positioning
+    //         position: absolute;
+    //         top: 70%;
+    //         left: 45%;
 
-            // box model
-            flex-direction: column;
+    //         // box model
+    //         flex-direction: column;
 
-            @include atDesktop {
-                // box model
-                left: 50%;
-            }
-        }
+    //         @include atDesktop {
+    //             // box model
+    //             left: 50%;
+    //         }
+    //     }
+    //     &__wrapper {
+    //     // positioning
+    //     position: relative;
+
+    //     // box model
+    //     display: flex;
+    //     flex-direction: column;
+    //     justify-content: center;
+    //     align-items: center;
+    //     padding-bottom: 80px;
+
+    //     @include atTabletsPortrait {
+    //         // box model
+    //         flex-direction: row;
+    //     }
+
+    //     &--centerX {
+    //         // positioning
+    //         position: absolute;
+    //         top: 70%;
+    //         left: 45%;
+
+    //         // box model
+    //         flex-direction: column;
+
+    //         @include atDesktop {
+    //             // box model
+    //             left: 50%;
+    //         }
+    //     }
 
 
-        &--inline {
+    //     &--inline {
 
-            @include atTabletsPortrait {
-                // box model
-                padding-left: 75px;
-                justify-content: flex-start;
-            }
+    //         @include atTabletsPortrait {
+    //             // box model
+    //             padding-left: 75px;
+    //             justify-content: flex-start;
+    //         }
 
-            @include atDesktop {
-                // positioning
-                z-index: 3;
+    //         @include atDesktop {
+    //             // positioning
+    //             z-index: 3;
 
-                // box model
-                flex-direction: row;
-            }
-        }
-    }
+    //             // box model
+    //             flex-direction: row;
+    //         }
+    //     }
+    // }
 
     &--online-record {
         // box model
@@ -114,13 +144,13 @@
     &--pink {
         // box model
         width: 240px;
-        padding: 10px 0;
         margin-bottom: 30px;
+        padding: 10px 0;
 
         // typography
         text-align: center;
         font-family: $textFontBold;
-        font-weight: bold;
+        font-weight: 600;
         color: #3b0f22;
 
         // visual
@@ -156,7 +186,7 @@
 
         // typography
         text-align: center;
-        font-family: $textFontBold !important;
+        font-family: $textFontBold;
         font-weight: 600;
         color: #3b0f22;
         

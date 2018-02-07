@@ -134,8 +134,9 @@
         // typography
         color: $section;
         text-transform: uppercase;
+        letter-spacing: 1px;
         font-size: 3.33rem;
-        font-weight: bold;
+        font-weight: 700;
 
 
         @include atTabletsPortrait {
