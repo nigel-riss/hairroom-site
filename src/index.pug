@@ -47,8 +47,8 @@ html(lang="ru")
                     
                     //- change class (put into main-menu block)
                     .be-friends
-                        a(href="http://instagram.com") 
-                            p.be-friends__text Давайте дружить 
+                        a(href="http://instagram.com")
+                            p.be-friends__text Давайте дружить
                             p.be-friends__social instagram
 
             section.hero
@@ -59,9 +59,9 @@ html(lang="ru")
 
                 .hero__img
                     picture
-                        img(src="./img/women.png" alt="Hair Room девушка")
-                        source( media="(max-width: 700px)" srcset="./img/women.png")
-                        source( media="(max-width: 1920px)" srcset="./img/women-lg.png")
+                        img(src="./img/women-md.png" alt="Hair Room девушка")
+                        source(media="(min-width: 700px)" srcset="./img/women-md.png")
+                        source(media="(min-width: 1200px)" srcset="./img/women-lg.png")
                 
                 .hero__button
                     a.button.button--online-record(href="#") online&nbsp;запись

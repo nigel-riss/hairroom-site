@@ -2,15 +2,15 @@
     // positioning
     position: fixed;
     left: -110%;
-    z-index: 4;
+    z-index: 5;
 
     // box model
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     height: 100%;
     width: 100%;
+    padding-top: 20px;
     padding-bottom: 70px;
 
     // visual
