@@ -65,6 +65,7 @@
     &__board {
         // box model
         padding: 35px 30px;
+        padding-bottom: 70px;
         
         // visual
         background-color: $white;
@@ -183,5 +184,47 @@
     &__buttons {
         // typography
         text-align: center;
+    }
+
+    &__logo {
+        // positioning
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        z-index: 2;
+
+        // box model
+        height: 155px;
+        width: 155px;
+        padding: 32px;
+
+        // visual
+        background-color: $white;
+        border-radius: 50%;
+        box-shadow: 0 7px 28px 6px rgba($copyColor, 0.125);
+
+        &::after {
+            content: "";
+
+            // positioning
+            position: absolute;
+            left: 6px;
+            top: 6px;
+
+            // box model
+            height: 142px;
+            width: 142px;
+            border: 1px solid #cccccc;
+            
+            // visual
+            border-radius: 50%;
+        }
+
+        img {
+            // box model
+            max-height: 100%;
+            max-width: 100%;
+        }
     }
 }

@@ -1,4 +1,8 @@
 .price {
+    // positioning
+    position: relative;
+    z-index: 1;
+    
     // box model
     margin-bottom: -30px;
     padding-left: 25px;

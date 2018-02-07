@@ -37,22 +37,6 @@
     //     width: 188px;
     // }
 
-    &--about {
-        // positioning
-        @include centerer-x;
-        z-index: 3;
-        bottom: -85px;
-
-        // visual
-        background-color: $white;
-        border-radius: 50%;
-        
-        // box model
-        width: 150px;
-        height: 150px;
-        padding: 30px;
-    }
-
     img {
         // box model
         width: 100%;
