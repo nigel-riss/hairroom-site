@@ -180,30 +180,6 @@
         
     // }
 
-
-    &__copy {
-        // box model
-        margin: 0;
-        margin-bottom: 55px;
-
-        // typography
-        color: #010101;
-        font-family: $textFont;
-        line-height: 2rem;
-
-        @include atTabletsPortrait {
-            max-width: 410px;
-        }
-
-        @include atDesktop {
-            max-width: 470px;
-        }
-
-        &--mrtop {
-            margin: 0;
-        }
-    }
-
     &__button {
         // box model
         width: 100%;
