@@ -17,7 +17,7 @@ html(lang="ru")
         meta(name="theme-color" content="#ee7aad")
 
         //- fix font import to @font-face
-        link(href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900" rel="stylesheet")
         link(href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet")
         link(rel="stylesheet", href="styles.css")
         title HairRoom
@@ -63,7 +63,7 @@ html(lang="ru")
 
                 .hero__img
                     picture
-                        img(src="./img/women-md.png" alt="Hair Room девушка")
+                        img(src="./img/women.png" alt="Hair Room девушка")
                         source(media="(min-width: 700px)" srcset="./img/women-md.png")
                         source(media="(min-width: 1200px)" srcset="./img/women-lg.png")
                 
@@ -97,8 +97,8 @@ html(lang="ru")
                     .tabs
                         ul.tabs__list(id="tabs" role="tablist")
                             li.tabs__list-item.tabs__list-item--current: a.tabs__link Миссия
-                            li.tabs__list-item(data-tab="tab-2"): a.tabs__link Подход
-                            li.tabs__list-item(data-tab="tab-3"): a.tabs__link Мастера
+                            li.tabs__list-item: a.tabs__link Подход
+                            li.tabs__list-item: a.tabs__link Мастера
 
                         .tabs__content.tabs__content--current
                             p.tabs__copy Наш салон предлагает уникальные услуги европейского уровня качества, поэтому мы всегда гарантируем отменное качество вашего неповторимого образа. Уникальное оборудование и профессиональные мастера — это залог упеха студии HAIR ROOM.
@@ -106,9 +106,13 @@ html(lang="ru")
 
                         .tabs__content
                             p.tabs__copy Текст вкладки "подход"
+                            p.tabs__copy Наш салон предлагает уникальные услуги европейского уровня качества, поэтому мы всегда гарантируем отменное качество вашего неповторимого образа. Уникальное оборудование и профессиональные мастера — это залог упеха студии HAIR ROOM.
+                            p.tabs__copy Позвольте себе у
 
                         .tabs__content
                             p.tabs__copy Текст вкладки "мастера"
+                            p.tabs__copy Наш салон предлагает уникальные услуги европейского уровня качества, поэтому мы всегда гарантируем отменное качество вашего неповторимого образа. Уникальное оборудование и профессиональные мастера — это залог упеха студии HAIR ROOM.
+                            p.tabs__copy Позвольте себе у
 
                 .about__buttons
                     a.button.button--pink(href="#") Online Запись
@@ -118,52 +122,58 @@ html(lang="ru")
                     img(src="./img/hr_logo_black.svg" alt="Hairroom logo")
 
 
-        //- section.services
+        section.services
             a#services.nav-link
             header.services__header
-                p.title__sup.title__sup--mrtop Мы предлагаем
-                p.title__section Услуги
+                sup.services__suptitle Мы предлагаем
+                p.services__title-section Услуги
             
-            .services__cards.owl-carousel.owl-theme
-
+            .services__cards
                 article.services__card
                     header.services__card-title Наращивание<br>волос
                     .services__wrapper
                         .services__card-img.services__card-img--bg4
                         .services__card-content
+                            // changes class
                             p.title__description.title__description--left Hair Room Услуги
                             p.services__card-description бесцветный розовый с нейтрализацией желтизны
-                            .button__wrapper.button__wrapper--centerX
+                            .services__buttons
                                 a.button.button--pink.button--card(href="#") Записаться
                                 a.button.button--ghost.button--card(href="#") Прайс-лист
+
                 article.services__card
                     header.services__card-title Маникюрные<br> услуги
                     .services__wrapper
                         .services__card-img.services__card-img--bg2
                         .services__card-content
+                            // change class
                             p.title__description.title__description--left Hair Room Услуги
                             p.services__card-description бесцветный розовый с нейтрализацией желтизны
-                            .button__wrapper.button__wrapper--centerX
+                            .services__buttons
                                 a.button.button--pink.button--card(href="#") Записаться
                                 a.button.button--ghost.button--card(href="#") Прайс-лист
+
                 article.services__card
                     header.services__card-title Уход<br>за волосами
                     .services__wrapper
                         .services__card-img.services__card-img--bg3
                         .services__card-content
+                            // change class
                             p.title__description.title__description--left Hair Room Услуги
                             p.services__card-description бесцветный розовый с нейтрализацией желтизны
-                            .button__wrapper.button__wrapper--centerX
+                            .services__buttons
                                 a.button.button--pink.button--card(href="#") Записаться
                                 a.button.button--ghost.button--card(href="#") Прайс-лист
+
                 article.services__card
                     header.services__card-title Дополнительные услуги
                     .services__wrapper
                         .services__card-img.services__card-img--bg4
                         .services__card-content
+                            // change class
                             p.title__description.title__description--left Hair Room Услуги
                             p.services__card-description бесцветный розовый с нейтрализацией желтизны
-                            .button__wrapper.button__wrapper--centerX
+                            .services__buttons
                                 a.button.button--pink.button--card(href="#") Записаться
                                 a.button.button--ghost.button--card(href="#") Прайс-лист
                 
@@ -172,9 +182,10 @@ html(lang="ru")
                     .services__wrapper
                         .services__card-img.services__card-img--bg5
                         .services__card-content
+                            // change class
                             p.title__description.title__description--left Hair Room Услуги
                             p.services__card-description бесцветный розовый с нейтрализацией желтизны
-                            .button__wrapper.button__wrapper--centerX
+                            .services__buttons
                                 a.button.button--pink.button--card(href="#") Записаться
                                 a.button.button--ghost.button--card(href="#") Прайс-лист
 
@@ -182,13 +193,13 @@ html(lang="ru")
             a#price.nav-link
             .price__board
                 header.price__header
-                    p.title__sup.title__sup--price Цены на услуги
-                    p.title__section.title__section--white Прайс-лист
+                    sup.price__suptitle Цены на услуги
+                    p.price__section-title Прайс - лист
 
                 .price__content
                     .price__group.price__group--big
                         h3.price__group-title Уход<br>за волосами
-                        .price__conteiner
+                        .price__container
                             .price-inner__column
                                 table.price__table
                                     caption.price__caption кератиновое выпрямление<br>/ восстановление
@@ -205,7 +216,7 @@ html(lang="ru")
                                     tr
                                         td середина спины
                                         td <b>4000 - 4500</b> <span>руб.</span>
-                            .price-inner__column.price-inner__column--pd
+                            .price-inner__column
                                 table.price__table
                                     caption.price__caption Тонировка с уходом
                                     caption.price__column-description Большой выбор красок европейских производителей, профессиональные мастера.
@@ -226,7 +237,7 @@ html(lang="ru")
                                         td Любой длины
                                         td <b>800 - 2000</b> <span>руб.</span>
                             
-                            .price-inner__column.price-inner__column--pd
+                            .price-inner__column
                                 table.price__table
                                     caption.price__caption Ботокс<br>/ Биксипластия
                                     caption.price__column-description Предназначен для сухих, поврежденных волос! Глубоко воздействует на структуру волос, восстанавливает поврежденные участки на клеточном уровне!    
@@ -301,7 +312,7 @@ html(lang="ru")
                                         td Без последующего покрытия
                                         td <b>400</b>&nbsp;<span>руб.</span>
 
-                            .price-inner__column.price-inner__column--pd
+                            .price-inner__column
                                 table.price__table
                                     caption.price__caption Покрытие гель-лаком<br> + коминированный<br>маникюр
                                     tr
@@ -424,8 +435,9 @@ html(lang="ru")
             header.gallery__header
                 h3.title__sup.title__sup--gallery Социальные сети
                 h4.gallery__title Следите за HAIR ROOM<br>в социальных сетях
+
             .gallery__subscribe
-                h5.gallery__slogan Давайте дружить
+                p.gallery__slogan Давайте дружить
                 .gallery__content
                     .gallery__logo: img(src="./img/insta_logo.png" alt="instagram logo")
                     p.gallery__text Для подписчиков нашей группы в Instagramv мы проводим регулярные розыгрыши призов и сертификатов на улуги нашего салона.
@@ -434,20 +446,28 @@ html(lang="ru")
             .gallery__gallery
                 .gallery__img
                     img(src="./img/card1-sm.jpg" alt="HairRoom студия красоты")
+
                 .gallery__img.gallery__img--subscribe
                     img(src="./img/card__subscribe.jpg" alt="подписаться")
+
                 .gallery__img
                     img(src="./img/card2-sm.jpg" alt="HairRoom декорации")
+
                 .gallery__img
                     img(src="./img/card3-sm.jpg" alt="HairRoom наращивание ресниц")
+
                 .gallery__img
                     img(src="./img/card4-sm.jpg" alt="HairRoom окрас волос")
+
                 .gallery__img
                     img(src="./img/card5-sm.jpg" alt="HairRoom")
+
                 .gallery__img
                     img(src="./img/card6-sm.jpg" alt="HairRoom увеличение губ")
+                    
                 .gallery__img
                     img(src="./img/card7-sm.jpg" alt="HairRoom миллирование")
+
                 .gallery__img
                     img(src="./img/card8-sm.jpg" alt="HairRoom педикюр")
 
@@ -456,6 +476,7 @@ html(lang="ru")
             .map-label
               .map-label__content
                 p.title__description.title__description--right.title__description--map Hairroom Kaliningrad
+
                 p.map-label__info-title E-mail
                 p.map-label__info-text hairroom@gmail.com
 
@@ -494,7 +515,7 @@ html(lang="ru")
                     p.site-footer__info-title E-mail:
                     a.site-footer__info-text(href="mailto: hairroom@gmail.com") hairroom@gmail.com
 
-                .site-footer__time
+                .site-footer__worktime
                     p.site-footer__contacts-title Время работы
 
                     p.site-footer__info-title Ежедневно:
@@ -514,5 +535,5 @@ html(lang="ru")
                 li: a.scroll-spy__link(id="contacts-link" data-label="Контакты" href="#contacts") Контакты
 
         //- script(src="map.js")
-        //- script(src="scripts.js")
-        //- script(async, defer, src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsXqiEFxIOCZHT3sEJWMMLc6HywtBL4-0&callback=initMap")
+        script(src="scripts.js")
+        script(async, defer, src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsXqiEFxIOCZHT3sEJWMMLc6HywtBL4-0&callback=initMap")

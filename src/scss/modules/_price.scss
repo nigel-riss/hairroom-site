@@ -12,124 +12,117 @@
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     
-    @include atTabletsPortrait {
-        // visual
-        background: none;
-    }
+    // @include atTabletsPortrait {
+    //     // visual
+    //     background: none;
+    // }
     
 
-    @include atTabletsPortrait {
-        // positioning
-        position: relative;
-        z-index: 1;
-        transform: translateY(-150px);
+    // @include atTabletsPortrait {
+    //     // positioning
+    //     position: relative;
+    //     z-index: 1;
+    //     transform: translateY(-150px);
 
-        // box model
-        padding-left: 55px;
+    //     // box model
+    //     padding-left: 55px;
 
-        &::before {
-            content: url("./img/hero_hr_gallery.png");
+    //     &::before {
+    //         content: url("./img/hero_hr_gallery.png");
 
-            // positioning
-            position: absolute;
-            bottom: -240px;
-            left: -100px;
-            z-index: 3;
-        }
-    }
+    //         // positioning
+    //         position: absolute;
+    //         bottom: -240px;
+    //         left: -100px;
+    //         z-index: 3;
+    //     }
+    // }
 
-    @include atDesktop {
-        // positioning
-        transform: translateY(-250px);
+    // @include atDesktop {
+    //     // positioning
+    //     transform: translateY(-250px);
 
-        // box model
-        margin-left: 246px;
+    //     // box model
+    //     margin-left: 246px;
 
-        // visual
-        background: none;
-        background-repeat: no-repeat;
-    }
+    //     // visual
+    //     background: none;
+    //     background-repeat: no-repeat;
+    // }
 
     &__board {
+        // box model
+        padding: 40px 25px;
+
         // visual
         background-color: #d8a8df;
         
-        @include atTabletsPortrait {
-            // visual
-            background-image: url("./img/price_bg-lg.jpg");
-            background-repeat: no-repeat;
-            background-size: contain;
-            border-radius: 5px;
-            box-shadow: -14px 0px 20px -5px rgba(0,0,0,0.3);
-        }
+        // @include atTabletsPortrait {
+        //     // visual
+        //     background-image: url("./img/price_bg-lg.jpg");
+        //     background-repeat: no-repeat;
+        //     background-size: contain;
+        //     border-radius: 5px;
+        //     box-shadow: -14px 0px 20px -5px rgba($black, 0.3);
+        // }
     }
 
     &__header {
         // box model
-        padding-top: 40px;
-        padding-left: 20px;
+        margin-bottom: 50px;
+    }
+
+    &__suptitle {
+        // box model
+        margin: 0;
+        padding: 0;
+        margin-bottom: 20px;
+
+        // typography
+        font-size: 1rem;
+        font-family: $textFont;
+        color: $text;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+    }
+
+    &__section-title {
+        // box model
+        margin: 0;
+
+        // typography
+        color: $sectionColor;
+        font-size: 3.33rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        line-height: 1;
     }
 
     &__content {
         // box model
-        padding: 0 25px;
         padding-bottom: 80px;
 
-        @include atDesktop {
-            /// box model
-            display: flex;
-            flex-wrap: wrap;
-        }
+        // @include atDesktop {
+        //     /// box model
+        //     display: flex;
+        //     flex-wrap: wrap;
+        // }
     }
 
     &__group {
 
-        @include atTabletsPortrait {
-            // box model
-            width: 33.3%;
-        }
+        // @include atTabletsPortrait {
+        //     // box model
+        //     width: 33.3%;
+        // }
 
-        &--big {
-            @include atDesktop {
-                // box model
-                width: 66.6%;
-            }
-        }
-    }
-
-    &-inner__column {
-        
-        &--right {
-            // box model
-            width: auto !important;
-        }
-
-        &--pd {
-            @include atDesktop {
-                // box model
-                padding-left: 120px;
-            }
-        }
-
-        @include atTabletsPortrait {
-            // box model
-            width: 300px;
-            display: inline-block;
-        }
-
-        @include atDesktop {
-            // box model
-            width: 40%;
-        }
-    }
-
-    &__conteiner {
-        
-        @include atTabletsPortrait {
-            // box mdoel
-            display: flex;
-            flex-wrap: wrap;
-        }
+        // &--big {
+        //     @include atDesktop {
+        //         // box model
+        //         width: 66.6%;
+        //     }
+        // }
     }
 
     &__group-title {
@@ -143,11 +136,61 @@
         letter-spacing: 1px;
     }
 
+    &__container {
+        
+        // @include atTabletsPortrait {
+        //     // box mdoel
+        //     display: flex;
+        //     flex-wrap: wrap;
+        // }
+    }
+
+    &-inner__column {
+        
+        &--right {
+            // box model
+            width: auto;
+        }
+
+        &--pd {
+            // @include atDesktop {
+            //     // box model
+            //     padding-left: 120px;
+            // }
+        }
+
+        // @include atTabletsPortrait {
+        //     // box model
+        //     width: 300px;
+        //     display: inline-block;
+        // }
+
+        // @include atDesktop {
+        //     // box model
+        //     width: 40%;
+        // }
+    }
+
+
+
     &__table {
         // box model
         width: 100%;
         margin-bottom: 30px;
         padding-right: 15px;
+    }
+
+    
+    &__caption {
+        // box model
+        margin: 0;
+        margin-bottom: 20px;
+
+        // typography
+        line-height: 1.5rem;
+        color: $text;
+        text-align: left;
+        text-transform: uppercase;
     }
 
     &__column-description {
@@ -156,37 +199,25 @@
         margin-bottom: 30px;
 
         // typography
-        color: #000;
+        color: $black;
         font-family: $textFont;
         line-height: 24px;
         text-align: left;
         font-weight: 500;
     }
 
-    &__caption {
-        // box model
-        margin: 0;
-        margin-bottom: 20px;
-
-        // typography
-        line-height: 24px;
-        color: #8a185a;
-        text-align: left;
-        text-transform: uppercase;
-    }
-
     td {
         // typography
         text-transform: uppercase;
         font-family: $textFont;
-        line-height: 30px;
+        line-height: 1.4rem;
         font-size: 0.875rem;
-        color: #000;
+        color: $black;
 
         span {
             // typography
             font-size: 0.75rem;
-            color: #000000;
+            color: $black;
         }
     }
 

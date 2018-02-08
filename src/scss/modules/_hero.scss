@@ -4,8 +4,7 @@
     
     // box model
     // min-height: 100vh;
-    padding: 35px 30px;
-    padding-left: 33px;
+    padding: 35px 40px;
     padding-bottom: 0;
     
     // visual
@@ -39,12 +38,10 @@
 
     &::after {
         content: url("./img/hero_hr.png");
-
         // positioning
         position: absolute;
         bottom: -100px;
         z-index: 2;
-
         @include centerer-x;
     }
     //     @include atTabletsPortrait {
@@ -103,7 +100,7 @@
         text-transform: uppercase;
 
         // visual
-        text-shadow: -6px 5px 0 #6a1444;
+        text-shadow: -6px 5px 0 $text;
 
         // typography
         color: $white;
@@ -130,7 +127,7 @@
             font-size: 4rem;
 
             // visual
-            text-shadow: 0 0, -12px 7px 0 #6a1444;
+            text-shadow: 0 0, -12px 7px 0 $text;
         }
     }
     
@@ -158,7 +155,7 @@
     &__copy {
         // box model
         display: inline-block;
-        max-width: 300px;
+        width: 300px;
 
         // typography
         color: $copyColor;
@@ -189,6 +186,7 @@
         // positioning
         position: relative;
         z-index: 3;
+        
         // position: absolute;
         // bottom: -65px;
         // z-index: 1;
@@ -255,11 +253,11 @@
         // positioning
         position: absolute;
         bottom: 25px;
-        left: 30px;
+        left: 0;
         z-index: 4;
 
         // typography
-        text-align: left;
+        text-align: center;
 
         // box model
         width: 100%;

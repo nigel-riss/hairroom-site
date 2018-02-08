@@ -6,42 +6,42 @@
     // visual
     background: linear-gradient(to right, #d16bb3, #8f6aa5);
     
-    @include atTabletsPortrait {
-        // visual
-        background: none;
-    }
+    // @include atTabletsPortrait {
+    //     // visual
+    //     background: none;
+    // }
 
-    @include atDesktop {
-        // positioning
-        transform: translateY(-300px);
+    // @include atDesktop {
+    //     // positioning
+    //     transform: translateY(-300px);
 
-        // visual
-        background-color: #fff;
-    }
+    //     // visual
+    //     background-color: $white;
+    // }
     
     &__content {
         // positioning
         transform: translateY(36px);
 
-        @include atTabletsPortrait {
-            // positioning
-            position: absolute;
-            top: -200px;
-            right: 30px;
-            transform: none;
+        // @include atTabletsPortrait {
+        //     // positioning
+        //     position: absolute;
+        //     top: -200px;
+        //     right: 30px;
+        //     transform: none;
 
-            // box model
-            display: flex;
-        }
+        //     // box model
+        //     display: flex;
+        // }
 
-        @include atDesktop {
-            // positioning
-            position: absolute;
-            top: 0;
+        // @include atDesktop {
+        //     // positioning
+        //     position: absolute;
+        //     top: 0;
 
-            // box model
-            display: flex;
-        }
+        //     // box model
+        //     display: flex;
+        // }
     }
 
     &__offers {
@@ -49,7 +49,7 @@
         margin: 0;
         
         // typography
-        color: #981864;
+        color: $text;
         text-transform: uppercase;
         font-family: $textFont;
         font-weight: 500;
@@ -74,13 +74,11 @@
 
         // typography
         color: #1c1e23;
-        font-family: $mainFontBlack;
-        font-weight: bold;
         text-align: left;
 
         &--white {
             // typography
-            color: white;
+            color: $white;
         }
     }
 
@@ -92,17 +90,17 @@
         padding-top: 10px;
 
         // visual
-        background-color: #fff;
+        background-color: $white;
         border-radius: 5px;
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
         
 
-        @include atDesktop {
-            // box model
-            width: 350px;
-            height: 250px;
-        }
+        // @include atDesktop {
+        //     // box model
+        //     width: 350px;
+        //     height: 250px;
+        // }
 
         &--offers {
             // box model
@@ -111,7 +109,7 @@
             // visual
             background-image: url("./img/offers.jpg");
             background-size: cover;
-            background-color: #fff;
+            background-color: $white;
         }
         
         &--loyality {
@@ -121,7 +119,7 @@
             // visual
             background-image: url("./img/loyality.jpg");
             background-size: cover;
-            background-color: #54adc3;
+            background-color: $sectionColor;
         }
     }
 }

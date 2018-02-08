@@ -6,20 +6,20 @@
     // visual
     background: linear-gradient(to bottom, #e5a0cf, #f7dfef 50%);
 
-    @include atTabletsPortrait {
-        // box model
-        display: flex;
-        padding-top: 0;
+    // @include atTabletsPortrait {
+    //     // box model
+    //     display: flex;
+    //     padding-top: 0;
 
-        // visual
-        background: linear-gradient(to bottom, #f2d2e7, #faeaf5);
-    }
+    //     // visual
+    //     background: linear-gradient(to bottom, #f2d2e7, #faeaf5);
+    // }
 
-    @include atDesktop {
-        // box model
-        padding-left: 83px;
-        padding-right: 100px;
-    }
+    // @include atDesktop {
+    //     // box model
+    //     padding-left: 83px;
+    //     padding-right: 100px;
+    // }
 
     &__header {
         // box model
@@ -27,51 +27,51 @@
         padding-right: 25px;
 
         // visual
-        border-top-color: #721d50;
+        border-top-color: $text;
         border-top-style: solid;
         border-top-width: 2px;
         
         
-        @include atTabletsPortrait {
-            // box model
-            max-width: 388px;
-            margin-top: 0;
+        // @include atTabletsPortrait {
+        //     // box model
+        //     max-width: 388px;
+        //     margin-top: 0;
 
-            // visual
-            border: none;
-        }
+        //     // visual
+        //     border: none;
+        // }
 
         // typography
-        color: #333333;
+        color: $black;
 
-        @include atDesktop {
-            // box model
-            max-width: 486px;
-        }
+        // @include atDesktop {
+        //     // box model
+        //     max-width: 486px;
+        // }
     }
 
     &__container {
         // box model
         padding-left: 25px;
 
-        @include atTabletsPortrait {
-            // box model
-            display: flex;
-            justify-content: space-between;
-            width: 100%;
-            padding-top: 60px;
-            flex-wrap: wrap;
-            padding-right: 25px;
-            padding-bottom: 200px;
+        // @include atTabletsPortrait {
+        //     // box model
+        //     display: flex;
+        //     justify-content: space-between;
+        //     width: 100%;
+        //     padding-top: 60px;
+        //     flex-wrap: wrap;
+        //     padding-right: 25px;
+        //     padding-bottom: 200px;
 
-            // visual
-            border-top: 2px solid #721d50;
-        }
+        //     // visual
+        //     border-top: 2px solid $text;
+        // }
 
-        @include atDesktop {
-            // box model
-            padding-bottom: 100px;
-        }
+        // @include atDesktop {
+        //     // box model
+        //     padding-bottom: 100px;
+        // }
 
     }
 
@@ -92,7 +92,7 @@
         margin: 0;
 
         // typography
-        color: #6f164b;
+        color: $text;
         text-transform: uppercase;
         letter-spacing: 1px;
     }
@@ -112,16 +112,14 @@
         margin-top: 40px;
 
         // typography
-        color: #6f1e4e;
-        font-family: $mainFontRegular;
-        font-weight: 500;
+        color: $text;
         text-transform: uppercase;
         letter-spacing: 4px;
 
-        @include atTabletsPortrait {
-            // box model
-            margin-top: 0;
-        }
+        // @include atTabletsPortrait {
+        //     // box model
+        //     margin-top: 0;
+        // }
     }
 
     &__info-title {
@@ -133,7 +131,7 @@
 
     &__info-text {
         // typography
-        color: #414042;
+        color: $notationColor;
         text-decoration: none;
     }
 
@@ -144,10 +142,10 @@
         padding: 40px 0;
         margin-bottom: 40px;
 
-        @include atTabletsPortrait {
-            // box model
-            padding: 0;
-        }
+        // @include atTabletsPortrait {
+        //     // box model
+        //     padding: 0;
+        // }
 
         img {
             // box model
@@ -164,10 +162,10 @@
         // visual
         list-style: none;
 
-        @include atDesktop {
-            // box model
-            display: block;
-        }
+        // @include atDesktop {
+        //     // box model
+        //     display: block;
+        // }
 
         li {
             // box model
@@ -185,7 +183,7 @@
             margin-bottom: 23px;
 
             // typography
-            color: #6f164b !important;
+            color: $text !important;
             letter-spacing: 4px;
         }
 
@@ -193,7 +191,7 @@
             // typography
             text-transform: uppercase;
             text-decoration: none;
-            color: #414042;
+            color: $notationColor;
         }
     }
 
@@ -207,19 +205,19 @@
         text-transform: uppercase;
         letter-spacing: 2px;
         font-family: $textFont;
-        color: #414042;
+        color: $notationColor;
 
-        @include atTabletsPortrait {
-            // box model
-            margin: 0 auto;
-        }
+        // @include atTabletsPortrait {
+        //     // box model
+        //     margin: 0 auto;
+        // }
 
-        @include atDesktop {
-            // box model
-            display: block;
-            margin: 0;
-            padding: 0;
-        }
+        // @include atDesktop {
+        //     // box model
+        //     display: block;
+        //     margin: 0;
+        //     padding: 0;
+        // }
 
         b {
             // typography

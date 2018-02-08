@@ -2,7 +2,7 @@
     // box model
     display: none;
     padding: 0;
-    border-top: 2px solid #6c1a3e;
+    border-top: 2px solid $secondaryColor;
     
     // visual
     list-style: none;
@@ -39,7 +39,7 @@
         letter-spacing: 1px;
         transition: 0.3s ease-in-out all;
         &:hover {
-            color: #6c1a3e;
+            color: $secondaryColor;
         }
     }
 }
