@@ -40,25 +40,25 @@
         padding-top: 5px;
         letter-spacing: 6px;
 
-        @include atTabletsPortrait {
-            letter-spacing: 1px;
-        }
+        // @include atTabletsPortrait {
+        //     letter-spacing: 1px;
+        // }
         
     }
 
-    @include atTabletsPortrait {
-        display: block;
-        position: absolute;
-        right: 0;
-        top: 80px;
-        font-size: 0.6875rem;
-    }
+    // @include atTabletsPortrait {
+    //     display: block;
+    //     position: absolute;
+    //     right: 0;
+    //     top: 80px;
+    //     font-size: 0.6875rem;
+    // }
 
-    @include atDesktop {
-        top: 60px;
-    }
+    // @include atDesktop {
+    //     top: 60px;
+    // }
 
-    @include atDesktopLarge {
-        top: 70px;
-    }
+    // @include atDesktopLarge {
+    //     top: 70px;
+    // }
 }
