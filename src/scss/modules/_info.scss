@@ -3,16 +3,15 @@
     margin: 0;
     padding-top: 15px;
     padding-left: 20px;
-    // border: 1px solid red;
 
     // typography
     text-align: center;
 
-    @include atTabletsPortrait {
-        // box model
-        padding-top: 25px;
-        padding-left: 40px;
-    }
+    // @include atTabletsPortrait {
+    //     // box model
+    //     padding-top: 25px;
+    //     padding-left: 40px;
+    // }
 
     &__address {
         // box model
@@ -26,10 +25,10 @@
         text-align: center;
         text-transform: uppercase;
 
-        @include atTabletsPortrait {
-            // typography
-            font-size: 1.1rem;
-        }
+        // @include atTabletsPortrait {
+        //     // typography
+        //     font-size: 1.1rem;
+        // }
 
         // @include atDesktop {
         //     // typography
@@ -45,20 +44,20 @@
         font-weight: 700;
         text-decoration: none;
         
-        @include atTabletsPortrait {
-            // typography
-            font-size: 2.5rem;
-        }
+        // @include atTabletsPortrait {
+        //     // typography
+        //     font-size: 2.5rem;
+        // }
 
-        @include atDesktop {
-            // typography
-            font-size: 2.75rem;
-        }
+        // @include atDesktop {
+        //     // typography
+        //     font-size: 2.75rem;
+        // }
         
-        @include atDesktopLarge {
-            // typography
-            font-size: 3.75rem;
-        }
+        // @include atDesktopLarge {
+        //     // typography
+        //     font-size: 3.75rem;
+        // }
 
         span {
             // positioning
@@ -72,10 +71,10 @@
             color: $accent;
             margin: 0 2px;
 
-            @include atTabletsPortrait {
-                // box model
-                vertical-align: top;
-            }
+            // @include atTabletsPortrait {
+            //     // box model
+            //     vertical-align: top;
+            // }
 
             // @include atDesktopLarge {
             //     // box model

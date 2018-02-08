@@ -17,20 +17,20 @@
         // visual
         border-radius: 5px;
         box-shadow: 18px 12px 28px -4px rgba(53,7,34,0.74);
-        background-color: rgba(#963a70, 0.8);
+        background-color: rgba($titleColor, 0.8);
 
     }
 
     &__info {
         // typography
-        color: #ffffff;
+        color: $white;
         font-size: 0.875rem;
         text-transform: uppercase;
     }
 
     &__contact {
         // typography
-        color: #ffffff;
+        color: $white;
         font-weight: bold;
         font-family: $textFont;
     }
