@@ -243,18 +243,14 @@
     }
 
     &--subscribe {
-        // box model
-        padding: 10px 30px;
-        margin-bottom: 50px;
-
         // visual
-        border: 5px solid $accent;
+        border: 3px solid $accent;
 
-        // typography
-        font-weight: bold;
-        color: $accent;
-
+        
         &:hover {
+            // typography
+            color: $accent;
+            
             // visual
             background-color: $white;
             transition: 0.3s ease-in-out;
