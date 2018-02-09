@@ -1,8 +1,7 @@
 .site-footer {
     // box model
     padding-top: 100px;
-    padding-left: 25px;
-    
+    padding-left: 30px;
     // visual
     background: linear-gradient(to bottom, #e5a0cf, #f7dfef 50%);
 
@@ -24,7 +23,7 @@
     &__header {
         // box model
         margin-top: 50px;
-        padding-right: 25px;
+        padding-right: 30px;
 
         // visual
         border-top-color: $text;
@@ -52,8 +51,7 @@
 
     &__container {
         // box model
-        padding-left: 25px;
-
+        
         // @include atTabletsPortrait {
         //     // box model
         //     display: flex;
@@ -90,6 +88,7 @@
     &__title-location {
         // box model
         margin: 0;
+        margin-bottom: 30px;
 
         // typography
         color: $text;
@@ -99,22 +98,25 @@
 
     &__description {
         // box model
-        margin-bottom: 40px;
+        margin: 0;
+        margin-bottom: 30px;
 
         // typography
-        color: $accent;
+        color: $text;
+        font-size: 0.9rem;
         line-height: 23px;
         font-family: $textFont;
     }
 
     &__contacts-title {
         // box model
-        margin-top: 40px;
+        margin: 0;
+        margin-bottom: 30px;
 
         // typography
         color: $text;
         text-transform: uppercase;
-        letter-spacing: 4px;
+        letter-spacing: 2px;
 
         // @include atTabletsPortrait {
         //     // box model
@@ -123,6 +125,10 @@
     }
 
     &__info-title {
+        // box model
+        margin: 0;
+        margin-bottom: 15px;
+
         // typography
         color: $accent;
         font-family: $textFont;
@@ -130,8 +136,17 @@
     }
 
     &__info-text {
+        // box model
+        margin: 0;
+        margin-bottom: 30px;
+        display: inline-block;
+
         // typography
-        color: $notationColor;
+        color: $copyColor;
+        font-family: $textFont;
+        font-weight: 700;
+        font-weight: 400;
+        font-size: 1rem;
         text-decoration: none;
     }
 
@@ -139,8 +154,7 @@
         // box model
         width: 248px;
         height: 31px;
-        padding: 40px 0;
-        margin-bottom: 40px;
+        margin: 30px 0;
 
         // @include atTabletsPortrait {
         //     // box model
@@ -197,8 +211,9 @@
 
     &__copyright {
         // box model
-        padding-top: 80px;
-        padding-bottom: 40px;
+        margin: 0;
+        // padding-top: 80px;
+        // padding-bottom: 40px;
 
         // typography
         text-align: center;

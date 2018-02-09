@@ -2,19 +2,21 @@
     // positioning
     position: absolute;
     z-index: 1;
-    top: 25px;
+    top: 30px;
 
     // need change
     @include centerer-x;
 
     // box model
     display: block;
-    width: 90%;
-    padding: 30px 15px;
-    box-shadow: 25px 0px 21px -11px rgba(53,7,34,0.74);
+    width: calc(100% - 30px);
+    // margin: 30px;
+    padding: 30px;
+    // box-shadow: 25px 0px 21px -11px rgba(53,7,34,0.74);
 
     // visual
-    background-image: url("./img/place.png");
+    background-color: rgba($accent, 0.8);
+    // background-image: url("./img/place.png");
     border-radius: 10px;
 
     // @include atTabletsPortrait {
@@ -43,16 +45,27 @@
     }
 
     &__info-title {
+        // box model
+        margin: 0;
+        margin-bottom: 15px;
 
         // typography
         color:$white;
+        font-family: $textFont;
         font-size: 0.75rem;
         text-transform: uppercase;
         letter-spacing: 1px;
     }
+
     &__info-text {
+        // box model
+        margin: 0;
+        margin-bottom: 30px;
+
         // typography
         color: $white;
+        font-family: $textFont;
+        font-weight: 400;
         font-size: 1.25rem;
 
         sub {

@@ -38,56 +38,20 @@
         //     // positioning
         //     position: absolute;
         //     top: 0;
-
+        
+        
         //     // box model
         //     display: flex;
         // }
     }
 
-    &__offers {
-        // box model
-        margin: 0;
-        
-        // typography
-        color: $text;
-        text-transform: uppercase;
-        font-family: $textFont;
-        font-weight: 500;
-        font-size: 0.75rem;
-        letter-spacing: 4px;
-
-        &--white {
-            // typography
-            color: white;
-        }
-    }
-
-    &__header {
-        // box model
-        padding-left: 25px;
-    }
-
-    &__text {
-        // box model
-        width: 135px;
-        margin-bottom: 30px;
-
-        // typography
-        color: #1c1e23;
-        text-align: left;
-
-        &--white {
-            // typography
-            color: $white;
-        }
-    }
-
     &__card {
+        // positioning
+        position: relative;
+        
         // box model
-        width: 328px;
-        height: 206px;
-        margin-bottom: 10px;
-        padding-top: 10px;
+        margin-right: 30px;
+        margin-bottom: 30px;
 
         // visual
         background-color: $white;
@@ -103,9 +67,6 @@
         // }
 
         &--offers {
-            // box model
-            margin-right: 50px;
-            
             // visual
             background-image: url("./img/offers.jpg");
             background-size: cover;
@@ -114,12 +75,62 @@
         
         &--loyality {
             // box model
-            margin-right: 50px;
             
             // visual
             background-image: url("./img/loyality.jpg");
             background-size: cover;
             background-color: $sectionColor;
         }
+    }
+
+    &__offers {
+        // box model
+        margin: 0;
+        margin-bottom: 30px;
+        
+        // typography
+        color: $text;
+        text-transform: uppercase;
+        font-family: $textFont;
+        font-weight: 700;
+        font-size: 1rem;
+        letter-spacing: 4px;
+
+        &--white {
+            // typography
+            color: white;
+        }
+    }
+
+    &__header {
+        // box model
+        padding: 30px;
+    }
+
+    &__text {
+        // box model
+        width: 150px;
+        margin: 0;
+        margin-bottom: 30px;
+        display: inline-block;
+        vertical-align: top;
+
+        // typography
+        color: #1c1e23;
+        text-align: left;
+        font-family: $mainFont;
+        font-weight: 900;
+        line-height: 1.25;
+
+        &--white {
+            // typography
+            color: $white;
+        }
+    }
+
+    &__button {
+        // // positioning
+        // position: absolute;
+        // bottom: 5px;
     }
 }

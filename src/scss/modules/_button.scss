@@ -201,7 +201,6 @@
     &--card {
         // box model
         width: 240px;
-        margin-bottom: 15px;
 
         // visual
         transition: 0.3s ease-in-out all;
@@ -231,6 +230,7 @@
     &--offers {
         // box model
         padding: 5px 30px;
+        margin: 0;
         width: auto;
 
         // visual
@@ -243,6 +243,9 @@
     }
 
     &--subscribe {
+        // box model
+        margin: 0;
+
         // visual
         border: 3px solid $accent;
 
