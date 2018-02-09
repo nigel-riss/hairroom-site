@@ -19,7 +19,7 @@ html(lang="ru")
         //- fix font import to @font-face
         link(href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900" rel="stylesheet")
         link(href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet")
-        link(rel="stylesheet", href="styles.css")
+        link(rel="stylesheet", href="styles.css" media="(min-width: 500px)")
         title HairRoom
 
         //- add dummy OG markup
@@ -122,22 +122,22 @@ html(lang="ru")
                     img(src="./img/hr_logo_black.svg" alt="Hairroom logo")
 
 
-        //- section.services
+        section.services
             a#services.nav-link
             header.services__header
                 p.services__suptitle Мы предлагаем
                 h2.services__title-section Услуги
             
-            .services__cards
-                article.services__card
-                    header.services__card-title Наращивание<br>волос
+            .services__cards.card__container
+                article.services__card.card
+                    header.services__card-title.card__title Наращивание<br>волос
                     .services__wrapper
-                        .services__card-img.services__card-img--bg4
-                        .services__card-content
+                        .services__card-img.services__card-img--bg4.card__img
+                        .services__card-content.card__content
                             // changes class
                             p.title__description.title__description--left Hair Room Услуги
-                            p.services__card-description бесцветный розовый с нейтрализацией желтизны
-                            .services__buttons
+                            p.services__card-description.card__description бесцветный розовый с нейтрализацией желтизны
+                            .services__buttons.card__buttons
                                 a.button.button--pink.button--card(href="#") Записаться
                                 a.button.button--ghost.button--card(href="#") Прайс-лист
 
@@ -314,39 +314,39 @@ html(lang="ru")
 
                             .price-inner__column
                                 table.price__table
-                                    caption.price__caption Покрытие гель-лаком<br> + коминированный<br>маникюр
+                                    caption.price__caption Покрытие гель-лаком<br>+ коминированный<br>маникюр
                                     tr
                                         td Однотонное покрытие
                                         td <b>1000</b> <span>руб.</span>
 
-                            //- .price-inner__column
-                            //-     table.price__table
-                            //-         caption.price__caption Экспресс маникюр + покрытие
-                            //-         caption.price__column-description Экспресс маникюр + покрытие за 1 час без выравнивания ногтевой пластины гелем + маникюр
-                            //-         tr
-                            //-             td Однотонное покрытие
-                            //-             td <b>800</b> <span>руб.</span>
+                    //-         .price-inner__column
+                    //-             table.price__table
+                    //-                 caption.price__caption Экспресс маникюр + покрытие
+                    //-                 caption.price__column-description Экспресс маникюр + покрытие за 1 час без выравнивания ногтевой пластины гелем + маникюр
+                    //-                 tr
+                    //-                     td Однотонное покрытие
+                    //-                     td <b>800</b> <span>руб.</span>
 
-                            //- .price-inner__column.price-inner__column--pd
-                            //-     table.price__table
-                            //-         caption.price__caption Дизайн ногтей
-                            //-         caption.price__column-description Лунный маникюр + 50р (ноготь), + 300р(все ногти); Френч + 300р (все руки); градиент + 100р (ноготь), + 1000 (все руки); слайдер + 50р (ноготь); стразы; дизайн от руки от 100р
-                            //-         tr
-                            //-             td Cтоимость работ
-                            //-             td <b>50 - 1000</b> <span>руб.</span>
+                    //-         .price-inner__column.price-inner__column--pd
+                    //-             table.price__table
+                    //-                 caption.price__caption Дизайн ногтей
+                    //-                 caption.price__column-description Лунный маникюр + 50р (ноготь), + 300р(все ногти); Френч + 300р (все руки); градиент + 100р (ноготь), + 1000 (все руки); слайдер + 50р (ноготь); стразы; дизайн от руки от 100р
+                    //-                 tr
+                    //-                     td Cтоимость работ
+                    //-                     td <b>50 - 1000</b> <span>руб.</span>
 
-                            //- .price-inner__column.price-inner__column--right
-                            //-     table.price__table
-                            //-         caption.price__caption Дополнительные услуги
-                            //-         tr
-                            //-             td Снятие покрытия
-                            //-             td <b>100</b> <span>руб.</span>
-                            //-         tr
-                            //-             td Ремонт ногтя
-                            //-             td <b>100</b> <span>руб.</span>
-                            //-         tr
-                            //-             td Укрепление акрилом
-                            //-             td <b>100</b> <span>руб.</span>
+                    //-         .price-inner__column.price-inner__column--right
+                    //-             table.price__table
+                    //-                 caption.price__caption Дополнительные услуги
+                    //-                 tr
+                    //-                     td Снятие покрытия
+                    //-                     td <b>100</b> <span>руб.</span>
+                    //-                 tr
+                    //-                     td Ремонт ногтя
+                    //-                     td <b>100</b> <span>руб.</span>
+                    //-                 tr
+                    //-                     td Укрепление акрилом
+                    //-                     td <b>100</b> <span>руб.</span>
 
                     //- .price__group.price__group--big
                     //-     h3.price__group-title наращивание ресниц
@@ -422,18 +422,21 @@ html(lang="ru")
                 article.shares__card.shares__card--offers
                     header.shares__header
                         p.shares__offers Акции
-                        p.shares__text Новинки в разделе ухода за волосами
-                        a.button.button--card.button--offers(href="#") Дальше
+                        p.shares__text Новинки в разделе ухода за волосами  
+                        .shares__button
+                            a.button.button--card.button--offers(href="#") Дальше
+
                 article.shares__card.shares__card--loyality
                     header.shares__header
                         p.shares__offers.shares__offers--white Акции
                         p.shares__text.shares__text--white Скидки дляучастников программы лояльности
-                        a.button.button--card.button--offers Дальше
+                        .shares__button
+                            a.button.button--card.button--offers Дальше
         
         section.gallery
             a#gallery.nav-link
             header.gallery__header
-                h3.title__sup.title__sup--gallery Социальные сети
+                h3.gallery__suptitle Социальные сети
                 h4.gallery__title Следите за HAIR ROOM<br>в социальных сетях
 
             .gallery__subscribe
@@ -507,7 +510,7 @@ html(lang="ru")
                     p.site-footer__contacts-title Контакты
 
                     p.site-footer__info-title Адрес:
-                    p.site-footer__info-text г. Калининград<br>ул. Иванникова, д. 12
+                    p.site-footer__info-text г. Калининград ул. Иванникова, д. 12
 
                     p.site-footer__info-title Телефон:
                     a.site-footer__info-text(href="tel: 523776") + 7 4012 52 37 76

@@ -1,6 +1,7 @@
 .location {
+    // positioning
     position: relative;
-
+    
     @include atTabletsPortrait {
         background-image: url("./img/pattern.jpg");
 
@@ -24,6 +25,7 @@
     }
 
     &__map {
+        // box model
         height: 100vh;
 
         @include atTabletsPortrait {

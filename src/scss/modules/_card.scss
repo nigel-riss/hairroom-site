@@ -1,0 +1,146 @@
+.card {
+
+    &__container {
+        // positioning
+        position: relative;
+        // box model
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        // visual
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+
+    &__card {
+        // box model
+        margin-right: 25px;
+        transition: 0.3s ease-in-out;
+    }
+    
+    &__title {
+        // box model
+        margin: 30px 0;
+        margin-top: 0;
+        padding-left: 15px;
+
+        // typography
+        color: $text;
+        text-transform: uppercase;
+        font-weight: 600;
+        line-height: 1.25;
+    }
+
+    &__img {
+        // positioning
+        position: relative;
+        display: inline-block;
+
+        // box model
+        width: 300px;
+        height: 450px;
+
+        // visual
+        background-size: cover;
+        box-shadow: 0px 23px 51px -9px rgba(165,68,122,0.96);
+        border-radius: 5px;
+        z-index: 0;
+
+         &--bg2 {
+            // visual
+            background-image: url("./img/card1.png");
+            background-position: 40% 0;
+            background-repeat: no-repeat;
+        }
+
+        &--bg3 {
+            // visual
+            background-image: url("./img/hair_bg2.png");
+        }
+
+        &--bg4 {
+            // visual
+            background-image: url("./img/hair_bg3.png");
+            background-position: 0 20%;
+        }
+
+        &--bg5 {
+            // visual
+            background-image: url("./img/hair_bg4.png");
+            background-position: 0 20%;
+        }
+
+        &::after {
+            content: "";
+            // positioning
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            // box model
+            display: block;
+            width: 100%;
+            height: 100%;
+
+            // visual
+            background: linear-gradient(180deg, #c6168d, #db669a);
+            opacity: 0;
+            border-radius: 5px;
+        }
+
+        img {
+            // positioning
+            position: absolute;
+            z-index: 1;
+
+            // box model
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__content {
+        // positioning
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        // box model
+        height: 100%;
+        width: 100%;
+        display: none;
+        
+        // visual
+        transition: 0.3s ease-in-out;
+    }
+
+    &__description {
+        // positioning
+        position: absolute;
+        top: 195px;
+        right: 30px;
+
+        // box model
+        width: 155px;
+
+        // typography
+        font-size: 0.875rem;
+        line-height: 1.5;
+        text-align: right;
+        color: $text;
+        text-transform: uppercase;
+    }
+
+    &__buttons {
+         // positioning
+         position: absolute;
+         bottom: 25px;
+         left: 50%;
+         transform: translateX(-50%);
+    }
+
+}
