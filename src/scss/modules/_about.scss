@@ -40,13 +40,12 @@
         // height: 247px;
         
 
-        // @include atTabletsPortrait {
-        //     width: 88%;
-        //     height: 390px;
-        //     // margin-bottom: 100px;
-        //     // height: 390px;
-        //     box-shadow: 0px 15px 39px 0px rgba(0,0,0,0.2);
-        // }
+        @include atTabletsPortrait {
+            // box model
+            width: 88%;
+            height: 390px;
+            // box-shadow: 0px 15px 39px 0px rgba(0,0,0,0.2);
+        }
 
         // @include atDesktop {
         // //    z-index: 3;
@@ -72,19 +71,15 @@
         overflow: hidden;
         
         @include atTabletsPortrait {
-            // positioning
-            // position: relative;
             // box model
+            margin-top: -150px;
             margin-left: 55px;
-            background-position: 0 0;
-            background-image: url("./img/about_bg-md.jpg");
+
+            // visual
+            background-image: url("./img/about_board-md.jpg");
             background-size: cover;
-            box-shadow: 0px 64px 58px -30px rgba(195,161,190,0.75);
-            transform: translateY(-100px);
-            // background-size: cover;
-            // background-repeat: no-repeat;
-            // background-position: 0 -100%;
-            // background-color: #e6dceb;
+            // box-shadow: 0px 64px 58px -30px rgba(195,161,190,0.75);
+            // transform: translateY(-100px);
         }
 
         @include atDesktop {
@@ -100,11 +95,12 @@
         margin-bottom: 25px;
 
         @include atTabletsPortrait {
-            padding-left: 75px;
+            // box model
             padding-top: 140px;
         }
         
         @include atDesktop {
+            // box model
             padding-top: 100px;
             padding-left: 80px;
         }
@@ -132,11 +128,12 @@
         font-size: 1.45rem;
         line-height: 1.25;
 
-        // @include atTabletsPortrait {
-        //     font-size: 2.66rem;
-        //     min-width: 436px;
-        //     letter-spacing: 3px;
-        // }
+        @include atTabletsPortrait {
+            font-size: 2.66rem;
+            min-width: 436px;
+            letter-spacing: 3px;
+            font-weight: 900;
+        }
 
         // @include atDesktop {
         //     font-size: 2.75rem;
@@ -145,9 +142,10 @@
     }
 
     &__content {
-
+        // box model
         @include atTabletsPortrait {
-            padding-left: 75px;
+            // box model
+            width: 585px;
         }
 
         @include atDesktop {
@@ -183,6 +181,14 @@
     &__buttons {
         // typography
         text-align: center;
+
+        @include atTabletsPortrait {
+            // box model
+            padding-bottom: 15px;
+
+            // typography
+            text-align: left;
+        }
     }
 
     &__logo {
@@ -202,6 +208,11 @@
         background-color: $white;
         border-radius: 50%;
         box-shadow: 0 7px 28px 6px rgba($copyColor, 0.125);
+
+        @include atTabletsPortrait {
+            // box model
+            display: none;
+        }
 
         &::after {
             content: "";

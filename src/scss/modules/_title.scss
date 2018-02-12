@@ -44,6 +44,8 @@
     &__description {
         // box model
         display: none;
+        margin: 0;
+        padding: 0;
 
         // @include atDesktop {
         //     // box model
@@ -71,7 +73,7 @@
         &--right {
             // positioning
             position: absolute;
-            right: -120px;
+            right: -136px;
             top: 100px;
             z-index: 2;
 
@@ -88,11 +90,14 @@
 
             // typography
 
-            // @include atTabletsPortrait {
-            //     // box model
-            //     top: 150px;
-            //     display: inline-block;
-            // }
+            @include atTabletsPortrait {
+                // positioning
+                top: 205px;
+
+                // box model
+                display: inline-block;
+                vertical-align: top;
+            }
 
             // @include atDesktop {
             //     // positioning
@@ -108,7 +113,7 @@
 
         &--map {
             // positioning
-            top: 120px;
+            top: 135px;
             right: -75px;
 
             // typography

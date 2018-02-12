@@ -4,10 +4,10 @@
     padding-bottom: 40px;
     padding-left: 25px;
 
-    // @include atTabletsPortrait {
-    //     // box model
-    //     padding-left: 55px;
-    // }
+    @include atTabletsPortrait {
+        // box model
+        padding-left: 50px;
+    }
 
     // @include atDesktop {
     //     // box model

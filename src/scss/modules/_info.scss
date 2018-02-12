@@ -7,11 +7,16 @@
     // typography
     text-align: center;
 
-    // @include atTabletsPortrait {
-    //     // box model
-    //     padding-top: 25px;
-    //     padding-left: 40px;
-    // }
+    @include atTabletsPortrait {
+        // box model
+        padding-top: 20px;
+        padding-left: 40px;
+    }
+
+    @include atTabletsLandscape {
+        // box model
+        padding-top: 33px;
+    }
 
     &__address {
         // box model
@@ -25,10 +30,15 @@
         text-align: center;
         text-transform: uppercase;
 
-        // @include atTabletsPortrait {
-        //     // typography
-        //     font-size: 1.1rem;
-        // }
+        @include atTabletsPortrait {
+            // typography
+            font-size: 1.25rem;
+        }
+
+        @include atTabletsLandscape {
+            // typography
+            font-size: 1.5rem;
+        }
 
         // @include atDesktop {
         //     // typography
@@ -44,10 +54,16 @@
         font-weight: 700;
         text-decoration: none;
         
-        // @include atTabletsPortrait {
-        //     // typography
-        //     font-size: 2.5rem;
-        // }
+        @include atTabletsPortrait {
+            // typography
+            font-size: 2.85rem;
+        }
+
+        @include atTabletsLandscape {
+            // typography
+            font-size: 3.5rem;
+            // transform: translateY(-0.8rem);
+        }
 
         // @include atDesktop {
         //     // typography
@@ -71,10 +87,10 @@
             color: $accent;
             margin: 0 2px;
 
-            // @include atTabletsPortrait {
-            //     // box model
-            //     vertical-align: top;
-            // }
+            @include atTabletsPortrait {
+                // box model
+                vertical-align: top;
+            }
 
             // @include atDesktopLarge {
             //     // box model

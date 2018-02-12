@@ -11,10 +11,10 @@
         // box model
         display: block;
         position: absolute;
-        padding-right: 40px;
+        padding-right: 20px;
         padding-top: 20px;
         right: 0;
-        bottom: 65px;
+        bottom: 45px;
         z-index: 1;
     }
 
@@ -38,6 +38,8 @@
         text-transform: uppercase;
         letter-spacing: 1px;
         transition: 0.3s ease-in-out all;
+        font-family: $textFont;
+        
         &:hover {
             color: $secondaryColor;
         }

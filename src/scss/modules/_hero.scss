@@ -16,8 +16,7 @@
         padding: 45px 55px;
 
         // positioning
-        z-index: 2;
-
+        z-index: 0;
         // box model
 
         // visual
@@ -37,7 +36,7 @@
 
 
     &::after {
-        content: url("./img/hero_hr.png");
+        // content: url("./img/hero_hr.png");
         // positioning
         position: absolute;
         bottom: -100px;
@@ -110,6 +109,7 @@
 
         @include atTabletsPortrait {
             // box model
+            display: inline-block;
             margin-bottom: 60px;
             padding-left: 0;
 
@@ -186,10 +186,6 @@
         // positioning
         position: relative;
         z-index: 3;
-        
-        // position: absolute;
-        // bottom: -65px;
-        // z-index: 1;
 
         // box model
         margin: 0;
@@ -203,13 +199,12 @@
         @include atTabletsPortrait {
             // positioning
             position: absolute;
-            top: 0;
+            bottom: 0;
             right: 18px;
             z-index: -1;
 
             // box model
-            // width: 685px;
-            margin-top: -30px;
+            min-width: 685px;
         }
 
         // @include atTabletsLandscape {
@@ -265,6 +260,9 @@
         @include atTabletsPortrait {
             // positioning
             position: static;
+
+            // box model
+            width: auto;
             
             // typography
             text-align: left;

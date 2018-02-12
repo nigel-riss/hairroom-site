@@ -3,7 +3,7 @@
     position: relative;
     
     @include atTabletsPortrait {
-        background-image: url("./img/pattern.jpg");
+        // background-image: url("./img/pattern.jpg");
 
         &::before {
             content: "";
@@ -30,7 +30,7 @@
 
         @include atTabletsPortrait {
             width: 95%;
-            transform: translateY(-200px);
+            // transform: translateY(-200px);
         }
 
         @include atDesktop {

@@ -37,14 +37,20 @@
 
             // visual
             background-color: rgba($notationColor, 0.25);
+
+            @include atTabletsPortrait {
+                // box model
+                width: 100%;
+            }
         }
     }
 
     &__list-item {
-        // @include atTabletsPortrait {
-        //     // box model
-        //     padding-right: 55px;
-        // }
+
+        @include atTabletsPortrait {
+            // box model
+            padding-right: 80px;
+        }
 
         &--current {
             .tabs__link {

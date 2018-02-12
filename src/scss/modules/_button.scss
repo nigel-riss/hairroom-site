@@ -152,12 +152,11 @@
         background-color: $accent;
         box-shadow: 0px 20px 58px -11px rgba(#4d2738, 0.8);
 
-        // @include atTabletsPortrait {
-        //     // box model
-        //     width: 310px;
-        //     margin-bottom: 0px;
-        //     margin-right: 40px;
-        // }
+        @include atTabletsPortrait {
+            // box model
+            margin-bottom: 0px;
+            margin-right: 40px;
+        }
 
         &:hover {
             // visual

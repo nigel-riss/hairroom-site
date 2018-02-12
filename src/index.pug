@@ -19,7 +19,7 @@ html(lang="ru")
         //- fix font import to @font-face
         link(href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900" rel="stylesheet")
         link(href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet")
-        link(rel="stylesheet", href="styles.css" media="(min-width: 500px)")
+        link(rel="stylesheet", href="styles.css")
         title HairRoom
 
         //- add dummy OG markup
@@ -63,7 +63,7 @@ html(lang="ru")
 
                 .hero__img
                     picture
-                        img(src="./img/women.png" alt="Hair Room девушка")
+                        img(src="./img/women-md.png" alt="Hair Room девушка")
                         source(media="(min-width: 700px)" srcset="./img/women-md.png")
                         source(media="(min-width: 1200px)" srcset="./img/women-lg.png")
                 
@@ -83,10 +83,10 @@ html(lang="ru")
 
             .about__img
                 picture
-                    source(srcset="./img/about_img-sm.jpg" media="(max-width: 700px)")
+                    source(srcset="./img/about_img-md.jpg" media="(max-width: 700px)")
                     source(srcset="./img/about__img-md.jpg" media="(max-width: 1200)")
                     source(srcset="./img/about_img-lg.jpg" media="(min-width: 1200px)")
-                    img(src="./img/about_img-sm.jpg" alt="HairRoom изображение")
+                    img(src="./img/about_img-md.jpg" alt="HairRoom изображение")
 
             .about__board
                 header.about__header
@@ -229,13 +229,6 @@ html(lang="ru")
                                     tr
                                         td Длинные
                                         td <b>3000</b> <span>руб.</span>
-                            .price-inner__column
-                                table.price__table
-                                    caption.price__caption Укладка
-                                    caption.price__column-description Учитываем все ваши пожелания.
-                                    tr
-                                        td Любой длины
-                                        td <b>800 - 2000</b> <span>руб.</span>
                             
                             .price-inner__column
                                 table.price__table
@@ -253,6 +246,7 @@ html(lang="ru")
                                     tr
                                         td Середина спины
                                         td <b>4000 - 4500</b> <span>руб.</span>
+                                        
 
                             .price-inner__column
                                 table.price__table
@@ -268,43 +262,52 @@ html(lang="ru")
                                         td Длинные
                                         td <b>3000</b> <span>руб.</span>
 
+                            .price-inner__column
+                                table.price__table
+                                    caption.price__caption Укладка
+                                    caption.price__column-description Учитываем все ваши пожелания.
+                                    tr
+                                        td Любой длины
+                                        td <b>800 - 2000</b> <span>руб.</span>
+
                     .price__group
                         h3.price__group-title наращивание волос
-                        .price-inner__column.price-inner__column--right
-                            table.price__table
-                                caption.price__caption наращивание волос
-                                caption.price__column-description В стоимость работы входит: мытье головы + экспресс уход, наращивание(микро+стандарт), Стрижка, укладка. В стоимость не входят волосы!
-                                tr
-                                    td до 150 капсул
-                                    td <b>4000</b> <span>руб.</span>
-                                tr
-                                    td до 200 капсул
-                                    td <b>4500</b> <span>руб.</span>
-                        .price-inner__column.price-inner__column--right
-                            table.price__table
-                                caption.price__caption Коррекция
-                                caption.price__column-description В данную услугу входит: снятие + перекапсулирование волос, мытье головы, наращивание, стрижка, укладка.
-                                tr
-                                    td до 150 капсул
-                                    td <b>4000 - 5000</b> <span>руб.</span>
-                                tr
-                                    td до 200 капсул
-                                    td <b>5000 - 5500</b> <span>руб.</span>
-                        
-                        .price-inner__column.price-inner__column--right
-                            table.price__table
-                                caption.price__caption Снятие волос
-                                caption.price__column-description В данную услугу входит: Снятие, мытье головы, стрижка, укладка.
-                                tr
-                                    td до 150 капсул
-                                    td <b>2000 - 3000</b> <span>руб.</span>
-                                tr
-                                    td до 200 капсул
-                                    td <b>3000</b> <span>руб.</span>
+                        .price__container
+                            .price-inner__column.price-inner__column--right
+                                table.price__table
+                                    caption.price__caption наращивание волос
+                                    caption.price__column-description В стоимость работы входит: мытье головы + экспресс уход, наращивание(микро+стандарт), Стрижка, укладка. В стоимость не входят волосы!
+                                    tr
+                                        td до 150 капсул
+                                        td <b>4000</b> <span>руб.</span>
+                                    tr
+                                        td до 200 капсул
+                                        td <b>4500</b> <span>руб.</span>
+                            .price-inner__column.price-inner__column--right
+                                table.price__table
+                                    caption.price__caption Коррекция
+                                    caption.price__column-description В данную услугу входит: снятие + перекапсулирование волос, мытье головы, наращивание, стрижка, укладка.
+                                    tr
+                                        td до 150 капсул
+                                        td <b>4000 - 5000</b> <span>руб.</span>
+                                    tr
+                                        td до 200 капсул
+                                        td <b>5000 - 5500</b> <span>руб.</span>
+                            
+                            .price-inner__column.price-inner__column--right
+                                table.price__table
+                                    caption.price__caption Снятие волос
+                                    caption.price__column-description В данную услугу входит: Снятие, мытье головы, стрижка, укладка.
+                                    tr
+                                        td до 150 капсул
+                                        td <b>2000 - 3000</b> <span>руб.</span>
+                                    tr
+                                        td до 200 капсул
+                                        td <b>3000</b> <span>руб.</span>
 
                     .price__group.price__group--big
                         h3.price__group-title Услуги маникюра
-                        .price__conteiner
+                        .price__container
                             .price-inner__column
                                 table.price__table
                                     caption.price__caption Маникюр<br>коминированный
@@ -319,103 +322,105 @@ html(lang="ru")
                                         td Однотонное покрытие
                                         td <b>1000</b> <span>руб.</span>
 
-                    //-         .price-inner__column
-                    //-             table.price__table
-                    //-                 caption.price__caption Экспресс маникюр + покрытие
-                    //-                 caption.price__column-description Экспресс маникюр + покрытие за 1 час без выравнивания ногтевой пластины гелем + маникюр
-                    //-                 tr
-                    //-                     td Однотонное покрытие
-                    //-                     td <b>800</b> <span>руб.</span>
+                            .price-inner__column
+                                table.price__table
+                                    caption.price__caption Экспресс маникюр + покрытие
+                                    caption.price__column-description Экспресс маникюр + покрытие за 1 час без выравнивания ногтевой пластины гелем + маникюр
+                                    tr
+                                        td Однотонное покрытие
+                                        td <b>800</b> <span>руб.</span>
 
-                    //-         .price-inner__column.price-inner__column--pd
-                    //-             table.price__table
-                    //-                 caption.price__caption Дизайн ногтей
-                    //-                 caption.price__column-description Лунный маникюр + 50р (ноготь), + 300р(все ногти); Френч + 300р (все руки); градиент + 100р (ноготь), + 1000 (все руки); слайдер + 50р (ноготь); стразы; дизайн от руки от 100р
-                    //-                 tr
-                    //-                     td Cтоимость работ
-                    //-                     td <b>50 - 1000</b> <span>руб.</span>
+                            .price-inner__column.price-inner__column--pd
+                                table.price__table
+                                    caption.price__caption Дизайн ногтей
+                                    caption.price__column-description Лунный маникюр + 50р (ноготь), + 300р(все ногти); Френч + 300р (все руки); градиент + 100р (ноготь), + 1000 (все руки); слайдер + 50р (ноготь); стразы; дизайн от руки от 100р
+                                    tr
+                                        td Cтоимость работ
+                                        td <b>50 - 1000</b> <span>руб.</span>
 
-                    //-         .price-inner__column.price-inner__column--right
-                    //-             table.price__table
-                    //-                 caption.price__caption Дополнительные услуги
-                    //-                 tr
-                    //-                     td Снятие покрытия
-                    //-                     td <b>100</b> <span>руб.</span>
-                    //-                 tr
-                    //-                     td Ремонт ногтя
-                    //-                     td <b>100</b> <span>руб.</span>
-                    //-                 tr
-                    //-                     td Укрепление акрилом
-                    //-                     td <b>100</b> <span>руб.</span>
+                            .price-inner__column.price-inner__column--right
+                                table.price__table
+                                    caption.price__caption Дополнительные услуги
+                                    tr
+                                        td Снятие покрытия
+                                        td <b>100</b> <span>руб.</span>
+                                    tr
+                                        td Ремонт ногтя
+                                        td <b>100</b> <span>руб.</span>
+                                    tr
+                                        td Укрепление акрилом
+                                        td <b>100</b> <span>руб.</span>
 
-                    //- .price__group.price__group--big
-                    //-     h3.price__group-title наращивание ресниц
-                    //-     .price__conteiner
-                    //-         .price-inner__column
-                    //-             table.price__table
-                    //-                 caption.price__caption наращивание ресниц
-                    //-                 tr
-                    //-                     td Неполные обьем
-                    //-                     td <b>1000</b> <span>руб.</span>
+                    .price__group.price__group--big
+                        h3.price__group-title наращивание ресниц
+                        .price__container
+                            .price-inner__column
+                                table.price__table
+                                    caption.price__caption наращивание ресниц
+                                    tr
+                                        td Неполные обьем
+                                        td <b>1000</b> <span>руб.</span>
 
-                    //-                 tr
-                    //-                     td Классический обьем
-                    //-                     td <b>1200</b> <span>руб.</span>
-                    //-                 tr
-                    //-                     td Полуторный обьем
-                    //-                     td <b>1400</b> <span>руб.</span>
+                                    tr
+                                        td Классический обьем
+                                        td <b>1200</b> <span>руб.</span>
+                                    tr
+                                        td Полуторный обьем
+                                        td <b>1400</b> <span>руб.</span>
 
-                    //-         .price-inner__column
-                    //-             table.price__table
-                    //-                 caption.price__caption 2D - 3D обьем
-                    //-                 tr
-                    //-                     td 2D обьем
-                    //-                     td <b>1000</b> <span>руб.</span>
-                    //-                 tr
-                    //-                     td 3D обьем
-                    //-                     td <b>1500</b> <span>руб.</span>
-                    //-                 tr
-                    //-                     td 5D обьем
-                    //-                     td <b>1800</b> <span>руб.</span>
-                    //- .price__group
-                    //-     h3.price__group-title Дополнительные услуги
-                    //-     .price-inner__column.price-inner__column--right
-                    //-         table.price__table
-                    //-             caption.price__caption Окрашивание<br>+ коррекция бровей
-                    //-             tr
-                    //-                 td Обычное
-                    //-                 td <b>500</b> <span>руб.</span>
+                            .price-inner__column
+                                table.price__table
+                                    caption.price__caption 2D - 3D обьем
+                                    tr
+                                        td 2D обьем
+                                        td <b>1000</b> <span>руб.</span>
+                                    tr
+                                        td 3D обьем
+                                        td <b>1500</b> <span>руб.</span>
+                                    tr
+                                        td 5D обьем
+                                        td <b>1800</b> <span>руб.</span>
+                    .price__group
+                        h3.price__group-title Дополнительные услуги
+                        .price__container
+                            .price-inner__column.price-inner__column--right
+                                table.price__table
+                                    caption.price__caption Окрашивание<br>+ коррекция бровей
+                                    tr
+                                        td Обычное
+                                        td <b>500</b> <span>руб.</span>
 
-                    //-             tr
-                    //-                 td Хной
-                    //-                 td <b>700</b> <span>руб.</span>
+                                    tr
+                                        td Хной
+                                        td <b>700</b> <span>руб.</span>
 
-                    //-     .price-inner__column.price-inner__column--right
-                    //-         table.price__table
-                    //-             caption.price__caption Makeup
-                    //-             tr
-                    //-                 td Дневной
-                    //-                 td <b>800 - 1000 </b> <span>руб.</span>
+                            .price-inner__column.price-inner__column--right
+                                table.price__table
+                                    caption.price__caption Makeup
+                                    tr
+                                        td Дневной
+                                        td <b>800 - 1000 </b> <span>руб.</span>
 
-                    //-             tr
-                    //-                 td Вечерний
-                    //-                 td <b>1500 - 2000</b> <span>руб.</span>
+                                    tr
+                                        td Вечерний
+                                        td <b>1500 - 2000</b> <span>руб.</span>
 
-                    //-     .price-inner__column.price-inner__column--right
-                    //-         table.price__table
-                    //-             caption.price__caption Стрижка
-                    //-             tr
-                    //-                 td Женская
-                    //-                 td <b>300 - 1200</b> <span>руб.</span>
+                            .price-inner__column.price-inner__column--right
+                                table.price__table
+                                    caption.price__caption Удаление волос воском
+                                    caption.price__column-description Любая из перечисленных зон: верхняя губа, бакенбарды
+                                    tr
+                                        td Одна зона
+                                        td <b>150 - 200</b> <span>руб.</span>
+
+                            .price-inner__column.price-inner__column--right
+                                table.price__table
+                                    caption.price__caption Стрижка
+                                    tr
+                                        td Женская
+                                        td <b>300 - 1200</b> <span>руб.</span>
 
 
-                    //-     .price-inner__column.price-inner__column--right
-                    //-         table.price__table
-                    //-             caption.price__caption Удаление волос воском
-                    //-             caption.price__column-description Любая из перечисленных зон: верхняя губа, бакенбарды
-                    //-             tr
-                    //-                 td Одна зона
-                    //-                 td <b>150 - 200</b> <span>руб.</span>
 
         section.shares
             .shares__content
@@ -429,7 +434,7 @@ html(lang="ru")
                 article.shares__card.shares__card--loyality
                     header.shares__header
                         p.shares__offers.shares__offers--white Акции
-                        p.shares__text.shares__text--white Скидки дляучастников программы лояльности
+                        p.shares__text.shares__text--white Скидки для участников программы
                         .shares__button
                             a.button.button--card.button--offers Дальше
         
@@ -472,7 +477,10 @@ html(lang="ru")
                     img(src="./img/card7-sm.jpg" alt="HairRoom миллирование")
 
                 .gallery__img
-                    img(src="./img/card8-sm.jpg" alt="HairRoom педикюр")
+                    img(src="./img/card5-sm.jpg" alt="HairRoom педикюр")
+                    
+                .gallery__img
+                    img(src="./img/card5-sm.jpg" alt="HairRoom педикюр")
 
         section.location
             a#contacts.nav-link
@@ -537,6 +545,6 @@ html(lang="ru")
                 li: a.scroll-spy__link(id="gallery-link" data-label="Галлерея" href="#gallery") Галлерея
                 li: a.scroll-spy__link(id="contacts-link" data-label="Контакты" href="#contacts") Контакты
 
-        //- script(src="map.js")
+        script(src="map.js")
         script(src="scripts.js")
         script(async, defer, src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBsXqiEFxIOCZHT3sEJWMMLc6HywtBL4-0&callback=initMap")

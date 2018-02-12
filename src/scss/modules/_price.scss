@@ -12,10 +12,13 @@
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
     
-    // @include atTabletsPortrait {
-    //     // visual
-    //     background: none;
-    // }
+    @include atTabletsPortrait {
+        // box model
+        padding-left: 50px;
+
+        // visual
+        // background: none;
+    }
     
 
     // @include atTabletsPortrait {
@@ -53,19 +56,18 @@
     &__board {
         // box model
         padding: 30px 25px;
-        padding-top: 110px;
 
         // visual
         background-color: #d8a8df;
         
-        // @include atTabletsPortrait {
-        //     // visual
-        //     background-image: url("./img/price_bg-lg.jpg");
-        //     background-repeat: no-repeat;
-        //     background-size: contain;
-        //     border-radius: 5px;
-        //     box-shadow: -14px 0px 20px -5px rgba($black, 0.3);
-        // }
+        @include atTabletsPortrait {
+            // visual
+            // background-image: url("./img/price_bg-lg.jpg");
+            // background-repeat: no-repeat;
+            // background-size: contain;
+            // border-radius: 5px;
+            // box-shadow: -14px 0px 20px -5px rgba($black, 0.3);
+        }
     }
 
     &__header {
@@ -112,10 +114,10 @@
 
     &__group {
 
-        // @include atTabletsPortrait {
-        //     // box model
-        //     width: 33.3%;
-        // }
+        @include atTabletsPortrait {
+            // box model
+            margin-bottom: 70px;
+        }
 
         // &--big {
         //     @include atDesktop {
@@ -134,22 +136,33 @@
         font-size: 1.33rem;
         text-transform: uppercase;
         letter-spacing: 1px;
+
+        @include atTabletsPortrait {
+            // typography
+            font-size: 2rem;
+            font-weight: 900;
+        }
     }
 
     &__container {
         
-        // @include atTabletsPortrait {
-        //     // box mdoel
-        //     display: flex;
-        //     flex-wrap: wrap;
-        // }
+        @include atTabletsLandscape {
+            // box model
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
     }
 
     &-inner__column {
+        @include atTabletsLandscape {
+            // box model
+            width: 345px;
+        }
         
         &--right {
             // box model
-            width: auto;
+            // width: auto;
         }
 
         &--pd {
@@ -192,7 +205,7 @@
     &__caption {
         // box model
         margin: 0;
-        margin-bottom: 30px;
+        margin-bottom: 15px;
 
         // typography
         line-height: 1.5rem;
