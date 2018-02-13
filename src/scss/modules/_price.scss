@@ -68,6 +68,7 @@
         @include atTabletsPortrait {
             // box model
             margin-top: -150px;
+            padding: 50px;
 
             // visual
             background-image: url("./img/price_bg-lg.jpg");

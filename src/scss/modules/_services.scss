@@ -14,19 +14,21 @@
     
     @include atTabletsPortrait {
         // box model
+        padding: 50px;
         padding-bottom: 250px;
-        // padding-left: 55px;
+       
     }
 
-    // @include atDesktop {
-    //     // box model
-    //     padding-left: 115px;
-    //     padding-bottom: 400px;
+    @include atDesktop {
+        // box model
+        padding-left: 115px;
+        padding-bottom: 400px;
 
-    //     // visual
-    //     background: linear-gradient(20deg,rgba(221, 129, 192, 1), rgba(211, 195, 221, 0.8)) 90%;
-    //     box-shadow: 0px 48px 116px -29px rgba(125,30,86,0.77);
-    // }
+        // visual
+        background: linear-gradient(20deg,rgba(221, 129, 192, 1), rgba(211, 195, 221, 0.8)) 90%;
+        box-shadow: 0px 48px 116px -29px rgba(125,30,86,0.77);
+    }
+
     &::before {
         content: url("./img/hero_hr.png");
 
