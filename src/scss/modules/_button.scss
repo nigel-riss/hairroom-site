@@ -248,6 +248,11 @@
         // visual
         border: 3px solid $accent;
 
+        @include atTabletsPortrait {
+            // box model
+            width: auto;
+        }
+
         
         &:hover {
             // typography

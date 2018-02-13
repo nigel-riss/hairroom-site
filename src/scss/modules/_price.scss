@@ -17,7 +17,12 @@
         padding-left: 50px;
 
         // visual
-        // background: none;
+        background: none;
+    }
+
+    @include atDesktop {
+        // box model
+        padding-left: 250px;
     }
     
 
@@ -61,12 +66,16 @@
         background-color: #d8a8df;
         
         @include atTabletsPortrait {
+            // box model
+            margin-top: -150px;
+
             // visual
-            // background-image: url("./img/price_bg-lg.jpg");
-            // background-repeat: no-repeat;
-            // background-size: contain;
-            // border-radius: 5px;
-            // box-shadow: -14px 0px 20px -5px rgba($black, 0.3);
+            background-image: url("./img/price_bg-lg.jpg");
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-radius: 5px;
+            box-shadow: -5px 0px 20px -5px rgba($black, 0.3);
         }
     }
 
@@ -229,6 +238,9 @@
     }
 
     td {
+        // box model
+        width: 600px;
+
         // typography
         color: $black;
         text-transform: uppercase;
@@ -243,10 +255,13 @@
             color: $black;
             font-weight: 400;
         }
+
+        &:nth-child(2) {
+            width: 300px;
+        }
     }
 
     tr {
-        // box model
         margin-bottom: 15px;
     }
 }

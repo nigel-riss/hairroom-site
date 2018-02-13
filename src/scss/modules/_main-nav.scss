@@ -9,11 +9,10 @@
         padding-left: 50px;
     }
 
-    // @include atDesktop {
-    //     // box model
-    //     align-items: center;
-    //     justify-content: space-between;
-    //     padding-left: 4.5%;
-    //     max-width: 88%;
-    // }
+    @include atDesktop {
+        // box model
+        // align-items: center;
+        // justify-content: space-between;
+        padding-left: 85px;
+    }
 }

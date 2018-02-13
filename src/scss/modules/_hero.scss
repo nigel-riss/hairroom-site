@@ -23,25 +23,24 @@
         box-shadow: 0px 70px 30px -50px rgba(125,30,86,0.4);
     }
     
-    // @include atDesktop {
-    //     // box model
-    //     height: 700px;
-    //     width: 88%;
-    //     margin-bottom: 200px;
-    //     padding-left: 4.5%;
+    @include atDesktop {
+        // box model
+        height: 700px;
+        width: 88%;
+        margin-bottom: 200px;
+        padding-left: 85px;
 
-    //     // visual
-    //     box-shadow: 0px 34px 39px -1px rgba(203,165,187,0.59);
-    // }
+        // visual
+        box-shadow: 0px 34px 39px -1px rgba(203,165,187,0.59);
+    }
 
 
     &::after {
-        // content: url("./img/hero_hr.png");
+        // content: url("./img/hero_hr-lg.png");
         // positioning
         position: absolute;
-        bottom: -100px;
-        z-index: 2;
-        @include centerer-x;
+        bottom: -200px;
+        z-index: 10;
     }
     //     @include atTabletsPortrait {
     //         // positioning
@@ -169,17 +168,22 @@
             margin-top: 0;
             margin-bottom: 60px;
             padding: 0;
+
+
+            // typography
+            color: #ffffff;
+            text-shadow: -2px 0px 3px $text;
         }
 
-        // @include atDesktop {
-        //     // box model
-        //     margin-bottom: 70px;
-        //     padding-left: 0;
-        //     width: 425px;
+        @include atDesktop {
+            // box model
+            margin-bottom: 70px;
+            padding-left: 0;
+            width: 425px;
 
-        //     // typography
-        //     font-size: 1rem;
-        // }
+            // typography
+            font-size: 1rem;
+        }
     }
 
     &__img {
@@ -207,28 +211,28 @@
             min-width: 685px;
         }
 
-        // @include atTabletsLandscape {
-        //     // positioning
-        //     left: 25%;
+        @include atTabletsLandscape {
+            // positioning
+            left: 25%;
 
-        //     // box model
-        //     min-width: 700px; 
-        // }
+            // box model
+            min-width: 700px;
+        }
 
-        // @include atDesktop {
-        //     // positioning
-        //     z-index: 0;
+        @include atDesktop {
+            // positioning
+            z-index: -1;
 
-        //     // box model
-        //     width: auto;
-        //     bottom: -19px;
-        //     left: 20%;
-        // }
+            // box model
+            width: 760px;
+            left: 35%;
+        }
 
-        // @include atDesktopLarge {
-        //     // positioning
-        //     left: 30%;
-        // }
+        @include atDesktopLarge {
+            // positioning
+            width: 790px;
+            left: 30%;
+        }
 
         img {
             // box model

@@ -9,14 +9,14 @@
 
     // visual
     background-color: #e3d8e8;
-    background: linear-gradient(25deg, #e3d6e5 70%, #e4d4dc);
+    background: linear-gradient(205deg, #e3d6e5 20%, #c978b5);
     background-size: cover;
     
-    // @include atTabletsPortrait {
-    //     // box model
-    //     padding-bottom: 250px;
-    //     padding-left: 55px;
-    // }
+    @include atTabletsPortrait {
+        // box model
+        padding-bottom: 250px;
+        // padding-left: 55px;
+    }
 
     // @include atDesktop {
     //     // box model
@@ -44,9 +44,6 @@
     }
 
     &__suptitle {
-        // box model
-        margin: 0;
-        
         // typography
         color: $titleColor;
         text-transform: uppercase;
@@ -320,13 +317,3 @@
         transform: translateX(-50%);
     }
 }
-
-// .services__buttons {
-//       // positioning
-//       position: absolute;
-//       bottom: 25px;
-//       left: 50%;
-//       transform: translateX(-50%);
-
-//       border: 1px solid red;
-// }

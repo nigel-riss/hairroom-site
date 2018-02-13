@@ -14,14 +14,13 @@
         padding-right: 20px;
         padding-top: 20px;
         right: 0;
-        bottom: 45px;
+        bottom: 40px;
         z-index: 1;
     }
 
     @include atDesktop {
         display: block;
         position: absolute;
-        bottom: 40px;
         right: 0;
         padding: 20px;
         padding-right: 2.5%;

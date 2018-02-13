@@ -14,7 +14,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(to bottom,rgba(177, 135, 177, 0.26), rgba(239, 206, 228, 0.9));
+            background: linear-gradient(to bottom,#f7dfef, #e5a0cf);
         }
     }
 
@@ -35,7 +35,7 @@
 
         @include atDesktop {
             height: 80vh;
-            transform: translateY(-350px);
+            // transform: translateY(-350px);
         }
     }
 }

@@ -30,14 +30,16 @@
 
         @include atTabletsPortrait {
             // positioning
-            transform: translateY(30px);
         }
-
+        
         @include atTabletsLandscape {
-            // positionin
+            // positioning
+            transform: translateY(-30px);
+
             // box model
-            transform: none;
-            padding-left: 25px;
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 50px;
         }
 
         // @include atDesktop {
@@ -94,14 +96,15 @@
         }
         
         &--loyality {
-            // box model
-            margin-right: 0;
-
             // visual
             background-image: url("./img/loyality.jpg");
             background-size: cover;
             background-color: $sectionColor;
 
+            @include atTabletsLandscape {
+                // box model
+                margin-right: 0;
+            }
         }
     }
 
@@ -127,6 +130,11 @@
     &__header {
         // box model
         padding: 30px;
+
+        @include atTabletsLandscape {
+            // box model
+            padding: 25px;
+        }
     }
 
     &__text {
