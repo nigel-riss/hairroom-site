@@ -18,6 +18,12 @@
     }
 }
 
+@mixin atTabletsLandscapeIpad {
+    @media (min-width: 900px) and (orientation: landscape) {
+        @content;
+    }
+}
+
 @mixin atDesktop {
     @media(min-width: 1200px) {
         @content;

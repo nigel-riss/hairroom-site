@@ -16,12 +16,11 @@
         // box model
         padding: 50px;
         padding-bottom: 250px;
-       
     }
 
     @include atDesktop {
         // box model
-        padding-left: 115px;
+        padding-left: 85px;
         padding-bottom: 400px;
 
         // visual
@@ -125,13 +124,13 @@
         //     flex-wrap: nowrap;
         // }
 
-        // @include atDesktop {
-        //     // box model
-        //     flex-wrap: wrap;
+        @include atDesktop {
+            // box model
+            flex-wrap: wrap;
 
-        //     // visual
-        //     overflow: hidden;
-        // }
+            // visual
+            overflow: hidden;
+        }
 
         &::before {
             content: url("./img/pattern-lg-cards.png");

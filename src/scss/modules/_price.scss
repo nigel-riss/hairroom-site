@@ -71,12 +71,17 @@
             padding: 50px;
 
             // visual
+            
+            border-radius: 5px;
+            box-shadow: -5px 0px 20px -5px rgba($black, 0.3);
+        }
+
+        @include atDesktop {
+            // visual
             background-image: url("./img/price_bg-lg.jpg");
             background-attachment: fixed;
             background-repeat: no-repeat;
             background-size: cover;
-            border-radius: 5px;
-            box-shadow: -5px 0px 20px -5px rgba($black, 0.3);
         }
     }
 

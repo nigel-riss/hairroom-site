@@ -18,20 +18,31 @@
         z-index: 1;
     }
 
+    @include atTabletsLandscapeIpad {
+        // positioning
+        bottom: 15px;
+    }
+
     @include atDesktop {
-        display: block;
+        // positioning
         position: absolute;
         right: 0;
+
+        // box model
+        display: block;
         padding: 20px;
         padding-right: 2.5%;
         padding-left: 80px;
+
     }
 
     li {
+        // box model
         padding-bottom: 5px;
     }
 
     a {
+        // typography
         color: #ffffff;
         text-decoration: none;
         text-transform: uppercase;
@@ -40,6 +51,7 @@
         font-family: $textFont;
         
         &:hover {
+            // typography
             color: $secondaryColor;
         }
     }

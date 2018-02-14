@@ -25,7 +25,8 @@ html(lang="ru")
         //- add dummy OG markup
 
     body
-        header.site-header
+        
+        header.site-header.nav-link#about
             nav.main-nav
                 .logo
                     img(src="./img/hr_logo_white.svg" alt="HairRoom Logo")
@@ -35,6 +36,7 @@ html(lang="ru")
                     a(href="tel:523766").info__phone 52<span>.</span>37<span>.</span>76
                 
                 .menu-icon: .menu-icon__middle
+                .main-menu--blackout
                 //- .menu-icon.menu-icon--close-x: .menu-icon__middle
 
                 //- nav.main-menu.main-menu--shown
@@ -79,13 +81,11 @@ html(lang="ru")
                     li: a(href="https://vk.com/") vkontakte
         
         section.about
-            a#about.nav-link
-
             .about__img
                 picture
                     source(media="(min-width: 700px)" srcset="./img/about_img-md.jpg")
                     source(media="(min-width: 1200px)" srcset="./img/about_img-lg.jpg")
-                    img(src="./img/about_img-sm.jpg" alt="HairRoom изображение")
+                    img(src="./img/about_img-lg.jpg" alt="HairRoom изображение")
 
             .about__board
                 header.about__header

@@ -14,6 +14,11 @@
     //     background: linear-gradient(to bottom, #f2d2e7, #faeaf5);
     // }
 
+    @include atDesktop {
+        // box model
+        padding: 85px;
+    }
+
     &__container {
         // box model
         
@@ -78,6 +83,11 @@
     &__contacts {
         // box model
         width: 170px;
+
+        @include atDesktop {
+            // box model
+            width: auto;
+        }
     }
 
 
@@ -184,37 +194,40 @@
         // visual
         list-style: none;
 
-        // @include atDesktop {
-        //     // box model
-        //     display: block;
-        // }
+        @include atDesktop {
+            // box model
+            display: block;
+        }
 
         li {
             // box model
             padding-bottom: 20px;
 
+            // typography
+            
             &:first-child, &:last-child {
                 // box model
                 padding-bottom: 0px;
             }
         }
+        
+        a {
+            // typography
+            text-transform: uppercase;
+            text-decoration: none;
+            color: $copyColor;
+        }
 
         &-title {
             // box model
             display: block;
-            margin-bottom: 23px;
+            margin-bottom: 35px;
 
             // typography
             color: $text !important;
             letter-spacing: 4px;
         }
 
-        a {
-            // typography
-            text-transform: uppercase;
-            text-decoration: none;
-            color: $notationColor;
-        }
     }
 
     &__copyright {
@@ -238,16 +251,16 @@
         @include atTabletsLandscape {
             // box model
             display: block;
-            margin: 50px auto;
+            margin: 0 auto;
             margin-bottom: 0;
         }
 
-        // @include atDesktop {
-        //     // box model
-        //     display: block;
-        //     margin: 0;
-        //     padding: 0;
-        // }
+        @include atDesktop {
+            // box model
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
 
         b {
             // typography

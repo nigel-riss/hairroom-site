@@ -26,6 +26,15 @@
         width: calc(100% - 400px);
     }
 
+    @include atDesktop {
+        // positioning
+        top: 200px;
+        left: 500px;
+
+        // box model
+        width: 500px;
+    }
+
     // visual
     background-color: rgba($accent, 0.8);
     // background-image: url("./img/place.png");

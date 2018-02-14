@@ -19,19 +19,14 @@
     }
 
     @include atDesktop {
+        // visual
         background-image: url("./img/pattern-lg.jpg");
         background-size: contain;
-        height: 60vh;
     }
 
     &__map {
         // box model
         height: 100vh;
-
-        @include atTabletsPortrait {
-            width: 95%;
-            // transform: translateY(-200px);
-        }
 
         @include atDesktop {
             height: 80vh;

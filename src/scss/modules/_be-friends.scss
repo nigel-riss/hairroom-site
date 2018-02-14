@@ -11,6 +11,14 @@
     text-align: center;
     text-transform: uppercase;
 
+    @include atDesktop {
+        // positioning
+        top: 45px;
+        right: 0;
+
+
+    }
+
     &__text {
         // box model
         margin: 0;
@@ -22,6 +30,19 @@
 
         // typography
         font-size: 0.7rem;
+
+        @include atDesktop {
+            // visual
+            border-bottom: 1px solid $secondaryColor;
+
+            // box model
+            padding-right: 25px;
+
+            // typography
+            color: $secondaryColor;
+            font-family: $textFont;
+            font-weight: 600;
+        }
     }
 
     &__social {
@@ -32,6 +53,16 @@
 
         // typography
         letter-spacing: 3px;
+
+        @include atDesktop {
+            // box model
+            padding-right: 25px;
+
+            // typography
+            color: $secondaryColor;
+            font-family: $textFont;
+            font-weight: 600;
+        }
     }
 
     span {

@@ -25,6 +25,13 @@
         padding: 30px;
     }
 
+    @include atTabletsLandscapeIpad {
+        // box model
+        height: 140px;
+        width: 140px;
+        padding: 20px;
+    }
+
     // @include atDesktop {
     //     // box model
     //     height: 144px;
