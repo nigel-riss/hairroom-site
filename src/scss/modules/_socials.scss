@@ -11,34 +11,47 @@
         // box model
         display: block;
         position: absolute;
-        padding-right: 40px;
+        padding-right: 20px;
         padding-top: 20px;
         right: 0;
-        bottom: 65px;
+        bottom: 40px;
         z-index: 1;
     }
 
+    @include atTabletsLandscapeIpad {
+        // positioning
+        bottom: 15px;
+    }
+
     @include atDesktop {
-        display: block;
+        // positioning
         position: absolute;
-        bottom: 40px;
         right: 0;
+
+        // box model
+        display: block;
         padding: 20px;
         padding-right: 2.5%;
         padding-left: 80px;
+
     }
 
     li {
+        // box model
         padding-bottom: 5px;
     }
 
     a {
+        // typography
         color: #ffffff;
         text-decoration: none;
         text-transform: uppercase;
         letter-spacing: 1px;
         transition: 0.3s ease-in-out all;
+        font-family: $textFont;
+        
         &:hover {
+            // typography
             color: $secondaryColor;
         }
     }

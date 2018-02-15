@@ -2,7 +2,8 @@ import $ from 'jquery';
 
 class ScrollSection {
     constructor() {
-        this.link = $(".main-menu__list a");
+        this.link = $(".main-menu a");
+        this.mainMenu = $(".main-menu");
         this.events();
     }
 
@@ -12,7 +13,8 @@ class ScrollSection {
             var section = $(this).attr("href");
             $("html, body").animate({
                 scrollTop: $(section).offset().top
-            }, 1000);
+            }, 800);
+            this.mainMenu.toggleClass("main-menu--shown");
         });
     }
 }

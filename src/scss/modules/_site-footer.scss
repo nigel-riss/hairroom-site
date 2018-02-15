@@ -1,7 +1,7 @@
 .site-footer {
     // box model
     padding-top: 100px;
-    padding-left: 30px;
+    padding-left: 50px;
     // visual
     background: linear-gradient(to bottom, #e5a0cf, #f7dfef 50%);
 
@@ -14,6 +14,37 @@
     //     background: linear-gradient(to bottom, #f2d2e7, #faeaf5);
     // }
 
+    @include atDesktop {
+        // box model
+        padding: 85px;
+    }
+
+    &__container {
+        // box model
+        
+        @include atTabletsPortrait {
+            // box model
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            padding-top: 60px;
+            padding-bottom: 60px;
+            padding-right: 25px;
+
+            // visual
+            border-top: 2px solid $text;
+        }
+
+        @include atTabletsLandscape {
+            flex-wrap: wrap;
+        }
+
+        // @include atDesktop {
+        //     // box model
+        //     padding-bottom: 100px;
+        // }
+
+    }
     // @include atDesktop {
     //     // box model
     //     padding-left: 83px;
@@ -31,14 +62,14 @@
         border-top-width: 2px;
         
         
-        // @include atTabletsPortrait {
-        //     // box model
-        //     max-width: 388px;
-        //     margin-top: 0;
+        @include atTabletsPortrait {
+            // box model
+            max-width: 388px;
+            margin-top: 0;
 
-        //     // visual
-        //     border: none;
-        // }
+            // visual
+            border: none;
+        }
 
         // typography
         color: $black;
@@ -49,29 +80,16 @@
         // }
     }
 
-    &__container {
+    &__contacts {
         // box model
-        
-        // @include atTabletsPortrait {
-        //     // box model
-        //     display: flex;
-        //     justify-content: space-between;
-        //     width: 100%;
-        //     padding-top: 60px;
-        //     flex-wrap: wrap;
-        //     padding-right: 25px;
-        //     padding-bottom: 200px;
+        width: 170px;
 
-        //     // visual
-        //     border-top: 2px solid $text;
-        // }
-
-        // @include atDesktop {
-        //     // box model
-        //     padding-bottom: 100px;
-        // }
-
+        @include atDesktop {
+            // box model
+            width: auto;
+        }
     }
+
 
     &__content {
         // box model
@@ -144,7 +162,6 @@
         // typography
         color: $copyColor;
         font-family: $textFont;
-        font-weight: 700;
         font-weight: 400;
         font-size: 1rem;
         text-decoration: none;
@@ -156,10 +173,11 @@
         height: 31px;
         margin: 30px 0;
 
-        // @include atTabletsPortrait {
-        //     // box model
-        //     padding: 0;
-        // }
+        @include atTabletsPortrait {
+            // box model
+            margin-top: 0;
+            padding: 0;
+        }
 
         img {
             // box model
@@ -176,37 +194,40 @@
         // visual
         list-style: none;
 
-        // @include atDesktop {
-        //     // box model
-        //     display: block;
-        // }
+        @include atDesktop {
+            // box model
+            display: block;
+        }
 
         li {
             // box model
             padding-bottom: 20px;
 
+            // typography
+            
             &:first-child, &:last-child {
                 // box model
                 padding-bottom: 0px;
             }
         }
+        
+        a {
+            // typography
+            text-transform: uppercase;
+            text-decoration: none;
+            color: $copyColor;
+        }
 
         &-title {
             // box model
             display: block;
-            margin-bottom: 23px;
+            margin-bottom: 35px;
 
             // typography
             color: $text !important;
             letter-spacing: 4px;
         }
 
-        a {
-            // typography
-            text-transform: uppercase;
-            text-decoration: none;
-            color: $notationColor;
-        }
     }
 
     &__copyright {
@@ -222,17 +243,24 @@
         font-family: $textFont;
         color: $notationColor;
 
-        // @include atTabletsPortrait {
-        //     // box model
-        //     margin: 0 auto;
-        // }
+        @include atTabletsPortrait {
+            // box model
+            display: none;
+        }
 
-        // @include atDesktop {
-        //     // box model
-        //     display: block;
-        //     margin: 0;
-        //     padding: 0;
-        // }
+        @include atTabletsLandscape {
+            // box model
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 0;
+        }
+
+        @include atDesktop {
+            // box model
+            display: block;
+            margin: 0;
+            padding: 0;
+        }
 
         b {
             // typography

@@ -10,6 +10,11 @@
     //     // visual
     //     background: none;
     // }
+    @include atTabletsLandscape {
+        // box model
+        padding-left: 50px;
+        background: none;
+    }
 
     // @include atDesktop {
     //     // positioning
@@ -20,19 +25,22 @@
     // }
     
     &__content {
-        // positioning
-        transform: translateY(36px);
+        // // positioning
+        transform: translateY(30px);
 
-        // @include atTabletsPortrait {
-        //     // positioning
-        //     position: absolute;
-        //     top: -200px;
-        //     right: 30px;
-        //     transform: none;
+        @include atTabletsPortrait {
+            // positioning
+        }
+        
+        @include atTabletsLandscape {
+            // positioning
+            transform: translateY(-30px);
 
-        //     // box model
-        //     display: flex;
-        // }
+            // box model
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 50px;
+        }
 
         // @include atDesktop {
         //     // positioning
@@ -58,7 +66,21 @@
         border-radius: 5px;
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
+
+        &::last-child {
+            margin-right: 0;
+        }
+        @include atTabletsPortrait {
+            // box model
+            width: 375px;
+        }
         
+        @include atTabletsLandscape {
+            // box model
+            margin-top: 0;
+            min-width: 375px;
+            display: inline-block;
+        }
 
         // @include atDesktop {
         //     // box model
@@ -74,12 +96,15 @@
         }
         
         &--loyality {
-            // box model
-            
             // visual
             background-image: url("./img/loyality.jpg");
             background-size: cover;
             background-color: $sectionColor;
+
+            @include atTabletsLandscape {
+                // box model
+                margin-right: 0;
+            }
         }
     }
 
@@ -105,6 +130,11 @@
     &__header {
         // box model
         padding: 30px;
+
+        @include atTabletsLandscape {
+            // box model
+            padding: 25px;
+        }
     }
 
     &__text {
